@@ -47,7 +47,7 @@
   z-index: 0;
 
   @media (min-width: @screen-sm-min) {
-    height: 8.8em;
+    height: 10em;
   }
 
   &:after {
@@ -78,7 +78,7 @@
       width: 12em;
 
       @media (min-width: @screen-sm-min) {
-        width: 9em;
+        width: 11em;
       }
     }
   }
@@ -126,6 +126,11 @@ section.intro {
     }
 
     @media (min-width: @screen-md-min) {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: @screen-lg-min) {
       font-size: 42px;
       margin-bottom: 30px;
     }
@@ -141,6 +146,10 @@ section.intro {
     }
 
     @media (min-width: @screen-md-min) {
+      font-size: 23px;
+    }
+
+    @media (min-width: @screen-lg-min) {
       font-size: 24px;
     }
 
@@ -176,6 +185,88 @@ section.intro {
         font-size: 28px;
         vertical-align: middle;
       }
+    }
+  }
+}
+
+#map {
+  width: 100%;
+  height: 250px;
+
+}
+
+.map {
+  position: relative;
+}
+
+
+.box {
+  background: #fff;
+  position: absolute;
+  width: 525px;
+  height: 135px;
+  left: 320px;
+  top: 0px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    margin-left: -65px;
+    margin-top: 40px;
+    border-right: 25px solid #fff;
+    border-bottom: 25px solid transparent;
+    border-top: 25px solid transparent;
+    border-left: 25px solid transparent;
+  }
+
+  .logo {
+    width: 150px;
+    float: left;
+    padding: 30px 0;
+
+    img {
+      width: 8em;
+    }
+  }
+
+  .address {
+    width: 300px;
+    float: left;
+    margin: 15px 0;
+  }
+
+  .contact {
+    float: left;
+    width: 300px;
+  }
+
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.gmnoprint, .gm-style-cc { display: none; }
+
+footer {
+  background-image: url('../images/bg-board.png');
+  font-family: 'crayon';
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+
+  @media (min-width: @screen-md-min) {
+    text-align: left;
+
+    .studio51 {
+      text-align: right;
+    }
+  }
+
+  .divider {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+
+    @media (min-width: @screen-sm-min) {
+      margin: 15px 0;
     }
   }
 }

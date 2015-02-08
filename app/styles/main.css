@@ -9085,7 +9085,7 @@ a .icon-flip-vertical:before {
 
 @media (min-width: 768px) {
   .navbar {
-    height: 8.8em;
+    height: 10em;
   }
 }
 
@@ -9122,7 +9122,7 @@ a .icon-flip-vertical:before {
 
 @media (min-width: 768px) {
   .navbar-brand img {
-    width: 9em;
+    width: 11em;
   }
 }
 
@@ -9178,6 +9178,13 @@ section.intro {
 
 @media (min-width: 992px) {
   .board h1 {
+    margin-bottom: 15px;
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .board h1 {
     margin-bottom: 30px;
     font-size: 42px;
   }
@@ -9195,6 +9202,12 @@ section.intro {
 }
 
 @media (min-width: 992px) {
+  .board p {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1200px) {
   .board p {
     font-size: 24px;
   }
@@ -9236,4 +9249,89 @@ section.intro {
   font-size: 28px;
   color: #fff;
   vertical-align: middle;
+}
+
+#map {
+  width: 100%;
+  height: 250px;
+}
+
+.map {
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 320px;
+  width: 525px;
+  height: 135px;
+  padding: 0 15px;
+  font-size: 16px;
+  background: #fff;
+}
+
+.box:before {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: -65px;
+  border-top: 25px solid transparent;
+  border-right: 25px solid #fff;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid transparent;
+  content: '';
+}
+
+.box .logo {
+  float: left;
+  width: 150px;
+  padding: 30px 0;
+}
+
+.box .logo img {
+  width: 8em;
+}
+
+.box .address {
+  float: left;
+  width: 300px;
+  margin: 15px 0;
+}
+
+.box .contact {
+  float: left;
+  width: 300px;
+}
+
+.gmnoprint,
+.gm-style-cc {
+  display: none;
+}
+
+footer {
+  font-family: 'crayon';
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background-image: url('../images/bg-board.png');
+}
+
+@media (min-width: 992px) {
+  footer {
+    text-align: left;
+  }
+  footer .studio51 {
+    text-align: right;
+  }
+}
+
+footer .divider {
+  margin: 10px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+  footer .divider {
+    margin: 15px 0;
+  }
 }
