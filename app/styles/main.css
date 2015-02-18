@@ -9037,42 +9037,221 @@ a .icon-flip-vertical:before {
 }
 
 /* Small Screens */
-
+/*
 .intro .container {
   padding: 0 70px;
+}*/
+/*
+
+#map {
+  width: 100%;
+  height: 250px;
 }
 
-@media (min-width: 768px) {
-  .intro .container {
-    padding: 0;
-  }
+.map {
+  position: relative;
 }
 
-.intro,
-.board {
-  height: 17em;
+
+.gmnoprint,
+.gm-style-cc {
+  display: none;
 }
 
-@media (min-width: 768px) {
-  .intro,
-  .board {
-    height: 20em;
-  }
+footer {
+  font-family: 'crayon';
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background-image: url('../images/bg-board.png');
 }
 
 @media (min-width: 992px) {
-  .intro,
-  .board {
-    height: 25em;
+  footer {
+    text-align: left;
+  }
+  footer .studio51 {
+    text-align: right;
   }
 }
 
-@media (min-width: 1200px) {
-  .intro,
-  .board {
-    height: 30em;
+footer .divider {
+  margin: 10px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+  footer .divider {
+    margin: 15px 0;
   }
 }
+
+@media (max-width: 768px) {
+
+
+  footer .container {
+    padding: 0;
+  }
+
+  footer .map {
+    margin: 0;
+  }
+}*/
+/*
+
+section.about {
+  padding: 50px 0;
+}
+
+section.about h2 {
+  font-family: 'Old Standard TT', serif;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+section.about p {
+  font-family: 'Old Standard TT', serif;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+#testimonials ul {
+  border: 1px solid red;
+  display: inline-block;
+  list-style: none;
+  border: 1px solid red;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+#testimonials ul li .testimonial-source {
+
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+#testimonials ul li i {
+  float: right;
+  font-size: 14px;
+}
+
+
+section.menu {
+  padding: 50px 0;
+}
+
+.menu h1 {
+  text-align: center;
+}
+
+.menu img {
+  margin: 30px auto;
+}
+
+.menu ul {
+  border: none;
+}
+
+.menu ul li {
+  border: none;
+  display: block;
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+
+
+
+.menu ul li.active a {
+  border: none;
+}
+
+.menu .tab-content {
+  text-align: center;
+}
+
+
+.tab-content .menu-divider {
+  margin: 5px 0;
+
+
+}
+
+.tab-content h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.tab-content h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.quote {
+
+  padding: 15px 0;
+  background: #efefef;
+  color: #999;
+}
+
+.quote .container {
+  position: relative;
+}
+
+.quote .container:before {
+  content: '``';
+  font-size: 44px;
+  position: absolute;
+  top: -20px;
+}
+
+.quote .container:after {
+  content: '``';
+  font-size: 44px;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+
+}
+
+
+.body {
+  background-color: #FAFBFD;
+}
+*/
+body {
+  background-color: #fafbfd;
+}
+
+.intro .container {
+  padding: 0 200px;
+  position: relative;
+  z-index: 1;
+}
+
+section.content {
+  margin-top: -50px;
+}
+
+.box {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+p.quote {
+
+  padding: 15px 50px;
+  margin: 0;
+}
+
 
 .navbar {
   position: relative;
@@ -9126,6 +9305,41 @@ a .icon-flip-vertical:before {
   }
 }
 
+
+.intro,
+section .board {
+  height: 15em;
+}
+
+/*@media (min-width: 768px) {
+  .intro,
+  .board {
+    height: 20em;
+  }
+
+  .container {
+    padding: 0 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro,
+  .board {
+    height: 25em;
+  }
+}*/
+
+@media (min-width: 1200px) {
+  .intro,
+  section .board {
+    height: 28em;
+  }
+
+  .container {
+    padding: 0 150px;
+  }
+}
+
 section.intro {
   background-image: url('../images/tea-room.png');
   background-position: center -200px;
@@ -9134,27 +9348,32 @@ section.intro {
 
 .board {
   position: relative;
-  padding: 0 30px;
+  padding: 0 15px;
   text-align: center;
   background: url('../images/bg-board.png');
 }
 
-.board:before,
-.board:after {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  background-image: url('../images/bg-board.png');
-  content: '';
+.board p {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 18px !important;
+
+
 }
 
-.board:before {
-  top: -30px;
+.board p i {
+  margin: 0 !important;
+  width: auto !important;
+  display: inline-block;
+  padding: 0 !improtant;
 }
 
-.board:after {
-  bottom: -30px;
+nav .board {
+  margin-right: 50px;
+}
+
+nav .board p {
+  text-align: left;
 }
 
 .board h1,
@@ -9236,6 +9455,10 @@ section.intro {
   }
 }
 
+nav .board {
+  padding: 30px;
+}
+
 .board .social a {
   display: inline-block;
 }
@@ -9251,16 +9474,200 @@ section.intro {
   vertical-align: middle;
 }
 
-#map {
-  width: 100%;
-  height: 250px;
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+.menu {
+  text-align: center;
 }
 
-.map {
+.menu img {
+  margin: 50px auto;
+}
+.navbar-brand img {
+  width: 9.5em !important;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+
+
+.section-title {
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+section p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+
+
+
+.tab-content {
+
+}
+
+.tab-content h3 {
+  margin-bottom: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+.tab-content h5 {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+.tab-content p {
+  font-size: 12px;
+  font-weight: 300;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.tab-content .menu-divider {
+  padding: 0;
+  margin: 5px 0;
+  color: #e4e4e4;
+}
+
+ul.nav-tabs {
+
+  margin-top: 30px;
+}
+ul.nav-tabs li {
+  float: none;
+}
+
+ul.nav-tabs li a {
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-color: blue;
+}
+
+ul.nav-tabs,
+ul.nav-tabs li.active a,
+ul.nav-tabs li.active a:hover,
+ul.nav-tabs li a {
+
+  border: none;
+}
+
+nav .board {
+  overflow: hidden;
+  padding: 0;
+  padding: 30px;
+}
+
+nav {
+  height: 122px !important;
+}
+
+section .board {
+  box-sizing: content-box;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.board h1 {
+  margin-bottom: 30px !important;
+  display: block;
+}
+
+.board .divider {
+  margin: 15px 0;
+  display: block;
+}
+
+section .board p:not(.social) {
+  font-size: 20px !important;
+}
+
+p.social {
+  margin-top: 20px !important;
+  display: block;
+  font-size: 19px !important;
+}
+
+nav .board p {
+  font-size: 22px !important;
+}
+
+
+section .board {
+  height: 25.5em;
+}
+
+
+.map  {
+  border: 1px solid red;
+/*   display: block; */
+
+  width: 100%;
+  height: 250px;
   position: relative;
 }
 
-.box {
+#map {
+  border: 1px solid red;
+  display: block;
+  height: 250px;
+}
+
+
+footer {
+  background: #fff;
+  padding: 30px 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+footer .divider {
+  margin: 15px 0;
+}
+
+footer {
+  font-size: 13px;
+}
+
+.gmnoprint,
+.gm-style-cc {
+  display: none;
+}
+#testimonials ul {
+/*   padding: 15px 0; */
+  padding: 0;
+  list-style-type: none;
+}
+
+#testimonials .testimonial-source {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 10px !important;
+  display: block;
+}
+
+#testimonials p {
+  padding: 15px;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+
+#testimonials i {
+  float: right;
+  margin-top: 10px;
+}
+
+.map .box {
   position: absolute;
   top: 0;
   left: 320px;
@@ -9271,7 +9678,7 @@ section.intro {
   background: #fff;
 }
 
-.box:before {
+.map .box:before {
   position: absolute;
   margin-top: 40px;
   margin-left: -65px;
@@ -9282,56 +9689,23 @@ section.intro {
   content: '';
 }
 
-.box .logo {
+.map .box .logo {
   float: left;
   width: 150px;
   padding: 30px 0;
 }
 
-.box .logo img {
+.map .box .logo img {
   width: 8em;
 }
 
-.box .address {
+.map .box .address {
   float: left;
   width: 300px;
   margin: 15px 0;
 }
 
-.box .contact {
+.map .box .contact {
   float: left;
   width: 300px;
-}
-
-.gmnoprint,
-.gm-style-cc {
-  display: none;
-}
-
-footer {
-  font-family: 'crayon';
-  font-size: 16px;
-  color: #fff;
-  text-align: center;
-  background-image: url('../images/bg-board.png');
-}
-
-@media (min-width: 992px) {
-  footer {
-    text-align: left;
-  }
-  footer .studio51 {
-    text-align: right;
-  }
-}
-
-footer .divider {
-  margin: 10px 0;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
-}
-
-@media (min-width: 768px) {
-  footer .divider {
-    margin: 15px 0;
-  }
 }

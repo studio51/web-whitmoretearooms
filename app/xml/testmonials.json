@@ -1,0 +1,68 @@
+{
+  "feed": {
+    "testimonial": {
+      "id":       1,
+      "content":  "Had a gorgeous afternoon here today, would highly recommend for lunch/afternoon tea, all the food was delicious, sandwiches and scones were so fresh. The place itself was beautifully laid out, relaxed atmosphere and friendly staff. Will be back!",
+      "author":   "Clare Priest",
+      "rating":   "*****",
+      "source":   "Facebook",
+      "date":     "Sunday, 25 January 2015"
+    },
+    "testimonial": {
+      "id":       1,
+      "content":  "we called there one sunny afternoon,sat outside we had lovely salmon sandwiches followed by beautifull cake,it was a delightfull time,down to the proper tea,thanks for a lovely afternoon tea.",
+      "author":   "Ronald Tams",
+      "rating":   "*****",
+      "source":   "Facebook",
+      "date":     "Tuesday, 26 August 2014"
+    },
+    "testimonial": {
+      "id":       1,
+      "content":  "I was lucky enough that my lovely friends planned my baby shower here! I had a lovely day! The afternoon tea was great, staff were brilliant and the setting perfect! I will definitely be returning! Xx",
+      "author":   "Rachel Whitehouse",
+      "rating":   "*****",
+      "source":   "Facebook",
+      "date":     "Tuesday, 4 November 2014"
+    },
+    "testimonial": {
+      "id":       1,
+      "content":  "A wonderful tea room on the outskirts of Newcastle just next door to the Mainwaring Arms, Serving fresh handmade cakes, Chocolate Brownies to die for and scones by HCL Cake's and Jams by Helen's Country Larder a great selection of loose tea served on beautiful vintage china tea cups and plates in a warm and friendly atmosphere.",
+      "author":   "Hcl Cackes",
+      "rating":   "*****",
+      "source":   "Facebook",
+      "date":     "Sunday, 10 November 2013"
+    }
+  }
+}
+
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <item>
+        <content>Really was a treat to go to today as a suprize. Fabulous atmosphere, great food, and the coffee and cake was fantastic. mmmmmmmmm Recommended highly</content>
+        <author-name>Pam Coleman</author-name>
+        <stars>*****</stars>
+        <source>Facebook</source>
+        <date>Friday, 17 October 2014</date>
+    </item>
+
+    <item>
+        <content>We had a lovely afternoon tea, in a beautiful setting for my hen party. Food was delicious and very good value, would thoroughly recommend for any event.</content>
+        <author-name>Rachel Russell</author-name>
+        <stars>*****</stars>
+        <source>Facebook</source>
+        <date>Saturday, 7 Februrary 20015</date>
+    </item>
+
+    <item>
+        <content>We have been let down by whitmore tea rooms! We went in to pay for a christening party two weeks before the event only to be told there was now an additional £500 room hire charge which was never mentioned when we booked 2 months previously
+
+We felt completely let down and left with a party of 50 people with nowhere to go!
+
+The attitude was awful and they weren't helpful at all! Luckily for us longton rugby club were more than happy to cater for our christening party!</content>
+        <author-name>Becky Kerr</author-name>
+        <stars>*</stars>
+        <source>Facebook</source>
+        <date>Saturday, 20 September 2014</date>
+    </item>
+</testimonials>
