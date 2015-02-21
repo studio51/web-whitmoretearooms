@@ -3,71 +3,65 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Whitmore Tea Rooms | Traditional Tea Rooms in Staffordshire, Cheshire</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+  <title>Whitmore Tea Rooms | Traditional Tea Rooms in Staffordshire, Cheshire</title>
 
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="fonts/flaticon.css">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
 
-    <script src="bower_components/modernizr/modernizr.js"></script>
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- <link rel="stylesheet" href="fonts/flaticon.css"> -->
 
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="scripts/gmaps.js"></script>
-  </head>
-  <body>
+</head>
+<body>
 
-    <header>
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="col-sm-12">
-                <div class="navbar-header">
-                  <a href="" class="navbar-brand">
-                    <img src="images/whitmore-logo.svg" alt="Whitmore Tea Rooms" title="Whitmore Tea Rooms" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <div class="board">
-                <p>
-                  <i class="flaticon-telephone85"></i>
-                  01782 680433
-                </p>
-
-                <p>
-                  <i class="flaticon-telephone85"></i>
-                  info@whitmoretearooms.co.uk
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <section class="intro">
+  <header>
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="row">
-          <div class="col-sm-push-6 col-sm-6">
+          <div class="col-sm-6">
+            <div class="navbar-header">
+              <img class="img-responsive" src="images/whitmore-logo.svg" alt="Whitmore Tea Rooms" title="Whitmore Tea Rooms" />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <p>
+              <i class="flaticon-telephone85"></i>
+              01782 680433
+            </p>
+
+            <p>
+              <i class="flaticon-telephone85"></i>
+              info@whitmoretearooms.co.uk
+            </p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content">
+
+    <section class="intro">
+      <div class="parallax"></div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-push-6 col-md-6">
             <div class="board">
 
               <h1>Opening Hours</h1>
 
-              <div class="divider"></div>
-
-              <p>Monday &amp; Tuesday closed</p>
+              <p>Monday - closed</p>
 
               <div class="divider"></div>
 
+              <p>Tuesday - 10am to 5pm</p>
               <p>Wednesday - 10am to 5pm</p>
               <p>Thursday - 10am to 5pm</p>
               <p>Friday - 10am to 5pm</p>
@@ -89,7 +83,7 @@
         <div class="row">
           <div class="col-sm-12">
             <section class="box about">
-              <h2 class="section-title">About Whitmore Tea Rooms</h2>
+              <h1 class="section-title">Whitmore Tea Rooms</h1>
 
               <p>
                 Situated in the heart of the English countryside Whitmore Tea
@@ -128,18 +122,18 @@
             </section>
 
             <p class="quote">
-              There are few hours in life more agreeable than the hour dedicated to the ceremony known as afternoon tea -Henry James
+              "There are few hours in life more agreeable than the hour dedicated to the ceremony known as afternoon tea" -Henry James
             </p>
 
             <section class="menu">
               <div class="row">
-                <div class="col-sm-5">
-                  <div class="box">
-                    <h2 class="section-title">Menu</h2>
+                <div class="col-md-5">
+                  <div class="box first-page">
+                    <h1 class="section-title">Menu</h1>
 
                     <img src="images/menu.png" class="img-responsive" alt="menu-icon-tea-cup" />
 
-                    <p>
+                    <p class="bookings-text">
                       Bookings available for large parties and special occasions.
                     </p>
 
@@ -159,35 +153,123 @@
                   </div>
                 </div>
 
-                <div class="col-sm-7">
+                <div class="col-md-7">
                   <div class="box">
                     <div class="tab-content">
                       <div role="tabpanel" class="tab-pane fade" id="drinks-menu">
-                        <h3 class="menu-category-title">Soft Drinks Menu</h3>
+                        <h1 class="menu-category-title">Soft Drinks Menu</h1>
 
                         <table>
                           <tbody>
-                            <tr align="left"><td><p>Coke Cola / Diet Coke</p></td> <td><p>£2.20</p></td></tr>
-                            <tr><td><p>Fentiman's Victorian Lemonade</p></td> <td><p>£2.50</p></td></tr>
-                            <tr><td><p>Fentiman's Dandelion &amp; Burdoch</p></td> <td><p>£2.50</p></td></tr>
-                            <tr><td><p>Fentiman's Ginger Beer</p></td> <td><p>£2.50</p></td></tr>
-                            <tr><td><p>Bottlegreen Elderflower Presse</p></td> <td><p>£2.20</p></td></tr>
-                            <tr><td><p>Brit Vic Cranberry Juice</p></td> <td><p>£1.80</p></td></tr>
-                            <tr><td><p>Brit Vic Orange Juice</p></td> <td><p>£1.80</p></td></tr>
-                            <tr><td><p>Schweeppes Tonic / Slimline Tonic</p></td> <td><p>£1.80</p></td></tr>
-                            <tr><td><p>Fruit Shoots</p></td> <td><p>£1.50</p></td></tr>
-                            <tr><td><p>Sparkling / Still Mineral Water</p></td> <td><p>£2.00</p></td></tr>
-                            <tr><td><p>Lipton's Peach Iced Tea</p></td> <td><p>£2.00</p></td></tr>
-                          </tbody>
+                            <tr>
+                              <td>
+                                <p>Coke Cola / Diet Coke</p>
+                              </td>
+                              <td>
+                                <p>£2.20</p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <p>Fentiman's Victorian Lemonade</p>
+                              </td>
+                              <td>
+                                <p>£2.50</p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <p>Fentiman's Dandelion &amp; Burdoch</p>
+                              </td>
+                              <td>
+                                <p>£2.50</p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <p>Fentiman's Ginger Beer</p>
+                              </td>
+                              <td>
+                                <p>£2.50</p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <p>Bottlegreen Elderflower Presse</p>
+                              </td>
+                              <td>
+                                <p>£2.20</p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <p>Brit Vic Cranberry Juice</p>
+                              </td>
+                              <td>
+                                <p>£1.80</p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <p>Brit Vic Orange Juice</p>
+                              </td>
+                              <td>
+                                <p>£1.80</p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <p>Schweeppes Tonic / Slimline Tonic</p>
+                              </td>
+                              <td>
+                                <p>£1.80</p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <p>Fruit Shoots</p>
+                              </td>
+                              <td>
+                                <p>£1.50</p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <p>Sparkling / Still Mineral Water</p>
+                              </td>
+                              <td>
+                                <p>£2.00</p>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <p>Lipton's Peach Iced Tea</p>
+                              </td>
+                              <td>
+                                <p>£2.00</p>
+                              </td>
+                            </tr>
+                          </
+                          tbody>
                         </table>
                       </div>
 
                       <div role="tabpanel" class="tab-pane fade in active" id="tea-menu">
-                        <h3 class="menu-category-title">Lunch &amp; Afternoon Tea</h3>
+                        <h1 class="menu-category-title">Lunch &amp; Afternoon Tea</h1>
 
                         <div class="row">
                           <div class="col-sm-12">
-                            <h5>Pot of Tea for one £2.95 / for two £3.95</h5>
+                            <h3 class="menu-subcategory-title">Pot of Tea for one £2.95 / for two £3.95</h3>
 
                             <p>
                               English Breakfast, Earl Gray, Darjeeling, Assam &amp; Lapsang Souchong /
@@ -201,7 +283,7 @@
 
                         <div class="row">
                           <div class="col-sm-12">
-                            <h5>Cafetiere of Coffee small £2.95 / medium £3.95 / large £5.95</h5>
+                            <h3 class="menu-subcategory-title">Cafetiere of Coffee small £2.95 / medium £3.95 / large £5.95</h3>
 
                             <p>
                               Choose from our selection of fresh ground Arabica coffee; Breakfast Blend,
@@ -214,7 +296,7 @@
 
                         <div class="row">
                           <div class="col-sm-12">
-                            <h5>Cafetiere of Coffee small £2.95 / medium £3.95 / large £5.95</h5>
+                            <h3 class="menu-subcategory-title">Cafetiere of Coffee small £2.95 / medium £3.95 / large £5.95</h3>
 
                             <p>
                               Choose from our selection of fresh ground Arabica coffee; Breakfast Blend,
@@ -227,7 +309,7 @@
 
                         <div class="row">
                           <div class="col-sm-12">
-                            <h5>Cream Tea £5.00</h5>
+                            <h3 class="menu-subcategory-title">Cream Tea £5.00</h3>
 
                             <p>
                               Two Home-Made fruit Scones with Clotted Cream &amp; Preserve
@@ -239,7 +321,7 @@
 
                         <div class="row">
                           <div class="col-sm-12">
-                            <h5>Afternoon Tea £10.50 / person</h5>
+                            <h3 class="menu-subcategory-title">Afternoon Tea £10.50 / person</h3>
 
                             <p>
                               Includes a pot of tea or cafetiere of fresh coffee with a warm of
@@ -254,7 +336,7 @@
 
                         <div class="row">
                           <div class="col-sm-12">
-                            <h5>Royal Tea £16.50 / person</h5>
+                            <h3 class="menu-subcategory-title">Royal Tea £16.50 / person</h3>
 
                             <p>
                               Includes a glass of medium or dry sherry to begin followed by a pot
@@ -267,11 +349,11 @@
                       </div>
 
                       <div role="tabpanel" class="tab-pane fade" id="savouries-menu">
-                        <h3 class="menu-category-title">Savouries &amp; Light Bites</h3>
+                        <h1 class="menu-category-title">Savouries &amp; Light Bites</h1>
 
                         <div class="row">
                           <div class="col-sm-12">
-                            <h5>Omelettes</h5>
+                            <h3 class="menu-subcategory-title">Omelettes</h3>
 
                             <p>Cheese Omelette with Toast &amp; Salad Garnish (v) £5.50</p>
                             <p>Cheese &amp; Ham £5.95</p>
@@ -281,7 +363,7 @@
                           </div>
 
                           <div class="col-sm-12">
-                            <h5>Traditional Toasted Breads</h5>
+                            <h3 class="menu-subcategory-title">Traditional Toasted Breads</h3>
 
                             <p>Toasted Teacake, English Muffin or Crumpet with butter and preserve £2.25
 
@@ -289,7 +371,7 @@
                           </div>
 
                           <div class="col-sm-12">
-                            <h5>Bacon &amp; Egg Sandwich</h5>
+                            <h3 class="menu-subcategory-title">Bacon &amp; Egg Sandwich</h3>
 
                             <p>Three Rashers of Bacon &amp; Eggs on soft or lightly toasted White or Granary farmhouse Bread £4.50
 
@@ -297,7 +379,7 @@
                           </div>
 
                           <div class="col-sm-12">
-                            <h5>Oatcakes</h5>
+                            <h3 class="menu-subcategory-title">Oatcakes</h3>
 
                             <p>Two Local Oatcakes filled with Cheese £4.75</p>
                             <p>Cheese &amp; Bacon £5.50</p>
@@ -309,7 +391,7 @@
                           </div>
 
                           <div class="col-sm-12">
-                            <h5>Sandwiches £4.95</h5>
+                            <h3 class="menu-subcategory-title">Sandwiches £4.95</h3>
 
                             <p>Open Crayfish in Cocktail Sauce / Free-Range egg &amp; cress (v)</p>
                             <p>Honey Roast &amp; English Mustard / Herb Roast Chicken Breast</p>
@@ -319,7 +401,7 @@
                           </div>
 
                           <div class="col-sm-12">
-                            <h5>Children's Tea £5.50 / child</h5>
+                            <h3 class="menu-subcategory-title">Children's Tea £5.50 / child</h3>
 
                             <p>Fruit juice or hot chocolate with a selection of finger sandwiches, cake, crisps and fruit.</p>
 
@@ -333,146 +415,81 @@
             </section>
 
             <p class="quote">
-              You can never get a cup of tea large enough or a book long enough to suit me -C. S. Lewis
+              "You can never get a cup of tea large enough or a book long enough to suit me" -C. S. Lewis
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <div class="map">
-              <div id="map"></div>
-            </div>
-          </div>
+    <section class="map">
+      <div id="map"></div>
+    </section>
+  </main>
 
-          <div class="col-sm-7">
-            <div id="testimonials">
-              <ul>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5">
 
-                <?php
-
-                  $xmlFile = 'xml/testimonials.xml';
-                  $xslFile = 'xml/transform.xml';
-
-                  $doc = new DOMDocument();
-                  $xsl = new XSLTProcessor();
-
-                  $doc->load($xslFile);
-                  $xsl->importStyleSheet($doc);
-
-                  $doc->load($xmlFile);
-                  echo $xsl->transformToXML($doc);
-
-                ?>
-
-              </ul>
-            </div>
-          </div>
         </div>
+        <div class="col-sm-7">
+          <div id="testimonials">
+            <ul>
 
-        <div class="divider"></div>
+              <?php
 
-        <div class="row">
-          <div class="col-md-5 copyrights">
-            <p>&copy; 2015 Whitmore Tea Rooms</p>
-          </div>
+                $xmlFile = 'xml/testimonials.xml';
+                $xslFile = 'xml/transform.xml';
 
-          <div class="col-md-3 legal-links">
-            <ul class="list-inline">
-              <li><a href="#">Humans.txt</a></li>
-              <li><a href="#">License</a></li>
+                $doc = new DOMDocument();
+                $xsl = new XSLTProcessor();
+
+                $doc->load($xslFile);
+                $xsl->importStyleSheet($doc);
+
+                $doc->load($xmlFile);
+                echo $xsl->transformToXML($doc);
+
+              ?>
+
             </ul>
-          </div>
-
-          <div class="col-md-4 studio51">
-            <p>Design &amp; Development by <a href="http://www.creative-studio51.co.uk/">Studio51</a></p>
           </div>
         </div>
       </div>
-    </footer>
 
-    <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
+      <div class="divider"></div>
 
-    <script src="bower_components/jquery/jquery.js"></script>
-    <script src="scripts/main.js"></script>
+      <div class="row">
+        <div class="col-md-5 copyrights">
+          <p>&copy; 2015 Whitmore Tea Rooms</p>
+        </div>
 
-    <script>
-      $(document).ready(function() {
-        var latitude = 52.96656435104726,
-            longitude = -2.2864058017730,
-            map = new GMaps({
-              el: '#map',
-              lat: latitude,
-              lng: longitude
-            });
+        <div class="col-md-3 legal-links">
+          <ul class="list-inline">
+            <li><a href="#">Humans.txt</a></li>
+            <li><a href="#">License</a></li>
+          </ul>
+        </div>
 
-        map.addMarker({
-          lat: latitude,
-          lng: longitude
-        });
+        <div class="col-md-4 studio51">
+          <p>Design &amp; Development by <a href="http://www.creative-studio51.co.uk/">Studio51</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        map.drawOverlay({
-          lat: latitude,
-          lng: longitude,
-          content: '<div class="box"><div class="logo"><img src="images/whitmore-logo.svg" alt="Whitmore Tea Rooms" title="Whitmore Tea Rooms" /></div><div class="address">Three Mile Lane, Whitmore<br /> Newcastle-under-Lyme, Staffordshire <br /> ST5 5HR</div><div class="contact">01782 680433</div></div>'
-        });
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/bootstrap/js/tab.js"></script>
 
-        // function resizeBootstrapMap() {
-        //     var mapParentWidth = $('.map').width();
-        //     $('#map').width(mapParentWidth);
-        //     // $('#map').height(3 * mapParentWidth / 4);
-        //     google.maps.event.trigger($('#map', 'resize'));
-        //     console.log(mapParentWidth);
-        // };
+  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script src="scripts/gmaps.js"></script>
 
-        $(document).ready(function(){
+  <script src="scripts/main.js"></script>
 
-            // Hiding all the testimonials, except for the first one.
-            $('#testimonials li').hide().eq(0).show();
+  <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
 
-            // A self executing named function that loops through the testimonials:
-            (function showNextTestimonial(){
-
-                // Wait for 7.5 seconds and hide the currently visible testimonial:
-                $('#testimonials li:visible').delay(7500).fadeOut('slow',function(){
-
-                    // Move it to the back:
-                    $(this).appendTo('#testimonials ul');
-
-                    // Show the next testimonial:
-                    $('#testimonials li:first').fadeIn('slow',function(){
-
-                        // Call the function again:
-                        showNextTestimonial();
-                    });
-                });
-            })();
-
-        });
-        // $(window).resize(resizeBootstrapMap);
-      });
-    </script>
-        <!-- build:js scripts/vendor/bootstrap.js
-        <script src="bower_components/bootstrap/js/bootstrap-affix.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-alert.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-dropdown.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-tooltip.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-modal.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-transition.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-button.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-popover.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-typeahead.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-carousel.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-scrollspy.js"></script>
-        <script src="bower_components/bootstrap/js/bootstrap-collapse.js"></script>
-
-        endbuild -->
-    <script src="bower_components/bootstrap/js/tab.js"></script>
 </body>
 </html>
