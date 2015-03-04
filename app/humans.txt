@@ -1,0 +1,21 @@
+/* TEAM */
+
+Studio51, Creative Services
+Vlad Radulescu @pacMakaveli90
+
+//creative-studio51.co.uk
+//creative-studio51.co.uk/clients/whitmoreatearooms
+
+Newcastle-under-Lyme,
+Staffordshire
+
+/* THANKS */
+
+
+/* SITE */
+
+Last update: 2015/03/02
+Standards: HTML5, CSS3
+
+Components: Modernizr, jQuery, Bootstrap, Grunt
+Software: Sublime2, iTerm2, Grunt, Chrome, Illustrator, Photoshop
