@@ -1,390 +1,66 @@
-@import "../bower_components/bootstrap/less/bootstrap.less";
-@import "../bower_components/font-awesome/less/font-awesome.less";
+/*
 
-@font-face {
-  font-family: 'crayon';
-  src: url('../fonts/crayon.ttf');
-}
+  Author: Radulescu Vladut
+  Company: Studio51
 
-@font-face {
-  font-family: "Flaticon";
-  src: url("../fonts/flaticon.eot");
-  src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"),
-  url("../fonts/flaticon.woff") format("woff"),
-  url("../fonts/flaticon.ttf") format("truetype"),
-  url("../fonts/flaticon.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+  Client: whitmoretearooms.co.uk
+  Date completed: 27.02.2015
+  Version: 1.0
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-  font-family: Flaticon;
-  font-size: 20px;
-  font-style: normal;
-}
+  Credits: see ./humans.txt
 
-.flaticon-twitter22:before {
-  content: "\e161";
-}
+*/
 
-.flaticon-facebook32:before {
-  content: "\e082";
-}
+  @import "../bower_components/bootstrap/less/bootstrap.less";
 
-@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+  @font-face {
+    font-family: 'crayon';
+    src: url('../fonts/crayon.ttf');
+  }
 
-      .scale(@factor) {
--webkit-transform: scale(@factor);
-   -moz-transform: scale(@factor);
-    -ms-transform: scale(@factor);
-     -o-transform: scale(@factor);
-        transform: scale(@factor);
-      }
+  @import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
 
-      .perspective(@value: 1000) {
--webkit-perspective: @value;
-   -moz-perspective: @value;
-    -ms-perspective: @value;
-     -o-perspective: @value;
-        perspective: @value;
-      }
+/*
+  #### TABLE OF CONTENTS #######################################################
+  #
+  # LESS Author: Vlad Radulescu
+  #
+  # 0.0 Reset
+  # 0.1 LESS Mixins
+  ## 0.1.1 LESS Variables
+  #
+  # 1.0 Body
+  ## 1.1 Misc
+  # 2.0 Navigation
+  # 3.0 Intro
+  ## 3.1 Background Carousel
+  ## 3.2 Opening Times Board
+  #
+  # 4.0 Content
+  ### 4.0.1 Quotes
+  ## 4.1 About Whitmore Tea Rooms
+  ## 4.2 Whitmore Tea Rooms Menus
+  #
+  # 5.0 Footer
+  ## 5.1 Trip Advisor Widget
+  ## 5.2 Whitmore Tea Rooms Testimonials
+  ## 5.3 Whitmore Tea Rooms Meta
+  ### 5.3.1 Social Media
+  #
+  # 6.0 Map
+  ## 6.1 Studio51 Meta
+  #
+  # All media queries are in their respective section, there is no special sect-
+  # ion for media queries.
+  #
+  #### TABLE OF CONTENTS #######################################################
+*/
 
-      .transform-style(@string) {
--webkit-transform-style: @string;
-   -moz-transform-style: @string;
-    -ms-transform-style: @string;
-     -o-transform-style: @string;
-        transform-style: @string;
-      }
-
-
-      .transform(@string){
--webkit-transform: @string;
-   -moz-transform: @string;
-    -ms-transform: @string;
-     -o-transform: @string;
-        transform: @string;
-      }
-
-      .translate(@x, @y: 0) {
--webkit-transform: translate(@x, @y);
-   -moz-transform: translate(@x, @y);
-    -ms-transform: translate(@x, @y);
-     -o-transform: translate(@x, @y);
-        transform: translate(@x, @y);
-      }
-
-
-.debug(@size: 1px; @color: red) {
-  border: @size solid @color;
-}
-
-@navbar-height: 10em;
-@intro-height: 35em;
-
-@box-padding: 2.5em;
+/* 0.0 Reset */
 
 h1, h2, h3, h4, h5, h6,
 p {
   margin: 0;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-
-body {
-  background-color: #F5F7FA;
-  font-family: 'Quicksand', sans-serif;
-  overflow-y: auto;
-
-  // -webkit-overflow-scrolling: touch;
-
-  // .perspective(1px);
-  // .transform-style(preserve-3d);
-
-  * {
-    // .perspective(1px);
-    // .transform-style(preserve-3d);
-  }
-}
-
-/* TODO: Find a better way for parallax overlapping the header */
-
-  // header {
-  //   position: relative;
-  //   z-index: 1;
-  // }
-
-/* TODO: Find a better way for parallax overlapping the header */
-
-.navbar {
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  height: 0; /* :after image needs something, even if 0 :/ */
-  margin: 0;
-  min-height: @navbar-height;
-  padding: 0;
-  position: relative;
-
-  @media(min-width: 1200px) {
-    min-height: @navbar-height - 3em;
-  }
-
-  &:after {
-    background-image: url('../images/bg-floral2.jpg');
-    background-position: 30% 100%;
-    content: '';
-    height: 100%;
-    opacity: 0.3;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-    zoom: 40%;
-  }
-
-  img {
-    height: @navbar-height;
-    margin: 0 auto;
-    padding: 1em;
-
-    @media(min-width: 1200px) {
-      height: @navbar-height - 3em;
-    }
-  }
-
-  p { display: none; }
-}
-
-.container {
-  padding: 0 @box-padding;
-
-  @media(min-width: 768px) {
-    padding: 0 ( @box-padding + 5em );
-  }
-
-  @media(min-width: 1200px) {
-    padding: 0 ( @box-padding + 10em );
-  }
-}
-
-.board {
-  margin: @box-padding 0 ( @box-padding + 7.5em );
-  padding: 4em /* Board outter padding (2em) + inner padding (2em) */ 0;
-  color: #fff;
-  text-align: center;
-
-  .transform-style(preserve-3d);
-
-  .divider {
-    border-top: 1px dashed rgba(255, 255, 255, 0.5);
-    margin: 1em 6em;
-
-    @media(min-width: 1200px) {
-      margin: 1em 4em;
-    }
-  }
-
-   h1 {
-    font-family: 'crayon';
-    font-size: 2.5em;
-    margin-bottom: .5em;
-
-    @media(min-width: 1200px) {
-      font-size: 3.5em;
-    }
-  }
-
-  p {
-    font-family: 'crayon';
-    font-size: 1em;
-
-    @media(min-width: 1200px) {
-      font-size: 1.5em;
-    }
-
-    &.social {
-      font-size: 1.3em;
-      margin-top: 1.5em;
-    }
-  }
-
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-  }
-
-  &:before {
-    background-color: #63411f;
-    // background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nNCc+Cgk8ZGVmcyBpZD0nZGVmczQnPgoJCTxmaWx0ZXIgeT0nMCcgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSdzUkdCJyBpZD0ndCc+CgkJCTxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScuOCAwJyByZXN1bHQ9J291dDEnIG51bU9jdGF2ZXM9JzEnLz4KCQkJPGZlQ29sb3JNYXRyaXggdHlwZT0nc2F0dXJhdGUnIGluPSdvdXQxJyByZXN1bHQ9J291dDInIHZhbHVlcz0nMCcvPgoJCQk8ZmVDb21wb3NpdGUgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMC40NCcgazM9JzAnIGs0PScwJyBpbj0nb3V0MicgaW4yPSdvdXQxJy8+CgkJPC9maWx0ZXI+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAnIHg9JzUlJyB5PSctNSUnIHdpZHRoPScxMCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwJyB4PSc2JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMCcgeD0nNyUnIHk9Jy01JScgd2lkdGg9JzE0JScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAnIHg9JzklJyB5PSctNSUnIHdpZHRoPScyMCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwJyB4PScxMSUnIHk9Jy01JScgd2lkdGg9JzEwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAnIHg9JzU1JScgeT0nLTUlJyB3aWR0aD0nNDAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMCcgeD0nNjIlJyB5PSctNSUnIHdpZHRoPSczNSUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwJyB4PSczOCUnIHk9Jy01JScgd2lkdGg9JzIwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAnIHg9Jzg1JScgeT0nLTUlJyB3aWR0aD0nNDAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMCcgeD0nNTIlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3Qgc3R5bGU9J2ZpbHRlcjp1cmwoI3QpJyB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAwJScvPgo8L3N2Zz4=');
-    // background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nNCc+Cgk8ZGVmcyBpZD0nZGVmczQnPgoJCTxmaWx0ZXIgeT0nMCcgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSdzUkdCJyBpZD0ndCc+CgkJCTxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScuOCAwJyByZXN1bHQ9J291dDEnIG51bU9jdGF2ZXM9JzEnLz4KCQkJPGZlQ29sb3JNYXRyaXggdHlwZT0nc2F0dXJhdGUnIGluPSdvdXQxJyByZXN1bHQ9J291dDInIHZhbHVlcz0nMCcvPgoJCQk8ZmVDb21wb3NpdGUgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMC4zNCcgazM9JzAnIGs0PScwJyBpbj0nb3V0MicgaW4yPSdvdXQxJy8+CgkJPC9maWx0ZXI+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMTIzJyB4PSc1JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc2JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc3JScgeT0nLTUlJyB3aWR0aD0nMTQlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc5JScgeT0nLTUlJyB3aWR0aD0nMjAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PScxMSUnIHk9Jy01JScgd2lkdGg9JzEwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDk4NCcgeD0nNTUlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjAzNjg5OTk5OTk5OTk5OTk5NScgeD0nNjIlJyB5PSctNSUnIHdpZHRoPSczNSUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjA4NjEwMDAwMDAwMDAwMDAxJyB4PSczOCUnIHk9Jy01JScgd2lkdGg9JzIwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDM2ODk5OTk5OTk5OTk5OTk1JyB4PSc4NSUnIHk9Jy01JScgd2lkdGg9JzQwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDYxNScgeD0nNTIlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3Qgc3R5bGU9J2ZpbHRlcjp1cmwoI3QpJyB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAwJScvPgo8L3N2Zz4=');
-    // background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nNCc+Cgk8ZGVmcyBpZD0nZGVmczQnPgoJCTxmaWx0ZXIgeT0nMCcgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSdzUkdCJyBpZD0ndCc+CgkJCTxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScuOCAwJyByZXN1bHQ9J291dDEnIG51bU9jdGF2ZXM9JzEnLz4KCQkJPGZlQ29sb3JNYXRyaXggdHlwZT0nc2F0dXJhdGUnIGluPSdvdXQxJyByZXN1bHQ9J291dDInIHZhbHVlcz0nMCcvPgoJCQk8ZmVDb21wb3NpdGUgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMC4zNCcgazM9JzAnIGs0PScwJyBpbj0nb3V0MicgaW4yPSdvdXQxJy8+CgkJPC9maWx0ZXI+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMTIzJyB4PSc1JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc2JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc3JScgeT0nLTUlJyB3aWR0aD0nMTQlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc5JScgeT0nLTUlJyB3aWR0aD0nMjAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PScxMSUnIHk9Jy01JScgd2lkdGg9JzEwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDk4NCcgeD0nNTUlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjAzNjg5OTk5OTk5OTk5OTk5NScgeD0nNjIlJyB5PSctNSUnIHdpZHRoPSczNSUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjA4NjEwMDAwMDAwMDAwMDAxJyB4PSczOCUnIHk9Jy01JScgd2lkdGg9JzIwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDM2ODk5OTk5OTk5OTk5OTk1JyB4PSc4NSUnIHk9Jy01JScgd2lkdGg9JzQwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDYxNScgeD0nNTIlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3Qgc3R5bGU9J2ZpbHRlcjp1cmwoI3QpJyB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAwJScvPgo8L3N2Zz4=');
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nNCc+Cgk8ZGVmcyBpZD0nZGVmczQnPgoJCTxmaWx0ZXIgeT0nMCcgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSdzUkdCJyBpZD0ndCc+CgkJCTxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScuOCAwJyByZXN1bHQ9J291dDEnIG51bU9jdGF2ZXM9JzEnLz4KCQkJPGZlQ29sb3JNYXRyaXggdHlwZT0nc2F0dXJhdGUnIGluPSdvdXQxJyByZXN1bHQ9J291dDInIHZhbHVlcz0nMCcvPgoJCQk8ZmVDb21wb3NpdGUgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMC4zNCcgazM9JzAnIGs0PScwJyBpbj0nb3V0MicgaW4yPSdvdXQxJy8+CgkJPC9maWx0ZXI+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMTIzJyB4PSc1JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc2JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc3JScgeT0nLTUlJyB3aWR0aD0nMTQlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc5JScgeT0nLTUlJyB3aWR0aD0nMjAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PScxMSUnIHk9Jy01JScgd2lkdGg9JzEwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDk4NCcgeD0nNTUlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjAzNjg5OTk5OTk5OTk5OTk5NScgeD0nNjIlJyB5PSctNSUnIHdpZHRoPSczNSUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjA4NjEwMDAwMDAwMDAwMDAxJyB4PSczOCUnIHk9Jy01JScgd2lkdGg9JzIwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDM2ODk5OTk5OTk5OTk5OTk1JyB4PSc4NSUnIHk9Jy01JScgd2lkdGg9JzQwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDYxNScgeD0nNTIlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3Qgc3R5bGU9J2ZpbHRlcjp1cmwoI3QpJyB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAwJScvPgo8L3N2Zz4=');
-    border: 2px solid #63411f;
-    box-shadow: inset 0 0 50px 0px #271a0c;
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-
-  &:after {
-    background: url('../images/bg-board.png');
-    border: 3px solid #271a0c;
-    bottom: 2em;
-    box-shadow: inset 0 0 50px 5px #000,
-                      0 0 50px 5px #271a0c;
-    left: 2em;
-    right: 2em;
-    top: 2em;
-  }
-}
-
-.content {
-  margin-top: -( @box-padding + 5em );
-}
-
-.box {
-  background-color: #fff;
-  border-radius: .5em;
-  padding: @box-padding;
-
-  .section-title,
-  .menu-category-title {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: @box-padding - 1em;
-    text-align: center;
-
-    @media(min-width: 1200px) {
-      font-size: 32px;
-    }
-  }
-
-  p {
-    font-weight: 300;
-    font-size: 1em;
-    text-align: center;
-
-    &:not(:last-child) {
-      margin-bottom: 1em;
-    }
-
-    @media(min-width: 1200px) {
-      font-size: 14px;
-    }
-  }
-}
-
-.quote {
-  font-style: italic;
-  font-weight: 300;
-  padding: ( @box-padding / 2 ) @box-padding;
-}
-
-.intro {
-  background-image: url('../images/tea-room.png');
-  background-position: center -50px;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @media(min-width: 992px) {
-    background-position: center -100px;
-  }
-
-  @media(min-width: 1200px) {
-    background-position: center -200px;
-  }
-
-  .parallax {
-
-    // height: @intro-height - .5em;
-    // position: absolute;
-    // top: -150vh;
-    // width: 100%;
-
-    // .transform(translateZ(-0.64px) scale(3.5));
-
-    @media(min-width: 1200px) {
-      // background-position: center -150px;
-      // height: @intro-height;
-
-      // .transform(translateZ(-1.67px) scale(6.1));
-    }
-  }
-}
-
-.about {
-  @media(min-width: 768px) {
-    text-align: left;
-  }
-}
-
-.menu {
-  text-align: center;
-
-  .first-page {
-    margin-bottom: 30px;
-  }
-
-  @media(min-width: 992px) {
-    .first-page {
-      margin-bottom: 0;
-    }
-  }
-
-  p.bookings-text, img {
-    margin: @box-padding auto;
-  }
-
-  p {
-    font-size: 1em;
-    font-weight: 300;
-  }
-
-  table {
-    width: 100%;
-    text-align: left;
-  }
-
-  ul {
-    &.nav-tabs {
-      margin: 0;
-
-      li {
-        float: none;
-
-        a {
-          border-radius: 0;
-          font-family: 'Quicksand', sans-serif;
-          font-weight: 400;
-          padding: 1em;
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  &-subcategory-title {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.3em;
-    font-weight: 400;
-    margin-bottom: .5em;
-  }
-
-  &-divider {
-    margin: .5em 0;
-  }
 }
 
 ul.nav-tabs,
@@ -394,13 +70,543 @@ ul.nav-tabs li a {
   border: none;
 }
 
-.map {
-  height: 15em;
-  position: relative;
-  width: 100%;
+/* 0.1 LESS Mixins */
 
-  #map {
-    display: block;
-    height: 15em;
+.box-shadow(@string) {
+  -webkit-box-shadow: @string;
+     -moz-box-shadow: @string;
+          box-shadow: @string;
+}
+
+.transform-style(@string) {
+  -webkit-transform-style: @string;
+     -moz-transform-style: @string;
+      -ms-transform-style: @string;
+       -o-transform-style: @string;
+          transform-style: @string;
+}
+
+  .shadow-box() {
+    .box-shadow( 0 3px 0 1px fade(@border-color, 50%) );
+  }
+
+  .spacing {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 0.1.1 LESS Variables */
+
+  @navbar-height: @box-padding * 5;
+  @intro-height: 560px;
+
+  @box-padding: 30px;
+
+  @background-color: #f5f7fa;
+  @box-color: #ffffff;
+
+  @border-radius: @box-padding / 7;
+  @border-color: darken(@background-color, 5%);
+
+  @font-size-sm: 13px;
+  @font-size-md: @font-size-sm + 2px;
+  @font-size-lg: @font-size-md + 2px;
+
+/* 1.0 Body */
+
+html,
+body {
+  .spacing;
+
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: @font-size-sm;
+
+  p {
+    text-shadow: 0px 0px 1px fade(#000, 50%);
+  }
+}
+
+.container {
+  padding: 0 @box-padding;
+
+  @media(min-width: 1200px) {
+    padding: 0 ( @box-padding * 4 );
+  }
+}
+
+  /* 1.1 Misc */
+
+  .flaticon {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+  }
+
+/* 2.0 Navigation */
+
+.navbar {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  height: 0; /* :after needs the height property specified, even if 0 */
+  margin: 0;
+  min-height: @navbar-height;
+
+  @media(min-width: 768px) {
+    min-height: @navbar-height - 35px;
+  }
+
+  &:after {
+    background-image: url('../images/bg-floral.jpg');
+    background-position: 30% 100%;
+    content: '';
+    height: 100%;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+    zoom: 40%;
+  }
+
+  img {
+    height: @navbar-height;
+    margin: 0 auto;
+    padding: @box-padding 0;
+    position: relative;
+    z-index: 1;
+
+    @media(min-width: 768px) {
+      height: @navbar-height - 35px;
+      padding: 0;
+    }
+
+    @media(min-width: 992px) {
+      margin: 0;
+      padding: ( @box-padding / 2 ) 0;
+    }
+  }
+
+  .meta {
+    margin: ( @navbar-height / 3.7 ) 0;
+
+    @media(min-width: 768px) {
+      margin: ( @navbar-height / 6.5 ) 0;
+    }
+  }
+
+  p {
+    display: none;
+
+    @media(min-width: 768px) {
+      display: block;
+      font-size: @font-size-sm;
+      font-weight: 700;
+      padding: ( @box-padding / 6 ) 0;
+      position: relative;
+      z-index: 1;
+
+      i {
+        line-height: 0;
+      }
+    }
+  }
+}
+
+/* 3.0 Intro */
+
+  /* 3.1 Background Carousel */
+
+  .intro {
+    background-image: url('../images/tea-room.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media(min-width: 992px) {
+      background-position: center -100px;
+    }
+
+    @media(min-width: 1200px) {
+      background-position: center -200px;
+    }
+  }
+
+  /* 3.2 Opening Times Board */
+
+  .board {
+    margin: @box-padding 0 ( @box-padding * 3 ); /* margin on sides is being handled by the .container class */
+    padding: ( @box-padding * 2 ) ( @box-padding * 1 );
+    color: #fff;
+    text-align: center;
+
+    .transform-style(preserve-3d);
+
+    .divider {
+      border-top: 1px dashed rgba(255, 255, 255, 0.5);
+      margin: ( @box-padding / 2 ) ( @box-padding * 2 );
+
+      @media(min-width: 1200px) {
+        margin: 1em 4em;
+      }
+    }
+
+    .meta {
+      margin-bottom: @box-padding;
+
+      p {
+        // font-size: 1.3em;
+      }
+    }
+
+    h1 {
+      font-family: 'crayon';
+      // font-size: 2.5em;
+      margin-bottom: .5em;
+
+      @media(min-width: 768px) {
+        // font-size: 3em;
+      }
+    }
+
+    p {
+      font-family: 'crayon';
+      // font-size: 1.1em;
+      margin-bottom: 5px !important; /* TOFIX */
+
+      @media(min-width: 768px) {
+        // font-size: 1.5em;
+      }
+
+      &.social {
+        margin-top: @box-padding - 5px;
+
+        @media(min-width: 768px) {
+          // font-size: 1.2em;
+        }
+      }
+    }
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
+
+    &:before {
+      background-color: #63411f;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nNCc+Cgk8ZGVmcyBpZD0nZGVmczQnPgoJCTxmaWx0ZXIgeT0nMCcgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSdzUkdCJyBpZD0ndCc+CgkJCTxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScuOCAwJyByZXN1bHQ9J291dDEnIG51bU9jdGF2ZXM9JzEnLz4KCQkJPGZlQ29sb3JNYXRyaXggdHlwZT0nc2F0dXJhdGUnIGluPSdvdXQxJyByZXN1bHQ9J291dDInIHZhbHVlcz0nMCcvPgoJCQk8ZmVDb21wb3NpdGUgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMC4zNCcgazM9JzAnIGs0PScwJyBpbj0nb3V0MicgaW4yPSdvdXQxJy8+CgkJPC9maWx0ZXI+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMTIzJyB4PSc1JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc2JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc3JScgeT0nLTUlJyB3aWR0aD0nMTQlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc5JScgeT0nLTUlJyB3aWR0aD0nMjAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PScxMSUnIHk9Jy01JScgd2lkdGg9JzEwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDk4NCcgeD0nNTUlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjAzNjg5OTk5OTk5OTk5OTk5NScgeD0nNjIlJyB5PSctNSUnIHdpZHRoPSczNSUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjA4NjEwMDAwMDAwMDAwMDAxJyB4PSczOCUnIHk9Jy01JScgd2lkdGg9JzIwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDM2ODk5OTk5OTk5OTk5OTk1JyB4PSc4NSUnIHk9Jy01JScgd2lkdGg9JzQwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDYxNScgeD0nNTIlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3Qgc3R5bGU9J2ZpbHRlcjp1cmwoI3QpJyB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAwJScvPgo8L3N2Zz4=');
+      border: 2px solid #63411f;
+      box-shadow: inset 0 0 50px 0px #271a0c;
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    &:after {
+      background: url('../images/bg-board.png');
+      border: 3px solid #271a0c;
+      bottom: @box-padding;
+      box-shadow: inset 0 0 50px 5px #000,
+                        0 0 50px 5px #271a0c;
+      left: @box-padding;
+      right: @box-padding;
+      top: @box-padding;
+    }
+  }
+
+/* 4.0 Content */
+
+  .content {
+    margin-top: -( @box-padding * 2 );
+  }
+
+  .box {
+    background-color: #fff;
+    border-radius: @border-radius;
+    .shadow-box();
+    padding: @box-padding;
+
+    .section-title,
+    .menu-category-title {
+      font-family: 'Quicksand', sans-serif;
+      // font-size: 1.6em;
+      font-weight: 700;
+      margin-bottom: @box-padding;
+      text-align: center;
+
+      @media(min-width: 1200px) {
+        // font-size: 32px;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      // font-size: .9em;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: @box-padding / 3;
+      }
+
+      @media(min-width: 1200px) {
+        // font-size: 14px;
+      }
+    }
+  }
+
+    /* 4.0.1 Quotes */
+
+    .quote {
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 0 !important; /* TOFIX */
+      padding: ( @box-padding / 2 ) 0;
+    }
+
+  /* 4.2 About Whitmore Tea Rooms */
+
+  @media(min-width: 768px) {
+    .about .section-title,
+    .about p {
+      text-align: left;
+    }
+  }
+
+  /* 4.3 Whitmore Tea Rooms Menus */
+
+  .menu {
+    text-align: center;
+
+    .first-page {
+      margin-bottom: @box-padding;
+    }
+
+    @media(min-width: 992px) {
+      .first-page {
+        margin-bottom: 0;
+      }
+    }
+
+    p.bookings-text, img {
+      margin: @box-padding auto;
+    }
+
+    p {
+      // font-size: .9em;
+      font-weight: 300;
+    }
+
+    .drinks {
+      p {
+        text-align: left;
+
+        span {
+          float: right;
+        }
+      }
+    }
+
+    ul {
+      &.nav-tabs {
+        margin: 0;
+
+        li {
+          float: none;
+
+          a {
+            border-radius: 0;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 400;
+            padding: 1em;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &-subcategory-title {
+      font-family: 'Quicksand', sans-serif;
+      // font-size: 1.2em;
+      font-weight: 400;
+      margin-bottom: @box-padding / 2;
+    }
+
+    &-divider {
+      margin: ( @box-padding / 2 ) 0;
+    }
+  }
+
+
+/* 5.0 Footer */
+
+footer {
+  padding: @box-padding 0;
+  .shadow-box();
+}
+
+  /* 5.1 Trip Advisor widget */
+
+  .widSSP {
+    width: 100% !important;
+    .shadow-box();
+    border-radius: @border-radius;
+    padding: @box-padding / 2 !important;
+  }
+
+  .widSSPData {
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .widSSPBranding {
+    border: none !important;
+    width: 100%;
+    padding: 0 0 ( @box-padding / 2 ) !important;
+    margin: 0 !important;
+
+    dl {
+      dt {
+        margin: 0 !important;
+        width: 100% !important;
+      }
+    }
+  }
+
+  /* 5.2 Whitmore Tea Rooms Testimonials */
+
+  .testimonials {
+    border-radius: @border-radius;
+    .shadow-box();
+    margin-top: @box-padding;
+    padding: @box-padding;
+
+    @media(min-width: 768px) {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+
+        .author {
+          display: block;
+          // font-size: 14px;
+          margin-bottom: @box-padding / 3;
+        }
+
+        .testimonial {
+          // font-size: 12px;
+        }
+
+        .date {
+          color: darken(@border-color, 20%);
+          display: block;
+          font-style: italic;
+          // font-size: 12px;
+          margin-top: @box-padding / 2;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+/* 6.0 Map */
+
+.map {
+  background-image: url('../images/whitmore-map.png');
+  background-position: center 10px;
+  height: @box-padding * 13;
+  width: 100%;
+  position: relative;
+
+  @media(min-width: 768px) {
+    height: @box-padding * 10;
+    background-position: center center;
+  }
+}
+
+.vcard {
+  background: #fff;
+  border-radius: @border-radius;
+  // font-size: 12px;
+  left: 0;
+  margin-left: @box-padding;
+  margin-right: @box-padding;
+  margin-top: @box-padding;
+  padding: @box-padding @box-padding 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+
+  @media(min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+  }
+
+  .logo {
+    img {
+      max-height: @box-padding * 3;
+    }
+  }
+
+  .address, .telephone {
+    margin-top: @box-padding / 2;
+  }
+
+  &:after {
+    content: '';
+    position: relative;
+    bottom: -( @box-padding );
+    margin: 0 auto;
+    border-top: 15px solid #fff;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+}
+
+.box.studio51 {
+  padding: @box-padding 0 @box-padding / 1;
+  box-shadow: none;
+}
+
+.client-meta,
+.studio51-meta {
+  // font-size: 11px;
+  padding: 3px 0;
+  text-align: center;
+
+  @media(min-width: 768px) {
+    // font-size: 12px;
+    text-align: left;
+  }
+}
+
+ul.client-links,
+ul.studio51-links {
+  margin: 0;
+  text-align: center;
+
+  @media(min-width: 768px) {
+    text-align: right;
+  }
+
+  li {
+    a {
+      // font-size: 12px;
+    }
   }
 }

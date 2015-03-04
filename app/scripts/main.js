@@ -1,52 +1,16 @@
 $(document).ready(function() {
 
-  var latitude = 52.96656435104726,
-      longitude = -2.2864058017730;
+  // Hides all the testimonials except the first one, to start with.
 
-  var map = new GMaps({
-    el: '#map',
-    lat: latitude,
-    lng: longitude
-  });
+  $("#testimonials li").hide().eq(0).show();
 
-  map.controls({
-    panControl: false,
-    zoomControl: true,
-    mapTypeControl: false,
-    scaleControl: false,
-    streetViewControl: false,
-    overviewMapControl: false
-  });
+  // Function to cycle through the testimonials by fading them in/out
 
-  // $("#map").GMaps({
-  //   controls: {
-  //     panControl: false,
-  //     zoomControl: true,
-  //     mapTypeControl: false,
-  //     scaleControl: false,
-  //     streetViewControl: false,
-  //     overviewMapControl: false
-  //   },
-  //   scrollwheel: false,
-  //   draggable: true,
-  //   markers: [{
-  //     latitude: latitude,
-  //     longitude: longitude
-  //   }],
-  //   latitude: latitude,
-  //   longitude: longitude
-  // });
+  (function showNextTestimonial() {
+    $("#testimonials li:visible").delay(7500).fadeOut("slow", function() {
+      $(this).appendTo("#testimonials ul");
 
-
-  $('#testimonials li').hide().eq(0).show();
-
-  (function showNextTestimonial(){
-
-    $('#testimonials li:visible').delay(7500).fadeOut('slow',function(){
-
-      $(this).appendTo('#testimonials ul');
-
-      $('#testimonials li:first').fadeIn('slow',function(){
+      $("#testimonials li:first").fadeIn("slow", function() {
         showNextTestimonial();
       });
     });
