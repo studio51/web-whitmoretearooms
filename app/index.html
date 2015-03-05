@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="styles/main.css">
-  <!-- <link rel="stylesheet" href="fonts/flaticon.css"> -->
+  <link rel="stylesheet" href="styles/carousel.min.css">
 
 </head>
 <body>
@@ -50,6 +50,24 @@
   <main id="content">
 
     <section class="intro">
+      <div id="carousel" class="owl-carousel hidden-xs">
+        <div class="carousel-layer carousel-layer-one">
+          <img data-src="images/carousel1.png" title="Whitmore Tea Rooms" alt="" class="lazyOwl" />
+        </div>
+
+        <div class="carousel-layer carousel-layer-two">
+          <img data-src="images/carousel2.jpg" title="Whitmore Tea Rooms" alt="" class="lazyOwl" />
+        </div>
+
+        <div class="carousel-layer carousel-layer-three">
+          <img data-src="images/carousel3.jpg" title="Whitmore Tea Rooms" alt="" class="lazyOwl" />
+        </div>
+
+        <div class="carousel-layer carousel-layer-four">
+          <img data-src="images/carousel4.jpg" title="Whitmore Tea Rooms" alt="" class="lazyOwl" />
+        </div>
+      </div>
+
       <div class="container">
         <div class="row">
           <div class="col-sm-push-5 col-sm-7 col-md-push-6 col-md-6 col-lg-push-7 col-lg-5">
@@ -69,9 +87,6 @@
               <h1>Opening Hours</h1>
 
               <p>Monday - closed</p>
-
-              <div class="divider"></div>
-
               <p>Tuesday - 10am to 5pm</p>
               <p>Wednesday - 10am to 5pm</p>
               <p>Thursday - 10am to 5pm</p>
@@ -450,7 +465,7 @@
           <div class="col-sm-4">
             <ul class="list-inline studio51-links">
               <li><a href="http://whitmoreatearooms.co.uk/humans.txt">Humans.txt</a></li>
-              <li><a href="#">License</a></li>
+              <li><a href="#">Licenses</a></li>
             </ul>
           </div>
         </div>
@@ -458,13 +473,11 @@
     </div>
   </section>
 
-  <script src="bower_components/jquery/jquery.js"></script>
-  <script src="bower_components/bootstrap/js/tab.js"></script>
-
-  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  <script src="scripts/gmaps.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
 
   <script src="scripts/main.js"></script>
+  <script src="scripts/carousel.min.js"></script>
 
   <!--[if lt IE 7]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
