@@ -1,0 +1,665 @@
+@import "bootstrap.min.css";
+
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+
+@import "carousel.min.css";
+
+/*
+
+  Author: Radulescu Vladut
+  Company: Studio51
+
+  Client: whitmoretearooms.co.uk
+  Date completed: 27.02.2015
+  Version: 1.0
+
+  Credits: see ./humans.txt
+
+*/
+
+@font-face {
+  font-family: 'crayon';
+  src: url('../fonts/crayon.ttf');
+}
+
+/*
+  #### TABLE OF CONTENTS #######################################################
+  #
+  # LESS Author: Vlad Radulescu
+  #
+  # 0.0 Reset
+  # 0.1 LESS Mixins
+  ## 0.1.1 LESS Variables
+  #
+  # 1.0 Body
+  ## 1.1 Misc
+  # 2.0 Navigation
+  # 3.0 Intro
+  ## 3.1 Background Carousel
+  ## 3.2 Opening Times Board
+  #
+  # 4.0 Content
+  ### 4.0.1 Quotes
+  ## 4.1 About Whitmore Tea Rooms
+  ## 4.2 Whitmore Tea Rooms Menus
+  #
+  # 5.0 Footer
+  ## 5.1 Trip Advisor Widget
+  ## 5.2 Whitmore Tea Rooms Testimonials
+  ## 5.3 Whitmore Tea Rooms Meta
+  ### 5.3.1 Social Media
+  #
+  # 6.0 Map
+  ## 6.1 Studio51 Meta
+  #
+  # All media queries are in their respective section, there is no special sect-
+  # ion for media queries.
+  #
+  #### TABLE OF CONTENTS #######################################################
+*/
+
+/* 0.0 Reset */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul.list-inline li {
+  display: inline-block;
+}
+
+/* 0.1 LESS Mixins */
+
+.spacing {
+  padding: 0;
+  margin: 0;
+}
+
+/* 0.1.1 LESS Variables */
+
+/* 1.0 Body */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  background-color: #fff;
+}
+
+body p,
+body a {
+  text-shadow: 0 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  padding: 0 30px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 120px;
+  }
+}
+
+/* 1.1 Misc */
+
+.flaticon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+/* 2.0 Navigation */
+
+.navbar {
+  height: 0;
+  min-height: 150px;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    min-height: 115px;
+  }
+}
+
+.navbar:after {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 600px;
+  background-image: url('../images/bg-floral.jpg');
+  background-position: 30% 100%;
+  content: '';
+  opacity: 0.3;
+  zoom: 40%;
+}
+
+.navbar img {
+  position: relative;
+  z-index: 1;
+  height: 150px;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .navbar img {
+    height: 115px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar img {
+    padding: 15px 0;
+    margin: 0;
+  }
+}
+
+.navbar .meta {
+  margin: 40.54054054054054px 0;
+}
+
+@media (min-width: 768px) {
+  .navbar .meta {
+    margin: 23.076923076923077px 0;
+  }
+}
+
+.navbar p {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar p {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 5px 0;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .navbar p i {
+    line-height: 0;
+  }
+}
+
+/* 3.0 Intro */
+
+/* 3.1 Background Carousel */
+
+.intro {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+
+.intro.mobile {
+  background-image: url('../images/carousel1.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.owl-carousel {
+  position: absolute !important;
+}
+
+.owl-carousel .carousel-layer img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .owl-carousel .carousel-layer-three {
+    -webkit-transform: translateY(-17%);
+       -moz-transform: translateY(-17%);
+        -ms-transform: translateY(-17%);
+         -o-transform: translateY(-17%);
+            transform: translateY(-17%);
+  }
+}
+
+@media (min-width: 982px) {
+  .owl-carousel .carousel-layer-one {
+    -webkit-transform: translateY(-5%);
+       -moz-transform: translateY(-5%);
+        -ms-transform: translateY(-5%);
+         -o-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  .owl-carousel .carousel-layer-two {
+    -webkit-transform: translateY(-12%);
+       -moz-transform: translateY(-12%);
+        -ms-transform: translateY(-12%);
+         -o-transform: translateY(-12%);
+            transform: translateY(-12%);
+  }
+  .owl-carousel .carousel-layer-three {
+    -webkit-transform: translateY(-20%);
+       -moz-transform: translateY(-20%);
+        -ms-transform: translateY(-20%);
+         -o-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  .owl-carousel .carousel-layer-four {
+    -webkit-transform: translateY(-18%);
+       -moz-transform: translateY(-18%);
+        -ms-transform: translateY(-18%);
+         -o-transform: translateY(-18%);
+            transform: translateY(-18%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .owl-carousel .carousel-layer-one {
+    -webkit-transform: translateY(-10%);
+       -moz-transform: translateY(-10%);
+        -ms-transform: translateY(-10%);
+         -o-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .owl-carousel .carousel-layer-two {
+    -webkit-transform: translateY(-15%);
+       -moz-transform: translateY(-15%);
+        -ms-transform: translateY(-15%);
+         -o-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+  .owl-carousel .carousel-layer-four {
+    -webkit-transform: translateY(-25%);
+       -moz-transform: translateY(-25%);
+        -ms-transform: translateY(-25%);
+         -o-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+}
+
+/* 3.2 Opening Times Board */
+
+.board {
+  padding: 60px 30px;
+  margin: 30px 0 90px;
+  font-family: 'crayon';
+  color: #fff;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.board .meta {
+  margin-bottom: 30px;
+}
+
+.board .meta p {
+  font-size: 15px;
+}
+
+.board h1 {
+  margin-bottom: 7.5px;
+}
+
+@media (min-width: 768px) {
+  .board h1 {
+    font-size: 42.5px;
+  }
+}
+
+.board p {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+@media (min-width: 768px) {
+  .board p {
+    font-size: 17px;
+  }
+}
+
+.board p.social {
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .board p.social {
+    font-size: 17px;
+  }
+}
+
+.board:before,
+.board:after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+}
+
+.board:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #63411f;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nNCc+Cgk8ZGVmcyBpZD0nZGVmczQnPgoJCTxmaWx0ZXIgeT0nMCcgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSdzUkdCJyBpZD0ndCc+CgkJCTxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScuOCAwJyByZXN1bHQ9J291dDEnIG51bU9jdGF2ZXM9JzEnLz4KCQkJPGZlQ29sb3JNYXRyaXggdHlwZT0nc2F0dXJhdGUnIGluPSdvdXQxJyByZXN1bHQ9J291dDInIHZhbHVlcz0nMCcvPgoJCQk8ZmVDb21wb3NpdGUgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMC4zNCcgazM9JzAnIGs0PScwJyBpbj0nb3V0MicgaW4yPSdvdXQxJy8+CgkJPC9maWx0ZXI+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMTIzJyB4PSc1JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc2JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc3JScgeT0nLTUlJyB3aWR0aD0nMTQlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc5JScgeT0nLTUlJyB3aWR0aD0nMjAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PScxMSUnIHk9Jy01JScgd2lkdGg9JzEwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDk4NCcgeD0nNTUlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjAzNjg5OTk5OTk5OTk5OTk5NScgeD0nNjIlJyB5PSctNSUnIHdpZHRoPSczNSUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjA4NjEwMDAwMDAwMDAwMDAxJyB4PSczOCUnIHk9Jy01JScgd2lkdGg9JzIwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDM2ODk5OTk5OTk5OTk5OTk1JyB4PSc4NSUnIHk9Jy01JScgd2lkdGg9JzQwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDYxNScgeD0nNTIlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3Qgc3R5bGU9J2ZpbHRlcjp1cmwoI3QpJyB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAwJScvPgo8L3N2Zz4=');
+  border: 2px solid #63411f;
+  box-shadow: inset 0 0 50px 0px #271a0c;
+}
+
+.board:after {
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  background: url('../images/bg-board.png');
+  border: 3px solid #271a0c;
+  box-shadow: inset 0 0 50px 5px #000,
+                        0 0 50px 5px #271a0c;
+}
+
+/* 4.0 Content */
+
+.content {
+  margin-top: -60px;
+}
+
+.box {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 4.285714285714286px;
+  -webkit-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
+     -moz-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
+          box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
+}
+
+.box .section-title,
+.box .menu-category-title {
+  margin-bottom: 30px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.box p {
+  font-weight: 300;
+  text-align: center;
+}
+
+.box p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* 4.0.1 Quotes */
+
+.quote {
+  padding: 15px 0;
+  margin-bottom: 0 !important;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* 4.2 About Whitmore Tea Rooms */
+
+@media (min-width: 768px) {
+  .about .section-title,
+  .about p {
+    text-align: left;
+  }
+}
+
+/* 4.3 Whitmore Tea Rooms Menus */
+
+.menu {
+  text-align: center;
+}
+
+.menu .first-page {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .menu .first-page {
+    margin-bottom: 0;
+  }
+}
+
+.menu p.bookings-text,
+.menu img {
+  margin: 30px auto;
+}
+
+.menu .drinks p {
+  text-align: left;
+}
+
+.menu .drinks p span {
+  float: right;
+}
+
+.menu .nav-tabs li a {
+  display: block;
+  padding: 10px;
+  margin-top: 7.5px;
+  font-weight: 400;
+  border: 1px solid #e4e9f2;
+  border-radius: 4.285714285714286px;
+}
+
+.menu .nav-tabs li.active a {
+  background-color: rgba(228, 233, 242, 0.3);
+}
+
+.menu .tab-pane {
+  display: none;
+}
+
+.menu .tab-pane.active {
+  display: block;
+}
+
+.menu-subcategory-title {
+  margin-bottom: 7.5px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-shadow: 0 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.menu-divider {
+  margin: 7.5px 0;
+}
+
+/* 5.0 Footer */
+
+footer {
+  padding: 30px 0;
+  border-top: 1px solid #e4e9f2;
+}
+
+.footer-clearfix {
+  margin-top: 30px;
+}
+
+/* 5.1 Trip Advisor widget */
+
+.widSSP {
+  width: 100% !important;
+  padding: 15px !important;
+  border-radius: 4.285714285714286px;
+  -webkit-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
+     -moz-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
+          box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
+}
+
+.widSSPData {
+  padding: 0 !important;
+  border: none !important;
+}
+
+.widSSPBranding {
+  width: 100%;
+  padding: 0 0 15px !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.widSSPBranding dl dt {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* 5.2 Whitmore Tea Rooms Testimonials */
+
+.testimonials {
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 4.285714285714286px;
+  -webkit-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
+     -moz-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
+          box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
+}
+
+@media (min-width: 768px) {
+  .testimonials {
+    margin-top: 0;
+  }
+}
+
+.testimonials ul li .author {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.testimonials ul li .testimonial {
+  font-size: 12px;
+}
+
+.testimonials ul li .date {
+  display: block;
+  margin-top: 15px;
+  font-size: 12px;
+  font-style: italic;
+  color: #a0b3cf;
+  text-align: right;
+}
+
+/* 6.0 Map */
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 390px;
+  background-image: url('../images/whitmore-map.png');
+  background-position: center 10px;
+}
+
+@media (min-width: 768px) {
+  .map {
+    height: 300px;
+    background-position: center center;
+  }
+}
+
+.vcard {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  padding: 30px 30px 0;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+  background: #fff;
+  border-radius: 4.285714285714286px;
+}
+
+@media (min-width: 768px) {
+  .vcard {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.vcard .logo img {
+  max-height: 90px;
+}
+
+.vcard .address,
+.vcard .telephone {
+  margin-top: 15px;
+}
+
+.vcard:after {
+  position: relative;
+  bottom: -30px;
+  margin: 0 auto;
+  border-top: 15px solid #fff;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid transparent;
+  content: '';
+}
+
+.box.studio51 {
+  padding: 30px 0 30px;
+  box-shadow: none;
+}
+
+p.client-meta,
+p.studio51-meta {
+  padding: 3px 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  p.client-meta,
+  p.studio51-meta {
+    text-align: left;
+  }
+}
+
+ul.client-links,
+ul.studio51-links {
+  margin: 7.5px 0 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  ul.client-links,
+  ul.studio51-links {
+    text-align: right;
+  }
+}

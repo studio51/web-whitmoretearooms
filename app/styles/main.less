@@ -1,0 +1,641 @@
+@import "bootstrap.min.css";
+
+/*
+
+  Author: Radulescu Vladut
+  Company: Studio51
+
+  Client: whitmoretearooms.co.uk
+  Date completed: 27.02.2015
+  Version: 1.0
+
+  Credits: see ./humans.txt
+
+*/
+
+@font-face {
+  font-family: 'crayon';
+  src: url('../fonts/crayon.ttf');
+}
+
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+
+/*
+  #### TABLE OF CONTENTS #######################################################
+  #
+  # LESS Author: Vlad Radulescu
+  #
+  # 0.0 Reset
+  # 0.1 LESS Mixins
+  ## 0.1.1 LESS Variables
+  #
+  # 1.0 Body
+  ## 1.1 Misc
+  # 2.0 Navigation
+  # 3.0 Intro
+  ## 3.1 Background Carousel
+  ## 3.2 Opening Times Board
+  #
+  # 4.0 Content
+  ### 4.0.1 Quotes
+  ## 4.1 About Whitmore Tea Rooms
+  ## 4.2 Whitmore Tea Rooms Menus
+  #
+  # 5.0 Footer
+  ## 5.1 Trip Advisor Widget
+  ## 5.2 Whitmore Tea Rooms Testimonials
+  ## 5.3 Whitmore Tea Rooms Meta
+  ### 5.3.1 Social Media
+  #
+  # 6.0 Map
+  ## 6.1 Studio51 Meta
+  #
+  # All media queries are in their respective section, there is no special sect-
+  # ion for media queries.
+  #
+  #### TABLE OF CONTENTS #######################################################
+*/
+
+/* 0.0 Reset */
+
+h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &.list-inline {
+
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+/* 0.1 LESS Mixins */
+
+.box-shadow(@string) {
+  -webkit-box-shadow: @string;
+     -moz-box-shadow: @string;
+          box-shadow: @string;
+}
+
+.transform(@string) {
+  -webkit-transform: @string;
+     -moz-transform: @string;
+      -ms-transform: @string;
+       -o-transform: @string;
+          transform: @string;
+}
+
+.translateY(@string) {
+  .transform(translateY(@string));
+}
+
+.transform-style(@string) {
+  -webkit-transform-style: @string;
+     -moz-transform-style: @string;
+      -ms-transform-style: @string;
+       -o-transform-style: @string;
+          transform-style: @string;
+}
+
+  .shadow-box() {
+    .box-shadow( 0 3px 0 1px fade(@border-color, 50%) );
+  }
+
+  .spacing {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 0.1.1 LESS Variables */
+
+  @box-padding: 30px;
+  @navbar-height: @box-padding * 5;
+
+  @background-color: #f5f7fa;
+  @box-color: #ffffff;
+
+  @border-radius: @box-padding / 7;
+  @border-color: darken(@background-color, 5%);
+
+  @font-size-sm: 13px;
+  @font-size-md: @font-size-sm + 2px;
+  @font-size-lg: @font-size-md + 2px;
+
+/* 1.0 Body */
+
+html,
+body {
+  .spacing;
+
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: @font-size-sm;
+
+  p, a {
+    text-shadow: 0px 0px 1px fade(#000, 50%);
+  }
+}
+
+.container {
+  padding: 0 @box-padding;
+
+  @media(min-width: 1200px) {
+    padding: 0 ( @box-padding * 4 );
+  }
+}
+
+  /* 1.1 Misc */
+
+  .flaticon {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+  }
+
+/* 2.0 Navigation */
+
+.navbar {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  height: 0; /* :after needs the height property specified, even if 0 */
+  margin: 0;
+  min-height: @navbar-height;
+
+  @media(min-width: 768px) {
+    min-height: @navbar-height - 35px;
+  }
+
+  &:after {
+    background-image: url('../images/bg-floral.jpg');
+    background-position: 30% 100%;
+    content: '';
+    height: @navbar-height * 4;
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    zoom: 40%;
+  }
+
+  img {
+    height: @navbar-height;
+    margin: 0 auto;
+    padding: @box-padding 0;
+    position: relative;
+    z-index: 1;
+
+    @media(min-width: 768px) {
+      height: @navbar-height - 35px;
+      padding: 0;
+    }
+
+    @media(min-width: 992px) {
+      margin: 0;
+      padding: ( @box-padding / 2 ) 0;
+    }
+  }
+
+  .meta {
+    margin: ( @navbar-height / 3.7 ) 0;
+
+    @media(min-width: 768px) {
+      margin: ( @navbar-height / 6.5 ) 0;
+    }
+  }
+
+  p {
+    display: none;
+
+    @media(min-width: 768px) {
+      display: block;
+      font-size: @font-size-sm;
+      font-weight: 700;
+      padding: ( @box-padding / 6 ) 0;
+      position: relative;
+      z-index: 1;
+
+      i {
+        line-height: 0;
+      }
+    }
+  }
+}
+
+/* 3.0 Intro */
+
+  /* 3.1 Background Carousel */
+
+  .intro {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+
+    &.mobile {
+      background-image: url('../images/carousel1.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .owl-carousel {
+    position: absolute !important;
+
+    .carousel-layer {
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      @media(min-width: 768px) {
+        &-three { .translateY(-17%); }
+      }
+
+      @media(min-width: 982px) {
+
+        &-one { .translateY(-5%); }
+        &-two { .translateY(-12%); }
+        &-three { .translateY(-20%); }
+        &-four { .translateY(-18%); }
+      }
+
+      @media(min-width: 1200px) {
+
+        &-one { .translateY(-10%); }
+        &-two { .translateY(-15%); }
+        &-four { .translateY(-25%); }
+      }
+    }
+  }
+
+  /* 3.2 Opening Times Board */
+
+  .board {
+    color: #fff;
+    font-family: 'crayon';
+    margin: @box-padding 0 ( @box-padding * 3 ); /* margin on sides is being handled by the .container class */
+    padding: ( @box-padding * 2 ) ( @box-padding * 1 );
+    text-align: center;
+
+    .transform-style(preserve-3d);
+
+    .meta {
+      margin-bottom: @box-padding;
+
+      p {
+        font-size: @font-size-md;
+      }
+    }
+
+    h1 {
+      margin-bottom: @box-padding / 4;
+
+      @media(min-width: 768px) {
+        font-size: @font-size-lg * 2.5;
+      }
+    }
+
+    p {
+      font-size: @font-size-md;
+      margin-bottom: @box-padding / 6;
+
+      @media(min-width: 768px) {
+        font-size: @font-size-lg;
+      }
+
+      &.social {
+        margin-top: @box-padding / 1;
+
+        @media(min-width: 768px) {
+          font-size: @font-size-lg;
+        }
+      }
+    }
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
+
+    &:before {
+      background-color: #63411f;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nNCc+Cgk8ZGVmcyBpZD0nZGVmczQnPgoJCTxmaWx0ZXIgeT0nMCcgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSdzUkdCJyBpZD0ndCc+CgkJCTxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScuOCAwJyByZXN1bHQ9J291dDEnIG51bU9jdGF2ZXM9JzEnLz4KCQkJPGZlQ29sb3JNYXRyaXggdHlwZT0nc2F0dXJhdGUnIGluPSdvdXQxJyByZXN1bHQ9J291dDInIHZhbHVlcz0nMCcvPgoJCQk8ZmVDb21wb3NpdGUgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMC4zNCcgazM9JzAnIGs0PScwJyBpbj0nb3V0MicgaW4yPSdvdXQxJy8+CgkJPC9maWx0ZXI+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMTIzJyB4PSc1JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc2JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc3JScgeT0nLTUlJyB3aWR0aD0nMTQlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc5JScgeT0nLTUlJyB3aWR0aD0nMjAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PScxMSUnIHk9Jy01JScgd2lkdGg9JzEwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDk4NCcgeD0nNTUlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjAzNjg5OTk5OTk5OTk5OTk5NScgeD0nNjIlJyB5PSctNSUnIHdpZHRoPSczNSUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjA4NjEwMDAwMDAwMDAwMDAxJyB4PSczOCUnIHk9Jy01JScgd2lkdGg9JzIwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDM2ODk5OTk5OTk5OTk5OTk1JyB4PSc4NSUnIHk9Jy01JScgd2lkdGg9JzQwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDYxNScgeD0nNTIlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3Qgc3R5bGU9J2ZpbHRlcjp1cmwoI3QpJyB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAwJScvPgo8L3N2Zz4=');
+      border: 2px solid #63411f;
+      box-shadow: inset 0 0 50px 0px #271a0c;
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    &:after {
+      background: url('../images/bg-board.png');
+      border: 3px solid #271a0c;
+      bottom: @box-padding;
+      box-shadow: inset 0 0 50px 5px #000,
+                        0 0 50px 5px #271a0c;
+      left: @box-padding;
+      right: @box-padding;
+      top: @box-padding;
+    }
+  }
+
+/* 4.0 Content */
+
+  .content {
+    margin-top: -( @box-padding * 2 );
+  }
+
+  .box {
+    .shadow-box();
+
+    background-color: #fff;
+    border-radius: @border-radius;
+    padding: @box-padding;
+
+    .section-title,
+    .menu-category-title {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      margin-bottom: @box-padding;
+      text-align: center;
+    }
+
+    p {
+      font-weight: 300;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: @box-padding / 3;
+      }
+    }
+  }
+
+    /* 4.0.1 Quotes */
+
+    .quote {
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 0 !important; /* TOFIX */
+      padding: ( @box-padding / 2 ) 0;
+    }
+
+  /* 4.2 About Whitmore Tea Rooms */
+
+  @media(min-width: 768px) {
+    .about .section-title,
+    .about p {
+      text-align: left;
+    }
+  }
+
+  /* 4.3 Whitmore Tea Rooms Menus */
+
+  .menu {
+    text-align: center;
+
+    .first-page {
+      margin-bottom: @box-padding;
+    }
+
+    @media(min-width: 992px) {
+      .first-page {
+        margin-bottom: 0;
+      }
+    }
+
+    p.bookings-text, img {
+      margin: @box-padding auto;
+    }
+
+    .drinks {
+      p {
+        text-align: left;
+
+        span {
+          float: right;
+        }
+      }
+    }
+
+    .nav-tabs {
+      li {
+        a {
+          border: 1px solid @border-color;
+          border-radius: @border-radius;
+          display: block;
+          font-weight: 400;
+          padding: @box-padding / 3;
+          margin-top: @box-padding / 4;
+        }
+
+        &.active a {
+          background-color: fade(@border-color, 30%);
+        }
+      }
+    }
+
+    .tab-pane {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &-subcategory-title {
+      font-family: 'Quicksand', sans-serif;
+      font-size: @font-size-md;
+      font-weight: 400;
+      margin-bottom: @box-padding / 4;
+      text-shadow: 0px 0px 1px fade(#000, 50%);
+    }
+
+    &-divider {
+      margin: ( @box-padding / 4 ) 0;
+    }
+  }
+
+
+/* 5.0 Footer */
+
+footer {
+
+
+  border-top: 1px solid @border-color;
+  padding: @box-padding 0;
+}
+
+  .footer-clearfix {
+    margin-top: @box-padding;
+  }
+
+  /* 5.1 Trip Advisor widget */
+
+  .widSSP {
+    width: 100% !important;
+    .shadow-box();
+    border-radius: @border-radius;
+    padding: @box-padding / 2 !important;
+  }
+
+  .widSSPData {
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .widSSPBranding {
+    border: none !important;
+    width: 100%;
+    padding: 0 0 ( @box-padding / 2 ) !important;
+    margin: 0 !important;
+
+    dl {
+      dt {
+        margin: 0 !important;
+        width: 100% !important;
+      }
+    }
+  }
+
+  /* 5.2 Whitmore Tea Rooms Testimonials */
+
+  .testimonials {
+    .shadow-box();
+
+    border-radius: @border-radius;
+    margin-top: @box-padding;
+    padding: @box-padding;
+
+    @media(min-width: 768px) {
+      margin-top: 0;
+    }
+
+    ul {
+      li {
+
+        .author {
+          display: block;
+          margin-bottom: @box-padding / 3;
+        }
+
+        .testimonial {
+          font-size: 12px;
+        }
+
+        .date {
+          color: darken(@border-color, 20%);
+          display: block;
+          font-size: 12px;
+          font-style: italic;
+          margin-top: @box-padding / 2;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+/* 6.0 Map */
+
+.map {
+  background-image: url('../images/whitmore-map.png');
+  background-position: center 10px;
+  height: @box-padding * 13;
+  width: 100%;
+  position: relative;
+
+  @media(min-width: 768px) {
+    height: @box-padding * 10;
+    background-position: center center;
+  }
+}
+
+.vcard {
+  background: #fff;
+  border-radius: @border-radius;
+  left: 0;
+  margin-left: @box-padding;
+  margin-right: @box-padding;
+  margin-top: @box-padding;
+  padding: @box-padding @box-padding 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+
+  @media(min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+  }
+
+  .logo {
+    img {
+      max-height: @box-padding * 3;
+    }
+  }
+
+  .address, .telephone {
+    margin-top: @box-padding / 2;
+  }
+
+  &:after {
+    content: '';
+    position: relative;
+    bottom: -( @box-padding );
+    margin: 0 auto;
+    border-top: 15px solid #fff;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+}
+
+.box.studio51 {
+  padding: @box-padding 0 @box-padding / 1;
+  box-shadow: none;
+}
+
+p.client-meta,
+p.studio51-meta {
+  padding: 3px 0;
+  text-align: center;
+
+  @media(min-width: 768px) {
+    text-align: left;
+  }
+}
+
+ul.client-links,
+ul.studio51-links {
+  margin: ( @box-padding / 4 ) 0 0;
+  text-align: center;
+
+  @media(min-width: 768px) {
+    text-align: right;
+  }
+}
+
+@import "carousel.min.css";
