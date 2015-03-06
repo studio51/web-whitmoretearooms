@@ -218,27 +218,25 @@ body {
   background-color: transparent;
   border: none;
   border-radius: 0;
-  height: 0; /* :after needs the height property specified, even if 0 */
   margin: 0;
   min-height: @navbar-height;
   overflow: hidden;
   position: relative;
 
   @media(min-width: 768px) and (max-width: 992px) {
-    min-height: @navbar-height - @box-padding;
+    // min-height: @navbar-height - @box-padding;
   }
 
   &:after {
     background-image: url('../images/bg-floral.jpg');
-    background-position: 30% 100%;
+    background-position: 20% 20%;
     content: '';
-    height: @navbar-height * 5;
+    height: @navbar-height;
     opacity: 0.3;
     position: absolute;
     z-index: -1;
     top: 0;
     width: 100%;
-    zoom: 40%;
   }
 
   img {
@@ -261,7 +259,7 @@ body {
     margin: ( @navbar-height / 4 ) 0;
 
     @media(min-width: 992px) {
-      margin: ( @navbar-height / 2.2 ) 0;
+      margin: ( @navbar-height / 2.2 ) 0 0;
     }
   }
 
