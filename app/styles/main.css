@@ -347,7 +347,7 @@ body {
 
 @media (min-width: 768px) {
   .board p.social {
-    font-size: 22.1px;
+    font-size: 18.700000000000003px;
   }
 }
 
@@ -382,16 +382,14 @@ body {
 
 /* 4.0 Content */
 
+/* Menu Page */
+
 section p,
 footer p,
 section a,
 footer a {
   font-weight: 400;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-}
-
-.content {
-  margin-top: -60px;
 }
 
 .box {
@@ -430,6 +428,10 @@ footer a {
 
 /* 4.2 About Whitmore Tea Rooms */
 
+.about {
+  margin-top: -60px;
+}
+
 @media (min-width: 768px) {
   .about .section-title,
   .about p {
@@ -438,6 +440,16 @@ footer a {
 }
 
 /* 4.3 Whitmore Tea Rooms Menus */
+
+/* Menu Page */
+
+.menu-page .menu img {
+  margin: 0;
+}
+
+.menu-page p.bookings-text {
+  margin: 15px 0;
+}
 
 .menu {
   text-align: center;
