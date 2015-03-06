@@ -2,8 +2,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
 
-@import "carousel.min.css";
-
 /*
 
   Author: Radulescu Vladut
@@ -398,7 +396,7 @@ body {
 
 @media (min-width: 768px) {
   .board p {
-    font-size: 17px;
+    font-size: 18.700000000000003px;
   }
 }
 
@@ -426,6 +424,7 @@ body {
   height: 100%;
   background-color: #924b16;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc2MDAnIGhlaWdodD0nNCc+Cgk8ZGVmcyBpZD0nZGVmczQnPgoJCTxmaWx0ZXIgeT0nMCcgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSdzUkdCJyBpZD0ndCc+CgkJCTxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScuOCAwJyByZXN1bHQ9J291dDEnIG51bU9jdGF2ZXM9JzEnLz4KCQkJPGZlQ29sb3JNYXRyaXggdHlwZT0nc2F0dXJhdGUnIGluPSdvdXQxJyByZXN1bHQ9J291dDInIHZhbHVlcz0nMCcvPgoJCQk8ZmVDb21wb3NpdGUgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMC4zNCcgazM9JzAnIGs0PScwJyBpbj0nb3V0MicgaW4yPSdvdXQxJy8+CgkJPC9maWx0ZXI+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMTIzJyB4PSc1JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc2JScgeT0nLTUlJyB3aWR0aD0nMTAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc3JScgeT0nLTUlJyB3aWR0aD0nMTQlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PSc5JScgeT0nLTUlJyB3aWR0aD0nMjAlJyBoZWlnaHQ9JzExMCUnLz4KCTxyZWN0IGZpbGw9JyNlZGNjYjknIGZpbGwtb3BhY2l0eT0nMC4wNDkyJyB4PScxMSUnIHk9Jy01JScgd2lkdGg9JzEwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDk4NCcgeD0nNTUlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjAzNjg5OTk5OTk5OTk5OTk5NScgeD0nNjIlJyB5PSctNSUnIHdpZHRoPSczNSUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3QgZmlsbD0nI2VkY2NiOScgZmlsbC1vcGFjaXR5PScwLjA4NjEwMDAwMDAwMDAwMDAxJyB4PSczOCUnIHk9Jy01JScgd2lkdGg9JzIwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDM2ODk5OTk5OTk5OTk5OTk1JyB4PSc4NSUnIHk9Jy01JScgd2lkdGg9JzQwJScgaGVpZ2h0PScxMTAlJy8+Cgk8cmVjdCBmaWxsPScjZWRjY2I5JyBmaWxsLW9wYWNpdHk9JzAuMDYxNScgeD0nNTIlJyB5PSctNSUnIHdpZHRoPSc0MCUnIGhlaWdodD0nMTEwJScvPgoJPHJlY3Qgc3R5bGU9J2ZpbHRlcjp1cmwoI3QpJyB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAwJScvPgo8L3N2Zz4=');
+  background-repeat: repeat;
   border: 2px solid #63411f;
   box-shadow: inset 0 0 50px 0px #63411f;
 }
@@ -448,7 +447,7 @@ footer p,
 section a,
 footer a {
   font-weight: 400;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
 }
 
 .box {
@@ -480,9 +479,7 @@ footer a {
 
 .quote {
   padding: 15px 0;
-  margin-bottom: 0 !important;
   font-style: italic;
-  font-weight: 300;
 }
 
 /* 4.2 About Whitmore Tea Rooms */
@@ -561,9 +558,9 @@ footer a {
 .menu-subcategory-title {
   margin-bottom: 7.5px;
   font-family: 'Quicksand', sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  text-shadow: 0 0px 1px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 0px 1px rgba(0, 0, 0, 0.3);
 }
 
 .menu-divider {
@@ -651,16 +648,15 @@ footer {
 
 .reviews ul li .author {
   display: block;
-  margin-bottom: 10px;
+  font-size: 15px;
 }
 
 .reviews ul li .review {
-  font-size: 12px;
+  margin: 15px 0;
 }
 
 .reviews ul li .date {
   display: block;
-  margin-top: 15px;
   font-size: 12px;
   font-style: italic;
   color: #a0b3cf;
@@ -733,9 +729,12 @@ footer {
   max-height: 90px;
 }
 
-.vcard .address,
+.vcard .address-line {
+  display: block;
+}
+
 .vcard .telephone {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .vcard:after {
@@ -750,14 +749,13 @@ footer {
 }
 
 .box.studio51 {
-  padding: 15px 0 10px;
+  padding: 15px 0;
   font-size: 11px;
   box-shadow: none;
 }
 
 p.client-meta,
 p.studio51-meta {
-  padding: 3px 0;
   text-align: center;
 }
 
@@ -770,6 +768,7 @@ p.studio51-meta {
 
 ul.client-links,
 ul.studio51-links {
+  padding: 1px 0;
   margin: 7.5px 0 0;
   text-align: center;
 }
@@ -777,11 +776,12 @@ ul.studio51-links {
 @media (min-width: 768px) {
   ul.client-links,
   ul.studio51-links {
+    margin: 0;
     text-align: right;
   }
 }
 
-ul.client-links li,
-ul.studio51-links li {
+ul.client-links li:not(:first-child),
+ul.studio51-links li:not(:first-child) {
   margin-left: 10px;
 }
