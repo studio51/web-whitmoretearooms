@@ -224,7 +224,7 @@ body {
   position: relative;
 
   @media(min-width: 768px) and (max-width: 992px) {
-    // min-height: @navbar-height - @box-padding;
+    min-height: @navbar-height - @box-padding;
   }
 
   &:after {
@@ -256,7 +256,7 @@ body {
   }
 
   .meta {
-    margin: ( @navbar-height / 4 ) 0;
+    margin: ( @navbar-height / 4 ) 0 0;
 
     @media(min-width: 992px) {
       margin: ( @navbar-height / 2.2 ) 0 0;
@@ -339,6 +339,13 @@ body {
 
     .transform-style(preserve-3d);
 
+    /* IE Fix */
+
+      h1, p, .meta {
+        position: relative;
+        z-index: 2;
+      }
+
     .meta {
       margin-bottom: @box-padding;
 
@@ -375,7 +382,7 @@ body {
     &:before, &:after {
       content: '';
       position: absolute;
-      z-index: -1;
+      z-index: 1;
     }
 
     &:before {

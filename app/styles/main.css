@@ -202,7 +202,9 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  
+  .navbar {
+    min-height: 120px;
+  }
 }
 
 .navbar:after {
@@ -238,7 +240,7 @@ body {
 }
 
 .navbar .meta {
-  margin: 37.5px 0;
+  margin: 37.5px 0 0;
 }
 
 @media (min-width: 992px) {
@@ -367,6 +369,13 @@ body {
           transform-style: preserve-3d;
 }
 
+.board h1,
+.board p,
+.board .meta {
+  position: relative;
+  z-index: 2;
+}
+
 .board .meta {
   margin-bottom: 30px;
 }
@@ -409,7 +418,7 @@ body {
 .board:before,
 .board:after {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   content: '';
 }
 
