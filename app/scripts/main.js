@@ -21,17 +21,17 @@ $(document).ready(function() {
     });
   }
 
-  // Hides all the testimonials except the first one, to start with.
+  // Hides all the reviews except the first one, to start with.
 
-  $("#testimonials li").hide().eq(0).show();
+  $("#reviews li").hide().eq(0).show();
 
-  // Function to cycle through the testimonials by fading them in/out
+  // Function to cycle through the reviews by fading them in/out
 
   (function showNextTestimonial() {
-    $("#testimonials li:visible").delay(7500).fadeOut("slow", function() {
-      $(this).appendTo("#testimonials ul");
+    $("#reviews li:visible").delay(7500).fadeOut("slow", function() {
+      $(this).appendTo("#reviews ul");
 
-      $("#testimonials li:first").fadeIn("slow", function() {
+      $("#reviews li:first").fadeIn("slow", function() {
         showNextTestimonial();
       });
     });
