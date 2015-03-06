@@ -111,11 +111,6 @@ body {
   background-color: #fff;
 }
 
-body p,
-body a {
-  text-shadow: 0 0px 1px rgba(0, 0, 0, 0.5);
-}
-
 .container {
   padding: 0 30px;
 }
@@ -138,17 +133,19 @@ body a {
 /* 2.0 Navigation */
 
 .navbar {
+  position: relative;
   height: 0;
   min-height: 150px;
   margin: 0;
+  overflow: hidden;
   background-color: transparent;
   border: none;
   border-radius: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .navbar {
-    min-height: 115px;
+    min-height: 120px;
   }
 }
 
@@ -157,7 +154,7 @@ body a {
   top: 0;
   z-index: -1;
   width: 100%;
-  height: 600px;
+  height: 750px;
   background-image: url('../images/bg-floral.jpg');
   background-position: 30% 100%;
   content: '';
@@ -169,36 +166,30 @@ body a {
   position: relative;
   z-index: 1;
   height: 150px;
-  padding: 30px 0;
+  padding: 15px 0;
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .navbar img {
-    height: 115px;
-    padding: 0;
+    height: 120px;
   }
 }
 
 @media (min-width: 992px) {
   .navbar img {
-    padding: 15px 0;
     margin: 0;
   }
 }
 
 .navbar .meta {
-  margin: 40.54054054054054px 0;
+  margin: 37.5px 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar .meta {
-    margin: 23.076923076923077px 0;
+    margin: 68.18181818181817px 0;
   }
-}
-
-.navbar p {
-  display: none;
 }
 
 @media (min-width: 768px) {
@@ -206,8 +197,8 @@ body a {
     position: relative;
     z-index: 1;
     display: block;
-    padding: 5px 0;
-    font-size: 13px;
+    padding: 3.75px 0;
+    font-size: 17px;
     font-weight: 700;
   }
   .navbar p i {
@@ -251,7 +242,7 @@ body a {
   }
 }
 
-@media (min-width: 982px) {
+@media (min-width: 992px) {
   .owl-carousel .carousel-layer-one {
     -webkit-transform: translateY(-5%);
        -moz-transform: translateY(-5%);
@@ -356,7 +347,7 @@ body a {
 
 @media (min-width: 768px) {
   .board p.social {
-    font-size: 17px;
+    font-size: 22.1px;
   }
 }
 
@@ -391,6 +382,14 @@ body a {
 
 /* 4.0 Content */
 
+section p,
+footer p,
+section a,
+footer a {
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+}
+
 .content {
   margin-top: -60px;
 }
@@ -413,7 +412,6 @@ body a {
 }
 
 .box p {
-  font-weight: 300;
   text-align: center;
 }
 
@@ -505,6 +503,7 @@ body a {
 
 footer {
   padding: 30px 0;
+  background-color: #fff;
   border-top: 1px solid #e4e9f2;
 }
 
@@ -521,6 +520,10 @@ footer {
   -webkit-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
      -moz-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
           box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.5);
+}
+
+.widSSP a {
+  text-shadow: none;
 }
 
 .widSSPData {

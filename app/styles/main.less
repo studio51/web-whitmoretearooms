@@ -148,10 +148,6 @@ body {
   background-color: #fff;
   font-family: 'Quicksand', sans-serif;
   font-size: @font-size-sm;
-
-  p, a {
-    text-shadow: 0px 0px 1px fade(#000, 50%);
-  }
 }
 
 .container {
@@ -180,16 +176,18 @@ body {
   height: 0; /* :after needs the height property specified, even if 0 */
   margin: 0;
   min-height: @navbar-height;
+  overflow: hidden;
+  position: relative;
 
-  @media(min-width: 768px) {
-    min-height: @navbar-height - 35px;
+  @media(min-width: 768px) and (max-width: 992px) {
+    min-height: @navbar-height - @box-padding;
   }
 
   &:after {
     background-image: url('../images/bg-floral.jpg');
     background-position: 30% 100%;
     content: '';
-    height: @navbar-height * 4;
+    height: @navbar-height * 5;
     opacity: 0.3;
     position: absolute;
     z-index: -1;
@@ -201,37 +199,34 @@ body {
   img {
     height: @navbar-height;
     margin: 0 auto;
-    padding: @box-padding 0;
+    padding: ( @box-padding / 2) 0;
     position: relative;
     z-index: 1;
 
-    @media(min-width: 768px) {
-      height: @navbar-height - 35px;
-      padding: 0;
+    @media(min-width: 768px) and (max-width: 992px) {
+      height: @navbar-height - @box-padding;
     }
 
     @media(min-width: 992px) {
       margin: 0;
-      padding: ( @box-padding / 2 ) 0;
     }
   }
 
   .meta {
-    margin: ( @navbar-height / 3.7 ) 0;
+    margin: ( @navbar-height / 4 ) 0;
 
-    @media(min-width: 768px) {
-      margin: ( @navbar-height / 6.5 ) 0;
+    @media(min-width: 992px) {
+      margin: ( @navbar-height / 2.2 ) 0;
     }
   }
 
   p {
-    display: none;
 
     @media(min-width: 768px) {
       display: block;
-      font-size: @font-size-sm;
+      font-size: @font-size-lg;
       font-weight: 700;
-      padding: ( @box-padding / 6 ) 0;
+      padding: ( @box-padding / 8 ) 0;
       position: relative;
       z-index: 1;
 
@@ -273,7 +268,7 @@ body {
         &-three { .translateY(-17%); }
       }
 
-      @media(min-width: 982px) {
+      @media(min-width: 992px) {
 
         &-one { .translateY(-5%); }
         &-two { .translateY(-12%); }
@@ -329,7 +324,7 @@ body {
         margin-top: @box-padding / 1;
 
         @media(min-width: 768px) {
-          font-size: @font-size-lg;
+          font-size: @font-size-lg * 1.3;
         }
       }
     }
@@ -365,6 +360,13 @@ body {
 
 /* 4.0 Content */
 
+  section, footer {
+    p, a {
+      text-shadow: 0 0 1px fade(#000, 80%);
+      font-weight: 400;
+    }
+  }
+
   .content {
     margin-top: -( @box-padding * 2 );
   }
@@ -385,7 +387,7 @@ body {
     }
 
     p {
-      font-weight: 300;
+      // font-weight: 300;
       text-align: center;
 
       &:not(:last-child) {
@@ -483,8 +485,7 @@ body {
 /* 5.0 Footer */
 
 footer {
-
-
+  background-color: #fff;
   border-top: 1px solid @border-color;
   padding: @box-padding 0;
 }
@@ -496,15 +497,20 @@ footer {
   /* 5.1 Trip Advisor widget */
 
   .widSSP {
-    width: 100% !important;
     .shadow-box();
+
     border-radius: @border-radius;
     padding: @box-padding / 2 !important;
-  }
+    width: 100% !important;
 
-  .widSSPData {
-    border: none !important;
-    padding: 0 !important;
+    a {
+      text-shadow: none;
+    }
+
+    &Data {
+      border: none !important;
+      padding: 0 !important;
+    }
   }
 
   .widSSPBranding {
