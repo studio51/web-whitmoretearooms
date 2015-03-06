@@ -1,0 +1,21 @@
+## Carousel Images
+
+  Copyright © Whitmore Tea Rooms
+
+  License:  MIT, please provide links to us ( )
+
+## Floral Background
+
+  Copyright (C)
+
+  Author:
+  License:
+  Homepage:
+
+## Font Awesome
+
+  Copyright (C) 2012 by Dave Gandy
+
+  Author:    Dave Gandy
+  License:   SIL ()
+  Homepage:  http://fortawesome.github.com/Font-Awesome/
