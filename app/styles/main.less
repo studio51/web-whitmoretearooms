@@ -117,7 +117,7 @@ ul {
   @border-radius: 5px;
   @border-color: darken(@background-color, 5%);
 
-  @font-size-sm: 13px;
+  @font-size-sm: 14px;
   @font-size-md: @font-size-sm + 2px;
   @font-size-lg: @font-size-md + 2px;
 
@@ -402,6 +402,8 @@ body {
   section, footer {
     p, a {
       text-shadow: 0 0 1px fade(#000, 40%);
+      filter: progid:DXImageTransform.Microsoft.Shadow(color=#000,direction=0,strength=0.4);
+
       font-weight: 400;
     }
   }
@@ -654,11 +656,14 @@ footer {
       }
 
       @media(min-width: 992px) {
-        margin-right: @box-padding / 4;
+        margin-right: @box-padding / 5;
       }
 
-      &:not(:first-child) {
-        margin-top: @box-padding / 4;
+      @media(max-width: 992px) {
+
+        &:not(:first-child) {
+          margin-top: @box-padding / 4;
+        }
       }
 
       p {
@@ -681,7 +686,6 @@ footer {
         @media(min-width: 992px) {
           background-color: transparent !important;
           padding: 0;
-
 
           &.facebook  { color: #3b5998; }
           &.twitter   { color: #00aced; }

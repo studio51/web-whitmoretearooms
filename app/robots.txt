@@ -1,7 +1,3 @@
 # robotstxt.org
 
 User-agent: *
-
-Resources:
-  Flower pattern: shutterstock
-  Wood texture: http://www.svgeneration.com/generate/Wood-Grain, slightly adjusted

@@ -100,7 +100,7 @@ body {
 
 body {
   font-family: 'Quicksand', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   background-color: #fff;
 }
 
@@ -253,7 +253,7 @@ body {
     z-index: 1;
     display: block;
     padding: 3.75px 0;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 700;
   }
   .navbar p i {
@@ -375,7 +375,7 @@ body {
 }
 
 .board .meta p {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .board h1 {
@@ -384,18 +384,18 @@ body {
 
 @media (min-width: 768px) {
   .board h1 {
-    font-size: 42.5px;
+    font-size: 45px;
   }
 }
 
 .board p {
   margin-bottom: 5px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
   .board p {
-    font-size: 18.700000000000003px;
+    font-size: 19.8px;
   }
 }
 
@@ -405,7 +405,7 @@ body {
 
 @media (min-width: 768px) {
   .board p.social {
-    font-size: 18.700000000000003px;
+    font-size: 19.8px;
   }
 }
 
@@ -446,6 +446,7 @@ section a,
 footer a {
   font-weight: 400;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, direction=0, strength=0.4);
 }
 
 .box {
@@ -564,7 +565,7 @@ footer a {
 .menu-subcategory-title {
   margin-bottom: 7.5px;
   font-family: 'Quicksand', sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   text-shadow: 0 0px 1px rgba(0, 0, 0, 0.3);
 }
@@ -654,7 +655,7 @@ footer {
 
 .reviews ul li .author {
   display: block;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .reviews ul li .review {
@@ -663,7 +664,7 @@ footer {
 
 .reviews ul li .date {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   font-style: italic;
   color: #a0b3cf;
   text-align: right;
@@ -681,22 +682,24 @@ footer {
 
 @media (min-width: 992px) {
   .social-links li {
-    margin-right: 7.5px;
+    margin-right: 6px;
   }
 }
 
-.social-links li:not(:first-child) {
-  margin-top: 7.5px;
+@media (max-width: 992px) {
+  .social-links li:not(:first-child) {
+    margin-top: 7.5px;
+  }
 }
 
 .social-links li p {
-  font-size: 15px;
+  font-size: 16px;
   text-align: left;
 }
 
 @media (min-width: 992px) {
   .social-links li p {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -807,7 +810,7 @@ footer {
 
 .box.studio51 {
   padding: 15px 0;
-  font-size: 11px;
+  font-size: 12px;
   box-shadow: none;
 }
 
