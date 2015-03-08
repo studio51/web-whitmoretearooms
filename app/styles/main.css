@@ -1,7 +1,5 @@
 @import "bootstrap.min.css";
 
-@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
-
 /*
 
   Author: Radulescu Vladut
@@ -118,6 +116,13 @@ body {
 
 /* 1.1 Misc */
 
+.flaticon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
 @font-face {
   font-family: 'crayon';
   src: url('../fonts/crayon.ttf');
@@ -209,7 +214,7 @@ body {
   background-image: url('../images/bg-floral.jpg');
   background-position: 20% 20%;
   content: '';
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .navbar img {
@@ -446,7 +451,7 @@ footer a {
 .box {
   padding: 30px;
   background-color: #fff;
-  border-radius: 4.285714285714286px;
+  border-radius: 5px;
   -webkit-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
      -moz-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
           box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
@@ -492,31 +497,28 @@ footer a {
 
 /* Menu Page */
 
-.menu-page .menu img {
-  margin: 0;
+.menu-page .menu {
+  margin-top: 30px;
 }
 
 .menu-page p.bookings-text {
-  margin: 15px 0;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .menu-page p.bookings-text {
+    text-align: center;
+  }
 }
 
 .menu {
   text-align: center;
 }
 
-.menu .first-page {
-  margin-bottom: 30px;
-}
-
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .menu .first-page {
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
-}
-
-.menu p.bookings-text,
-.menu img {
-  margin: 30px auto;
 }
 
 .menu .drinks p {
@@ -527,13 +529,24 @@ footer a {
   float: right;
 }
 
+.menu img {
+  margin: 0 auto;
+}
+
+.menu p.bookings-text {
+  margin: 15px 0;
+}
+
+.menu .nav-tabs li:not(:first-child) {
+  margin-top: 7.5px;
+}
+
 .menu .nav-tabs li a {
   display: block;
   padding: 10px;
-  margin-top: 7.5px;
   font-weight: 400;
   border: 1px solid #e4e9f2;
-  border-radius: 4.285714285714286px;
+  border-radius: 5px;
 }
 
 .menu .nav-tabs li.active a {
@@ -577,7 +590,7 @@ footer {
 .widSSP {
   width: 100% !important;
   padding: 15px !important;
-  border-radius: 4.285714285714286px;
+  border-radius: 5px;
   -webkit-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
      -moz-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
           box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
@@ -618,7 +631,7 @@ footer {
 .reviews-page .reviews ul li {
   padding: 30px;
   margin-top: 30px;
-  border-radius: 4.285714285714286px;
+  border-radius: 5px;
   -webkit-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
      -moz-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
           box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
@@ -627,7 +640,7 @@ footer {
 .reviews {
   padding: 30px;
   margin-top: 30px;
-  border-radius: 4.285714285714286px;
+  border-radius: 5px;
   -webkit-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
      -moz-box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
           box-shadow: 0 3px 0 1px rgba(228, 233, 242, 0.8);
@@ -658,26 +671,77 @@ footer {
 
 /* 5.3 Whitmore Tea Rooms Social Media Links */
 
-.social-link {
-  margin-left: 10px;
+@media (max-width: 992px) {
+  .social-links li {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .social-links li {
+    margin-right: 7.5px;
+  }
+}
+
+.social-links li:not(:first-child) {
+  margin-top: 7.5px;
+}
+
+.social-links li p {
+  font-size: 15px;
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  .social-links li p {
+    font-size: 13px;
+  }
+}
+
+.social-links li a {
+  display: block;
+  padding: 10px 15px;
   font-weight: 700;
+  color: #fff;
   text-shadow: none;
+  border-radius: 5px;
 }
 
-.social-link.facebook {
-  color: #3b5998;
+@media (min-width: 992px) {
+  .social-links li a {
+    padding: 0;
+    background-color: transparent !important;
+  }
+  .social-links li a.facebook {
+    color: #3b5998;
+  }
+  .social-links li a.twitter {
+    color: #00aced;
+  }
+  .social-links li a.gplus {
+    color: #dd4b39;
+  }
+  .social-links li a.pinterest {
+    color: #cb2027;
+  }
 }
 
-.social-link.twitter {
-  color: #00aced;
+.social-links li a.facebook {
+  background-color: #3b5998;
 }
 
-.social-link.gplus {
-  color: #dd4b39;
+.social-links li a.twitter {
+  background-color: #00aced;
 }
 
-.social-link.pinterest {
-  color: #cb2027;
+.social-links li a.gplus {
+  background-color: #dd4b39;
+}
+
+.social-links li a.pinterest {
+  background-color: #cb2027;
 }
 
 /* 6.0 Map */
@@ -707,7 +771,7 @@ footer {
   margin-right: 30px;
   margin-left: 30px;
   background: #fff;
-  border-radius: 4.285714285714286px;
+  border-radius: 5px;
 }
 
 @media (min-width: 768px) {

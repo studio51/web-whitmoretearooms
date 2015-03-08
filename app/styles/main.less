@@ -114,7 +114,7 @@ ul {
   @background-color: #f5f7fa;
   @box-color: #ffffff;
 
-  @border-radius: @box-padding / 7;
+  @border-radius: 5px;
   @border-color: darken(@background-color, 5%);
 
   @font-size-sm: 13px;
@@ -147,7 +147,12 @@ body {
 
   /* 1.1 Misc */
 
-  @import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+  .flaticon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
 
   @font-face {
     font-family: 'crayon';
@@ -217,7 +222,7 @@ body {
     background-position: 20% 20%;
     content: '';
     height: @navbar-height;
-    opacity: 0.3;
+    opacity: 0.2;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -451,31 +456,25 @@ body {
 
       .menu-page {
         .menu {
-          img {
-            margin: 0;
-          }
+          margin-top: @box-padding;
         }
 
         p.bookings-text {
-          margin: @box-padding / 2 0;
+          text-align: left;
+
+          @media(max-width: 768px) {
+            text-align: center;
+          }
         }
       }
 
   .menu {
     text-align: center;
 
-    .first-page {
-      margin-bottom: @box-padding;
-    }
-
-    @media(min-width: 992px) {
+    @media(max-width: 992px) {
       .first-page {
-        margin-bottom: 0;
+        margin-bottom: @box-padding;
       }
-    }
-
-    p.bookings-text, img {
-      margin: @box-padding auto;
     }
 
     .drinks {
@@ -488,15 +487,27 @@ body {
       }
     }
 
+    img {
+      margin: 0 auto;
+    }
+
+    p.bookings-text {
+      margin: ( @box-padding / 2 ) 0;
+    }
+
     .nav-tabs {
       li {
+
+        &:not(:first-child) {
+          margin-top: @box-padding / 4;
+        }
+
         a {
           border: 1px solid @border-color;
           border-radius: @border-radius;
           display: block;
           font-weight: 400;
-          padding: @box-padding / 3;
-          margin-top: @box-padding / 4;
+          padding:  @box-padding / 3;
         }
 
         &.active a {
@@ -633,15 +644,57 @@ footer {
 
   /* 5.3 Whitmore Tea Rooms Social Media Links */
 
-  .social-link {
-    font-weight: 700;
-    margin-left: @box-padding / 3;
-    text-shadow: none;
+  .social-links {
+    li {
 
-    &.facebook  { color: #3b5998; }
-    &.twitter   { color: #00aced; }
-    &.gplus     { color: #dd4b39; }
-    &.pinterest { color: #cb2027; }
+      @media(max-width: 992px) {
+        display: block;
+        margin: 0;
+        width: 100%;
+      }
+
+      @media(min-width: 992px) {
+        margin-right: @box-padding / 4;
+      }
+
+      &:not(:first-child) {
+        margin-top: @box-padding / 4;
+      }
+
+      p {
+        text-align: left;
+        font-size: @font-size-md;
+
+        @media(min-width: 992px) {
+          font-size: @font-size-sm;
+        }
+      }
+
+      a {
+        text-shadow: none;
+        display: block;
+        font-weight: 700;
+        padding: ( @box-padding / 3 ) ( @box-padding / 2);
+        border-radius: @border-radius;
+        color: #fff;
+
+        @media(min-width: 992px) {
+          background-color: transparent !important;
+          padding: 0;
+
+
+          &.facebook  { color: #3b5998; }
+          &.twitter   { color: #00aced; }
+          &.gplus     { color: #dd4b39; }
+          &.pinterest { color: #cb2027; }
+        }
+
+        &.facebook  { background-color: saturate(#3b5998, 0%); }
+        &.twitter   { background-color: saturate(#00aced, 0%); }
+        &.gplus     { background-color: saturate(#dd4b39, 0%); }
+        &.pinterest { background-color: saturate(#cb2027, 0%); }
+      }
+    }
   }
 
 /* 6.0 Map */
