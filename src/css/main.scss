@@ -1,4 +1,5 @@
-@import "bootstrap.min.css";
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "carousel";
 
 /*
 
@@ -79,27 +80,27 @@ ul {
 
 /* 0.1 LESS Mixins */
 
-.box-shadow(@string) {
-  -webkit-box-shadow: @string;
-     -moz-box-shadow: @string;
-          box-shadow: @string;
-}
+// .box-shadow($string) {
+//   -webkit-box-shadow: $string;
+//      -moz-box-shadow: $string;
+//           box-shadow: $string;
+// }
 
-.transform(@string) {
-  -webkit-transform: @string;
-     -moz-transform: @string;
-      -ms-transform: @string;
-       -o-transform: @string;
-          transform: @string;
-}
+// .transform($string) {
+//   -webkit-transform: $string;
+//      -moz-transform: $string;
+//       -ms-transform: $string;
+//        -o-transform: $string;
+//           transform: $string;
+// }
 
-.translateY(@string) {
-  .transform(translateY(@string));
-}
+// .translateY($string) {
+//   .transform(translateY($string));
+// }
 
-  .shadow-box() {
-    .box-shadow( 0 3px 0 1px fade(@border-color, 80%) );
-  }
+//   .shadow-box() {
+//     .box-shadow( 0 3px 0 1px fade($border-color, 80%) );
+//   }
 
   .spacing {
     margin: 0;
@@ -108,24 +109,24 @@ ul {
 
   /* 0.1.1 LESS Variables */
 
-  @box-padding: 30px;
-  @navbar-height: @box-padding * 5;
+  $box-padding: 30px;
+  $navbar-height: $box-padding * 5;
 
-  @background-color: #f5f7fa;
-  @box-color: #ffffff;
+  $background-color: #f5f7fa;
+  $box-color: #ffffff;
 
-  @border-radius: 5px;
-  @border-color: darken(@background-color, 5%);
+  $border-radius: 5px;
+  $border-color: ""; // darken($background-color, 5%);
 
-  @font-size-sm: 14px;
-  @font-size-md: @font-size-sm + 2px;
-  @font-size-lg: @font-size-md + 2px;
+  $font-size-sm: 14px;
+  $font-size-md: $font-size-sm + 2px;
+  $font-size-lg: $font-size-md + 2px;
 
 /* 1.0 Body */
 
 html,
 body {
-  .spacing;
+  // .spacing;
 
   height: 100%;
   width: 100%;
@@ -134,14 +135,14 @@ body {
 body {
   background-color: #fff;
   font-family: 'Quicksand', sans-serif;
-  font-size: @font-size-sm;
+  font-size: $font-size-sm;
 }
 
 .container {
-  padding: 0 @box-padding;
+  padding: 0 $box-padding;
 
   @media(min-width: 1200px) {
-    padding: 0 ( @box-padding * 4 );
+    padding: 0 ( $box-padding * 4 );
   }
 }
 
@@ -161,9 +162,9 @@ body {
 
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.eot?46617619');
-    src: url('../font/fontello.eot?46617619#iefix') format('embedded-opentype'),
-         url('../font/fontello.svg?46617619#fontello') format('svg');
+    src: url('../fonts/fontello.eot?46617619');
+    src: url('../fonts/fontello.eot?46617619#iefix') format('embedded-opentype'),
+         url('../fonts/fontello.svg?46617619#fontello') format('svg');
     font-weight: normal;
     font-style: normal;
   }
@@ -177,7 +178,7 @@ body {
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     @font-face {
       font-family: 'fontello';
-      src: url('../font/fontello.svg?46617619#fontello') format('svg');
+      src: url('../fonts/fontello.svg?46617619#fontello') format('svg');
     }
   }
 
@@ -209,19 +210,19 @@ body {
   border: none;
   border-radius: 0;
   margin: 0;
-  min-height: @navbar-height;
+  min-height: $navbar-height;
   overflow: hidden;
   position: relative;
 
   @media(min-width: 768px) and (max-width: 992px) {
-    min-height: @navbar-height - @box-padding;
+    min-height: $navbar-height - $box-padding;
   }
 
   &:after {
-    background-image: url('../images/bg-floral.jpg');
+    background-image: url('../img/bg-floral.jpg');
     background-position: 20% 20%;
     content: '';
-    height: @navbar-height;
+    height: $navbar-height;
     opacity: 0.2;
     position: absolute;
     z-index: -1;
@@ -230,14 +231,14 @@ body {
   }
 
   img {
-    height: @navbar-height;
+    height: $navbar-height;
     margin: 0 auto;
-    padding: ( @box-padding / 2) 0;
+    padding: ( $box-padding / 2) 0;
     position: relative;
     z-index: 1;
 
     @media(min-width: 768px) and (max-width: 992px) {
-      height: @navbar-height - @box-padding;
+      height: $navbar-height - $box-padding;
     }
 
     @media(min-width: 992px) {
@@ -246,10 +247,10 @@ body {
   }
 
   .meta {
-    margin: ( @navbar-height / 4 ) 0 0;
+    margin: ( $navbar-height / 4 ) 0 0;
 
     @media(min-width: 992px) {
-      margin: ( @navbar-height / 2.2 ) 0 0;
+      margin: ( $navbar-height / 2.2 ) 0 0;
     }
   }
 
@@ -257,9 +258,9 @@ body {
 
     @media(min-width: 768px) {
       display: block;
-      font-size: @font-size-lg;
+      font-size: $font-size-lg;
       font-weight: 700;
-      padding: ( @box-padding / 8 ) 0;
+      padding: ( $box-padding / 8 ) 0;
       position: relative;
       z-index: 1;
 
@@ -280,7 +281,7 @@ body {
     height: auto;
 
     &.mobile {
-      background-image: url('../images/carousel1.png');
+      background-image: url('../img/carousel1.jpg');
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -297,24 +298,24 @@ body {
         height: auto;
       }
 
-      @media(min-width: 768px) {
-        &-three { .translateY(-17%); }
-      }
+      // @media(min-width: 768px) {
+      //   &-three { .translateY(-17%); }
+      // }
 
-      @media(min-width: 992px) {
+      // @media(min-width: 992px) {
 
-        &-one { .translateY(-5%); }
-        &-two { .translateY(-12%); }
-        &-three { .translateY(-20%); }
-        &-four { .translateY(-18%); }
-      }
+      //   &-one { .translateY(-5%); }
+      //   &-two { .translateY(-12%); }
+      //   &-three { .translateY(-20%); }
+      //   &-four { .translateY(-18%); }
+      // }
 
-      @media(min-width: 1200px) {
+      // @media(min-width: 1200px) {
 
-        &-one { .translateY(-10%); }
-        &-two { .translateY(-15%); }
-        &-four { .translateY(-25%); }
-      }
+      //   &-one { .translateY(-10%); }
+      //   &-two { .translateY(-15%); }
+      //   &-four { .translateY(-25%); }
+      // }
     }
   }
 
@@ -323,8 +324,8 @@ body {
   .board {
     color: #fff;
     font-family: 'crayon';
-    margin: @box-padding 0 ( @box-padding * 3 ); /* margin on sides is being handled by the .container class */
-    padding: ( @box-padding * 2 ) ( @box-padding * 1 );
+    margin: $box-padding 0 ( $box-padding * 3 ); /* margin on sides is being handled by the .container class */
+    padding: ( $box-padding * 2 ) ( $box-padding * 1 );
     position: relative;
     text-align: center;
 
@@ -336,34 +337,34 @@ body {
       }
 
     .meta {
-      margin-bottom: @box-padding;
+      margin-bottom: $box-padding;
 
       p {
-        font-size: @font-size-md;
+        font-size: $font-size-md;
       }
     }
 
     h1 {
-      margin-bottom: @box-padding / 4;
+      margin-bottom: $box-padding / 4;
 
       @media(min-width: 768px) {
-        font-size: @font-size-lg * 2.5;
+        font-size: $font-size-lg * 2.5;
       }
     }
 
     p {
-      font-size: @font-size-md;
-      margin-bottom: @box-padding / 6;
+      font-size: $font-size-md;
+      margin-bottom: $box-padding / 6;
 
       @media(min-width: 768px) {
-        font-size: @font-size-lg * 1.1;
+        font-size: $font-size-lg * 1.1;
       }
 
       &.social {
-        margin-top: @box-padding / 1;
+        margin-top: $box-padding / 1;
 
         @media(min-width: 768px) {
-          font-size: @font-size-lg * 1.1;
+          font-size: $font-size-lg * 1.1;
         }
       }
     }
@@ -386,14 +387,14 @@ body {
     }
 
     &:after {
-      background: url('../images/bg-board.png');
+      background: url('../img/bg-board.png');
       border: 3px solid #271a0c;
-      bottom: @box-padding;
+      bottom: $box-padding;
       box-shadow: inset 0 0 50px 5px #000,
                         0 0 50px 5px #271a0c;
-      left: @box-padding;
-      right: @box-padding;
-      top: @box-padding;
+      left: $box-padding;
+      right: $box-padding;
+      top: $box-padding;
     }
   }
 
@@ -409,17 +410,17 @@ body {
   }
 
   .box {
-    .shadow-box();
+    // .shadow-box();
 
     background-color: #fff;
-    border-radius: @border-radius;
-    padding: @box-padding;
+    border-radius: $border-radius;
+    padding: $box-padding;
 
     .section-title,
     .menu-category-title {
       font-family: 'Quicksand', sans-serif;
       font-weight: 700;
-      margin-bottom: @box-padding;
+      margin-bottom: $box-padding;
       text-align: center;
     }
 
@@ -427,7 +428,7 @@ body {
       text-align: center;
 
       &:not(:last-child) {
-        margin-bottom: @box-padding / 3;
+        margin-bottom: $box-padding / 3;
       }
     }
   }
@@ -436,13 +437,13 @@ body {
 
     .quote {
       font-style: italic;
-      padding: ( @box-padding / 2 ) 0;
+      padding: ( $box-padding / 2 ) 0;
     }
 
   /* 4.2 About Whitmore Tea Rooms */
 
   .about {
-    margin-top: -( @box-padding * 2 );
+    margin-top: -( $box-padding * 2 );
   }
 
   @media(min-width: 768px) {
@@ -458,7 +459,7 @@ body {
 
       .menu-page {
         .menu {
-          margin-top: @box-padding;
+          margin-top: $box-padding;
         }
 
         p.bookings-text {
@@ -475,7 +476,7 @@ body {
 
     @media(max-width: 992px) {
       .first-page {
-        margin-bottom: @box-padding;
+        margin-bottom: $box-padding;
       }
     }
 
@@ -494,26 +495,26 @@ body {
     }
 
     p.bookings-text {
-      margin: ( @box-padding / 2 ) 0;
+      margin: ( $box-padding / 2 ) 0;
     }
 
     .nav-tabs {
       li {
 
         &:not(:first-child) {
-          margin-top: @box-padding / 4;
+          margin-top: $box-padding / 4;
         }
 
         a {
-          border: 1px solid @border-color;
-          border-radius: @border-radius;
+          border: 1px solid $border-color;
+          border-radius: $border-radius;
           display: block;
           font-weight: 400;
-          padding:  @box-padding / 3;
+          padding:  $box-padding / 3;
         }
 
         &.active a {
-          background-color: fade(@border-color, 30%);
+          background-color: fade($border-color, 30%);
         }
       }
     }
@@ -528,14 +529,14 @@ body {
 
     &-subcategory-title {
       font-family: 'Quicksand', sans-serif;
-      font-size: @font-size-md + 1px;
+      font-size: $font-size-md + 1px;
       font-weight: 700;
-      margin-bottom: @box-padding / 4;
+      margin-bottom: $box-padding / 4;
       text-shadow: 0px 0px 1px fade(#000, 30%);
     }
 
     &-divider {
-      margin: ( @box-padding / 4 ) 0;
+      margin: ( $box-padding / 4 ) 0;
     }
   }
 
@@ -544,21 +545,21 @@ body {
 
 footer {
   background-color: #fff;
-  border-top: 1px solid @border-color;
-  padding: @box-padding 0;
+  border-top: 1px solid $border-color;
+  padding: $box-padding 0;
 }
 
   .footer-clearfix {
-    margin-top: @box-padding;
+    margin-top: $box-padding;
   }
 
   /* 5.1 Trip Advisor widget */
 
   .widSSP {
-    .shadow-box();
+    // .shadow-box();
 
-    border-radius: @border-radius;
-    padding: @box-padding / 2 !important;
+    border-radius: $border-radius;
+    padding: $box-padding / 2 !important;
     width: 100% !important;
 
     a {
@@ -576,7 +577,7 @@ footer {
   .widSSPBranding {
     border: none !important;
     width: 100%;
-    padding: 0 0 ( @box-padding / 2 ) !important;
+    padding: 0 0 ( $box-padding / 2 ) !important;
     margin: 0 !important;
 
     dl {
@@ -600,22 +601,22 @@ footer {
 
           ul {
             li {
-              .shadow-box();
+              // .shadow-box();
 
-              border-radius: @border-radius;
-              margin-top: @box-padding;
-              padding: @box-padding;
+              border-radius: $border-radius;
+              margin-top: $box-padding;
+              padding: $box-padding;
             }
           }
         }
       }
 
   .reviews {
-    .shadow-box();
+    // .shadow-box();
 
-    border-radius: @border-radius;
-    margin-top: @box-padding;
-    padding: @box-padding;
+    border-radius: $border-radius;
+    margin-top: $box-padding;
+    padding: $box-padding;
 
     @media(min-width: 768px) {
       margin-top: 0;
@@ -628,17 +629,17 @@ footer {
 
         .author {
           display: block;
-          font-size: @font-size-md;
+          font-size: $font-size-md;
         }
 
         .review {
-          margin: ( @box-padding / 2 ) 0;
+          margin: ( $box-padding / 2 ) 0;
         }
 
         .date {
-          color: darken(@border-color, 20%);
+          // color: darken($border-color, 20%);
           display: block;
-          font-size: @font-size-sm - 1px;
+          font-size: $font-size-sm - 1px;
           font-style: italic;
           text-align: right;
         }
@@ -658,22 +659,22 @@ footer {
       }
 
       @media(min-width: 992px) {
-        margin-right: @box-padding / 5;
+        margin-right: $box-padding / 5;
       }
 
       @media(max-width: 992px) {
 
         &:not(:first-child) {
-          margin-top: @box-padding / 4;
+          margin-top: $box-padding / 4;
         }
       }
 
       p {
         text-align: left;
-        font-size: @font-size-md;
+        font-size: $font-size-md;
 
         @media(min-width: 992px) {
-          font-size: @font-size-sm;
+          font-size: $font-size-sm;
         }
       }
 
@@ -681,8 +682,8 @@ footer {
         text-shadow: none;
         display: block;
         font-weight: 700;
-        padding: ( @box-padding / 3 ) ( @box-padding / 2);
-        border-radius: @border-radius;
+        padding: ( $box-padding / 3 ) ( $box-padding / 2);
+        border-radius: $border-radius;
         color: #fff;
 
         @media(min-width: 992px) {
@@ -706,26 +707,26 @@ footer {
 /* 6.0 Map */
 
 .map {
-  background-image: url('../images/whitmore-map.png');
+  background-image: url('../img/whitmore-map.png');
   background-position: center 10px;
-  height: @box-padding * 13;
+  height: $box-padding * 13;
   width: 100%;
   position: relative;
 
   @media(min-width: 768px) {
-    height: @box-padding * 10;
+    height: $box-padding * 10;
     background-position: center center;
   }
 }
 
 .vcard {
   background: #fff;
-  border-radius: @border-radius;
+  border-radius: $border-radius;
   left: 0;
-  margin-left: @box-padding;
-  margin-right: @box-padding;
-  margin-top: @box-padding;
-  padding: @box-padding @box-padding 0;
+  margin-left: $box-padding;
+  margin-right: $box-padding;
+  margin-top: $box-padding;
+  padding: $box-padding $box-padding 0;
   position: absolute;
   right: 0;
   z-index: 1;
@@ -738,7 +739,7 @@ footer {
 
   .logo {
     img {
-      max-height: @box-padding * 3;
+      max-height: $box-padding * 3;
     }
   }
 
@@ -747,13 +748,13 @@ footer {
   }
 
   .telephone {
-    margin-top: @box-padding / 3;
+    margin-top: $box-padding / 3;
   }
 
   &:after {
     content: '';
     position: relative;
-    bottom: -( @box-padding );
+    bottom: -( $box-padding );
     margin: 0 auto;
     border-top: 15px solid #fff;
     border-left: 15px solid transparent;
@@ -763,9 +764,9 @@ footer {
 }
 
 .box.studio51 {
-  padding: @box-padding / 2 0;
+  padding: $box-padding / 2 0;
   box-shadow: none;
-  font-size: @font-size-sm - 2;
+  font-size: $font-size-sm - 2;
 }
 
 p.client-meta,
@@ -779,7 +780,7 @@ p.studio51-meta {
 
 ul.client-links,
 ul.studio51-links {
-  margin: ( @box-padding / 4 ) 0 0;
+  margin: ( $box-padding / 4 ) 0 0;
   padding: 1px 0;
   text-align: center;
 
@@ -789,6 +790,6 @@ ul.studio51-links {
   }
 
   li:not(:first-child) {
-    margin-left: @box-padding / 3;
+    margin-left: $box-padding / 3;
   }
 }

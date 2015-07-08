@@ -1,292 +1,260 @@
-// Generated on 2015-02-08 using generator-bootstrap3-less 3.0.1
-'use strict';
+module.exports = function(grunt) {
 
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
-var mountFolder = function (connect, dir) {
-  return connect.static(require('path').resolve(dir));
-};
-
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to match all subfolders:
-// 'test/spec/**/*.js'
-
-module.exports = function (grunt) {
-  // load all grunt tasks
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-
-  // configurable paths
-  var yeomanConfig = {
-    app: 'app',
-    dist: 'dist'
+  var appConfig = {
+    host: 'localhost',
+    port: 1338
   };
 
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
   grunt.initConfig({
-    yeoman: yeomanConfig,
-    watch: {
-      recess: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
-        tasks: ['recess']
-      },
-      livereload: {
-        files: [
-          '<%= yeoman.app %>/*.html',
-          '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
-          '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-        ],
-        tasks: ['livereload']
-      }
-    },
+    pkg: grunt.file.readJSON('package.json'),
+    appConfig: appConfig,
+
     connect: {
       options: {
-        port: 1337,
-        // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
+        port: appConfig.port,
+        livereload: true,
       },
-      livereload: {
-        options: {
-          middleware: function (connect) {
-            return [
-              lrSnippet,
-              mountFolder(connect, '.tmp'),
-              mountFolder(connect, 'app')
-            ];
-          }
-        }
-      },
-      test: {
-        options: {
-          middleware: function (connect) {
-            return [
-              mountFolder(connect, '.tmp'),
-              mountFolder(connect, 'test')
-            ];
-          }
-        }
-      },
+
       dist: {
         options: {
-          middleware: function (connect) {
-            return [
-              mountFolder(connect, 'dist')
-            ];
-          }
+          base: 'dist/'
         }
       }
     },
+
     open: {
       server: {
-        path: 'http://localhost:<%= connect.options.port %>'
+        path: "http://<%= appConfig.host %>:<%= appConfig.port %>"
       }
     },
+
     clean: {
-      dist: {
-        files: [{
-          dot: true,
-          src: [
-            '.tmp',
-            '<%= yeoman.dist %>/*',
-            '!<%= yeoman.dist %>/.git*'
-          ]
-        }]
+      options: {
+        dot: true
       },
-      server: '.tmp'
-    },
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: [
-        'Gruntfile.js',
-        '<%= yeoman.app %>/scripts/{,*/}*.js',
-        '!<%= yeoman.app %>/scripts/vendor/*',
-        'test/spec/{,*/}*.js'
-      ]
-    },
-    mocha: {
-      all: {
-        options: {
-          run: true,
-          urls: ['http://localhost:<%= connect.options.port %>/index.html']
-        }
-      }
-    },
-    recess: {
+
       dist: {
-        options: {
-          compile: true
-        },
-        files: {
-          '<%= yeoman.app %>/styles/main.css': ['<%= yeoman.app %>/styles/main.less']
-        }
+        src: ['dist/']
       }
     },
-    // not used since Uglify task does concat,
-    // but still available if needed
-    /*concat: {
-      dist: {}
-    },*/
-    // not enabled since usemin task does concat and uglify
-    // check index.html to edit your build targets
-    // enable this task if you prefer defining your build targets here
-    /*uglify: {
-      dist: {}
-    },*/
-    rev: {
-      dist: {
-        files: {
-          src: [
-            '<%= yeoman.dist %>/scripts/{,*/}*.js',
-            '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-            '<%= yeoman.dist %>/fonts/*'
-          ]
-        }
-      }
-    },
-    useminPrepare: {
-      html: '<%= yeoman.app %>/index.html',
-      options: {
-        dest: '<%= yeoman.dist %>'
-      }
-    },
-    usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
-      options: {
-        dirs: ['<%= yeoman.dist %>']
-      }
-    },
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg}',
-          dest: '<%= yeoman.dist %>/images'
-        }]
-      }
-    },
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.svg',
-          dest: '<%= yeoman.dist %>/images'
-        }]
-      }
-    },
-    cssmin: {
-      dist: {
-        files: {
-          '<%= yeoman.dist %>/styles/main.css': [
-            '.tmp/styles/{,*/}*.css',
-            '<%= yeoman.app %>/styles/{,*/}*.css'
-          ]
-        }
-      }
-    },
-    htmlmin: {
-      dist: {
-        options: {
-          /*removeCommentsFromCDATA: true,
-          // https://github.com/yeoman/grunt-usemin/issues/44
-          //collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
-          useShortDoctype: true,
-          removeEmptyAttributes: true,
-          removeOptionalTags: true*/
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>',
-          src: '*.html',
-          dest: '<%= yeoman.dist %>'
-        }]
-      }
-    },
+
     copy: {
-      dist: {
+      src: {
         files: [{
           expand: true,
           dot: true,
-          cwd: '<%= yeoman.app %>',
-          dest: '<%= yeoman.dist %>',
-          src: [
-            '*.{ico,txt}',
-            'fonts/*',
-            '.htaccess',
-            'images/{,*/}*.{webp,gif}'
-          ]
-        }]
-      },
-      server: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>/bower_components/font-awesome/font/',
-          dest: '<%= yeoman.app %>/fonts/',
-          src: ['*']
+          flatten: true,
+          src: ['bower_components/font-awesome/fonts/*', 'src/fonts/*'],
+          dest: 'dist/fonts/',
+          filter: 'isFile'
         }]
       }
     },
-    concurrent: {
-      dist: [
-        'recess',
-        'imagemin',
-        'svgmin',
-        'htmlmin'
-      ]
+
+    sass: {
+      options: {
+        sourceMap: true
+      },
+
+      dist: {
+        files: {
+          'dist/css/main.min.css': 'src/css/main.scss'
+        }
+      }
+    },
+
+   postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('autoprefixer-core')({
+            browsers: ['last 5 versions', '> 15%', 'IE 10']
+          })
+        ]
+      },
+
+      dist: {
+        src: ['dist/css/main.min.css']
+      }
+    },
+
+    cssnext: {
+      options: {
+        sourcemap: false
+      },
+
+      dist: {
+        files: {
+          'dist/css/main.min.css': 'dist/css/main.min.css'
+        }
+      }
+    },
+
+    cssbeautifier : {
+      files : ['dist/css/main.min.css'],
+      options : {
+        indent: '  ',
+        openbrace: 'end-of-line',
+        autosemicolon: true
+      }
+    },
+
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+
+      target: {
+        files: {
+          'dist/css/main.min.css': ['dist/css/main.min.css'],
+        }
+      }
+    },
+
+    uglify: {
+      dist: {
+        options: {
+          beautify: true
+        },
+
+        files: {
+          'dist/js/main.min.js': ['src/js/**/*.js']
+        }
+      }
+    },
+
+    jade: {
+      html: {
+        files: {
+          'dist/': ['src/*.jade']
+        },
+
+        options: {
+          client: false,
+          pretty: true
+        }
+      }
+    },
+
+    watch: {
+      options: {
+        livereload: true
+      },
+      grunt: {
+        files: 'Gruntfile.js'
+      },
+      sass: {
+        files: ['src/css/**/*.scss'],
+        tasks: ['sass', 'postcss', 'cssnext']
+      },
+      uglify: {
+        files: ['src/js/**/*.js'],
+        tasks: ['uglify']
+      },
+      jade: {
+        files: ['src/**/*.jade'],
+        tasks: ['jade']
+      }
+    },
+
+    'ftp-deploy': {
+      build: {
+        auth: {
+          host: 'whitmoretearooms.co.uk',
+          port: 21,
+          authKey: '/.ftppass'
+        },
+        src: 'app',
+        dest: '/public_html/test',
+        exclusions: ['**/.DS_Store']
+      }
+    },
+
+    imagemin: {
+      png: {
+        options: {
+          optimizationLevel: 7
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'src/img/',
+            src: ['**/*.png'],
+            dest: 'dist/img/',
+            ext: '.png'
+          }
+        ]
+      },
+
+      jpg: {
+        options: {
+          progressive: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'src/img/',
+            src: ['**/*.jpg'],
+            dest: 'dist/img/',
+            ext: '.jpg'
+          }
+        ]
+      }
+    },
+
+    svgmin: {
+      options: {
+        plugins: [
+          { collapseGroups: false },
+          { removeUnknownsAndDefaults: false }
+        ]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'src/img',
+          src: '{,*/}*.svg',
+          dest: 'dist/img'
+        }]
+      }
     }
   });
 
-  grunt.renameTask('regarde', 'watch');
-
-  grunt.registerTask('server', function (target) {
-    if (target === 'dist') {
-      return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
-    }
-
-    grunt.task.run([
-      'clean:server',
-      'recess',
-      'copy:server',
-      'livereload-start',
-      'connect:livereload',
-      'open',
-      'watch'
-    ]);
-  });
-
-  grunt.registerTask('test', [
-    'clean:server',
-    'recess',
-    'copy:server',
-    'connect:test',
-    'mocha'
+  grunt.registerTask('compile-css', [
+    'sass',
+    'postcss',
+    'cssnext',
+    'imagemin',
+    'svgmin',
+    'copy'
   ]);
 
-  grunt.registerTask('build', [
-    'clean:dist',
-    'copy:server',
-    'useminPrepare',
-    'concurrent',
-    'cssmin',
-    'concat',
-    'uglify',
-    'copy',
-    'rev',
-    'usemin'
+  grunt.registerTask('compile-js', [
+    'uglify'
   ]);
 
-  grunt.registerTask('default', [
-    'jshint',
-    'test',
-    'build'
+  grunt.registerTask('compile-html', [
+    'jade'
   ]);
-};
+
+  grunt.registerTask('compile-theme', ['compile-css', 'compile-js', 'compile-html']);
+
+  grunt.registerTask('prettify', [
+    'cssbeautifier',
+    'cssmin'
+  ]);
+
+  grunt.registerTask('preview', [
+    'compile-theme',
+    'connect',
+    'open',
+    'watch'
+  ]);
+
+  grunt.registerTask('default', ['clean', 'preview']);
+  grunt.registerTask('prepare', ['clean', 'compile-theme', 'prettify']);
+  grunt.registerTask('deploy', ['ship', 'ftp-deploy'])
+}

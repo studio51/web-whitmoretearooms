@@ -1,0 +1,91 @@
+include jade/header
+
+- var slides = 1
+
+main#content
+  section.intro
+    #carousel.carousel.hidden-xs
+
+      while slides < 5
+
+        div.carousel-layer(class="carousel-layer-#{slides}")
+          img.lazyOwl(data-src="img/carousel#{slides++}.jpg", title='Whitmore Tea Rooms', alt='')
+
+    .container
+      .row
+        .board
+          .board-contact-information
+            p: i.wta-phone 01782 680433
+            p: i.wta-mail info@whitmoretearooms.co.uk
+
+          h1 Opening Hours
+
+          p Monday - closed
+          p Tuesday - 10am to 5pm
+          p Wednesday - 10am to 5pm
+          p Thursday - 10am to 5pm
+          p Friday - 10am to 5pm
+          p Saturday - 10am to 5pm
+          p Sunday - 10am to 4pm
+
+          .board-social-media
+            p
+              | Find us on
+
+              a(href='https://www.facebook.com/tearoomswhitmore?ref=whitmoretearooms.co.uk', title='Facebook')
+                img.flaticon(src='img/facebook.svg', title='Like us on Facebook', alt='f')
+                | facebook
+
+              |  and
+
+              a(href='https://plus.google.com/101576584832781482721/about?ref=whitmoretearooms.co.uk', title='Google+')
+                img.flaticon(src='img/google.svg', title='Add us on Google+', alt='f')
+                | google+
+
+  section.content
+    .container
+      section#about.box.about
+        h1.section-title Whitmore Tea Rooms
+
+        p
+          | Situated in the heart of the English countryside Whitmore Tea
+          | Rooms is located in a beautifully restored 18th century cottage
+          | in an area reminiscent of a bygone era or a scene from a Jane
+          | Austen novel.
+
+        p
+          | Overlooking the historic parish church and fabulous grounds of
+          | Whitmore Hall the tea room is a quiet haven to relax and take a
+          | trip back in time to celebrate tea in its time honoured
+          | traditional style.
+
+        p
+          | Re-opened in September 2013 and lovingly restored we have
+          | successfully established a reputation for high quality food and
+          | service combined with an ambiance that is both relaxed and
+          | classically elegant. We guarantee a warm welcome from all of our
+          | staff and offer an experience that is both unique and ultimately
+          | satisfying.
+
+        p
+          | Our cooks and cake bakers work daily to provide the freshest
+          | food made with the best ingredients, and we source the highest
+          | quality fresh ground coffee and loose leaf tea. Our breakfast,
+          | lunch and afternoon tea menus are available daily along with a
+          | wide selection of home-made cakes and scones. We can also create
+          | bespoke menus to suit any occasion if required and all of our
+          | home-made cakes are available gift-wrapped to pre-order and collect.
+
+        p
+          | So whether you are just popping in for a pot of tea for one or
+          | organising a party for 30 we can ensure that your visit to our
+          | charming tea rooms will be an unforgettable event. We look
+          | forward to seeing you soon!
+
+      .quote
+        p &quot; There are few hours in life more agreeable than the hour dedicated to the ceremony known as afternoon tea &quot; -Henry James
+
+      include jade/menu
+
+include jade/contact
+include jade/footer
