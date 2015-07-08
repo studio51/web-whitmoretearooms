@@ -10,23 +10,19 @@ html(lang="en")
 
     meta(name="description", content="Quaint little village Tea Room, based in Whitmore, Newcastle-under-Lyme, Staffordshire")
 
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700')
     link(rel='stylesheet', href='css/main.min.css')
 
   body
 
     header
-      nav.navbar.navbar-default
+      nav.navbar
         .container
           .row
-            .col-sm-5.col-md-6.col-lg-7
-              .navbar-header
-                a(href='http://whitmoretearooms.co.uk', title='Whitmore Tea Rooms')
-                  img.img-responsive(itemprop='image', src='img/whitmore-logo.svg', alt='Whitmore Tea Rooms', title='Whitmore Tea Rooms')
+            .navbar-header
+              a(href='http://whitmoretearooms.co.uk', title='Whitmore Tea Rooms')
+                img.img-responsive(src='img/whitmore-logo.svg', alt='Whitmore Tea Rooms', title='Whitmore Tea Rooms')
 
-            .col-sm-7.col-md-6.col-lg-5
-              .meta.hidden-xs
-                p(itemprop='telephone')
-                  i.wta-phone 01782 680433
-
-                p(itemprop='email')
-                  i.wta-mail info@whitmoretearooms.co.uk
+            .navbar-contact-information
+              p: i.wta-phone 01782 680433
+              p: i.wta-mail info@whitmoretearooms.co.uk
