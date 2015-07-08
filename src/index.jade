@@ -1,15 +1,279 @@
-!!! 5
+include jade/header
 
-html(lang="en")
-  head
-    title Whitmore Tea Rooms | Traditional Tea Rooms in Staffordshire, Cheshire and Newcastle-under-Lyme
+main#content
+  section.intro
 
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    meta(name="viewport", content="width=device-width, initial-scale=1")
+    - var slides = 1
 
-    meta(name="description", content="Quaint little village Tea Room, based in Whitmore, Newcastle-under-Lyme, Staffordshire")
+    #carousel.owl-carousel.hidden-xs
 
-    link(rel='stylesheet', href='css/main.css')
+      while slides < 5
 
-  body
+        div(class="carousel-layer carousel-layer-#{slides}")
+          img.lazyOwl(data-src="img/carousel#{slides++}.jpg", title='Whitmore Tea Rooms', alt='')
+
+    .container
+      .row
+        .col-sm-push-5.col-sm-7.col-md-push-6.col-md-6.col-lg-push-7.col-lg-5
+          .board
+            .meta.visible-xs
+              p
+                i.wta-phone 01782 680433
+
+              p
+                i.wta-mail info@whitmoretearooms.co.uk
+
+            h1 Opening Hours
+
+            p Monday - closed
+            p Tuesday - 10am to 5pm
+            p Wednesday - 10am to 5pm
+            p Thursday - 10am to 5pm
+            p Friday - 10am to 5pm
+            p Saturday - 10am to 5pm
+            p Sunday - 10am to 4pm
+
+            p.social
+              | Find us on
+
+              a(href='https://www.facebook.com/tearoomswhitmore?fref=whitmoretearooms.co.uk', title='Facebook')
+                img.flaticon(src='img/facebook.svg', title='Like us on Facebook', alt='f')
+                | facebook
+              | and
+
+              a(href='', title='Twitter')
+                img.flaticon(src='img/twitter.svg', title='Follow us on Twitter', alt='t')
+                |  twitter
+              | .
+  section.content
+    .container
+      .row
+        .col-sm-12
+          section#about.box.about
+            h1.section-title(itemprop='name') Whitmore Tea Rooms
+            p
+              | Situated in the heart of the English countryside Whitmore Tea
+              | Rooms is located in a beautifully restored 18th century cottage
+              | in an area reminiscent of a bygone era or a scene from a Jane
+              | Austen novel.
+
+            p
+              | Overlooking the historic parish church and fabulous grounds of
+              | Whitmore Hall the tea room is a quiet haven to relax and take a
+              | trip back in time to celebrate tea in its time honoured
+              | traditional style.
+
+            p
+              | Re-opened in September 2013 and lovingly restored we have
+              | successfully established a reputation for high quality food and
+              | service combined with an ambiance that is both relaxed and
+              | classically elegant. We guarantee a warm welcome from all of our
+              | staff and offer an experience that is both unique and ultimately
+              | satisfying.
+
+            p
+              | Our cooks and cake bakers work daily to provide the freshest
+              | food made with the best ingredients, and we source the highest
+              | quality fresh ground coffee and loose leaf tea. Our breakfast,
+              | lunch and afternoon tea menus are available daily along with a
+              | wide selection of home-made cakes and scones. We can also create
+              | bespoke menus to suit any occasion if required and all of our
+              | home-made cakes are available gift-wrapped to pre-order and collect.
+
+            p
+              | So whether you are just popping in for a pot of tea for one or
+              | organising a party for 30 we can ensure that your visit to our
+              | charming tea rooms will be an unforgettable event. We look
+              | forward to seeing you soon!
+
+          p.quote
+            | &quot;There are few hours in life more agreeable than the hour dedicated to the ceremony known as afternoon tea&quot; -Henry James
+
+          section#menu.menu
+            .row
+              .col-md-4
+                .box.first-page
+                  h1.section-title Menu
+
+                  img.img-responsive(src='img/tea-pot.png', alt='Tea Pot', title='Whitmore Tea Rooms')
+
+                  p.bookings-text
+                    | Bookings available for large parties and special occasions.
+
+                  div(role='tabpanel')
+                    ul.nav.nav-tabs(role='tablist')
+                      li(role='presentation')
+                        a.menu-item(href='#drinks-menu', aria-controls='drinks-menu', role='tab', data-toggle='tab') Soft Drinks
+
+                      li.active(role='presentation')
+                        a.menu-item(href='#tea-menu', aria-controls='tea-menu', role='tab', data-toggle='tab') Lunch &amp; Afternoon Tea
+
+                      li(role='presentation')
+                        a.menu-item(href='#savouries-menu', aria-controls='savouries-menu', role='tab', data-toggle='tab') Savouries &amp; Light BItes
+
+              .col-md-8
+                .box
+                  .tab-content
+                    #drinks-menu.tab-pane.fade(role='tabpanel')
+                      h1.menu-category-title Soft Drinks Menu
+
+                      .drinks
+                        p
+                          | Coke Cola / Diet Coke
+                          span &pound;2.20
+
+                        p
+                          | Fentiman&apos;s Victorian Lemonade
+                          span &pound;2.50
+
+                        p
+                          | Fentiman&apos;s Dandelion &amp; Burdoch
+                          span &pound;2.50
+
+                        p
+                          | Fentiman&apos;s Ginger Beer
+                          span &pound;2.50
+
+                        p
+                          | Bottlegreen Elderflower Presse
+                          span &pound;2.20
+
+                        p
+                          | Brit Vic Cranberry Juice
+                          span &pound;1.80
+
+                        p
+                          | Brit Vic Orange Juice
+                          span &pound;1.80
+
+                        p
+                          | Schweeppes Tonic / Slimline Tonic
+                          span &pound;1.80
+
+                        p
+                          | Fruit Shoots
+                          span &pound;1.50
+
+                        p
+                          | Sparkling / Still Mineral Water
+                          span &pound;2.00
+
+                        p
+                          | Lipton&apos;s Peach Iced Tea
+                          span &pound;2.00
+
+                    #tea-menu.tab-pane.fade.in.active(role='tabpanel')
+                      h1.menu-category-title Lunch &amp; Afternoon Tea
+
+                      .row
+                        .col-sm-12
+                          h3.menu-subcategory-title Pot of Tea for one &pound;2.95 / for two &pound;3.95
+                          p
+                            | English Breakfast, Earl Gray, Darjeeling, Assam &amp; Lapsang Souchong /
+                            | Strawberry Rooibos, Camomile, Lemon &amp; Ginger, Peppermint / Green Teas Jasmine,
+                            | White &amp; Sencha
+
+                      .menu-divider ~~~
+
+                      .row
+                        .col-sm-12
+                          h3.menu-subcategory-title Cafetiere of Coffee small &pound;2.95 / medium &pound;4.95 / large &pound;6.95
+                          p
+                            | Choose from our selection of fresh ground Arabica coffee; Breakfast Blend,
+                            | French Roast, Colombian, Guatemalan Antigua &amp; Organic Peruvian
+
+                      .menu-divider ~~~
+
+                      .row
+                        .col-sm-12
+                          h3.menu-subcategory-title Cream Tea &pound;5.50
+                          p
+                            | Home-Made fruit Scones with Clotted Cream &amp; Preserve served with a Pot of Tea
+
+                      .menu-divider ~~~
+
+                      .row
+                        .col-sm-12
+                          h3.menu-subcategory-title Afternoon Tea &pound;12.50 / person
+
+                          p
+                            | Includes a pot of tea or cafetiere of fresh coffee with a warm of
+                            | fruit scone, clotted cream and preserve, a selection of dainty finger
+                            | sandwiches( two sandwich fillings per person ), and a choice of one
+                            | slice of home-made cake per person.
+
+                      .menu-divider ~~~
+
+                      .row
+                        .col-sm-12
+                          h3.menu-subcategory-title Royal Tea &pound;18.50 / person
+                          |
+                          p
+                            | Includes a glass of medium or dry sherry to begin followed by a pot
+                            | of tea or cafetiere of fresh coffee served with a selection of finger sandwiches,
+                            | scones, clotted cream, preserve &amp; home-made cakes plus champagne.
+
+                      .menu-divider ~~~
+
+                      .row
+                        .col-sm-12
+                          h3.menu-subcategory-title Children&apos;s Tea &pound;6.50 / child
+                          p
+                            | Fruit juice or hot chocolate with a selection of finger sandwiches, cake, crisps and fruit.
+
+                    #savouries-menu.tab-pane.fade(role='tabpanel')
+                      h1.menu-category-title Savouries &amp; Light Bites
+                      .row
+                        .col-sm-12
+                          h3.menu-subcategory-title Omelettes
+                          p Cheese Omelette with Toast &amp; Salad Garnish (v) &pound;6.50
+                          p Cheese &amp; Ham &pound;6.95
+                          p Cheese &amp; Mushroom (v) &pound;6.75
+
+                          .divider ~~~
+
+                        .col-sm-12
+                          h3.menu-subcategory-title Traditional Toasted Breads
+                          p
+                            | Toasted Teacake, English Muffin or Crumpet with butter and preserve &pound;2.25
+                            .divider ~~~
+
+                        .col-sm-12
+                          h3.menu-subcategory-title Bacon &amp; Egg Sandwich
+                          p
+                            | Three Rashers of Bacon &amp; Eggs on soft or lightly toasted White or Granary farmhouse Bread &pound;4.95
+                            .divider ~~~
+
+                        .col-sm-12
+                          h3.menu-subcategory-title Oatcakes
+                          p Two Local Oatcakes filled with Cheese &pound;5.75
+                          p Cheese &amp; Bacon &pound;6.50
+                          p Egg &amp; Cheese (v) &pound;5.95
+                          p Sausage &amp; Cheese &pound;6.50
+                          p Cheese &amp; Mushroom (v) &pound;5.95
+
+                          .divider ~~~
+
+                        .col-sm-12
+                          h3.menu-subcategory-title Soup of the Day
+
+                          p Home-Made Bowl of Soup served with warm bread roll &amp; butter (v) &pound;5.95
+
+                          .divider ~~~
+
+                        .col-sm-12
+                          h3.menu-subcategory-title Sandwiches
+                          p Open Crayfish in Cocktail Sauce &pound;6.95
+                          p Free-Range egg &amp; cress (v) &pound;4.95
+                          p Honey Roast Ham &amp; English Mustard &pound;5.95
+                          p Herb Roast Chicken Breast &pound;5.95
+                          p Cream Cheese &amp; Cucumber (v) &pound;4.95
+                          p Smoked Salmon &amp; Dill &pound;6.95
+                          p Roast Beef &amp; Horseradish Cream &pound;6.95
+
+                          .divider ~~~
+
+          p.quote
+            | &quot;You can never get a cup of tea large enough or a book long enough to suit me&quot; -C. S. Lewis
+
+include jade/footer

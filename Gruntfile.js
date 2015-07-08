@@ -46,9 +46,8 @@ module.exports = function(grunt) {
           expand: true,
           dot: true,
           flatten: true,
-          cwd: 'bower_components/font-awesome/font/',
-          src: ['*.*'],
-          dest: 'dist/fonts',
+          src: ['bower_components/font-awesome/fonts/*', 'src/fonts/*'],
+          dest: 'dist/fonts/',
           filter: 'isFile'
         }]
       }
@@ -61,7 +60,7 @@ module.exports = function(grunt) {
 
       dist: {
         files: {
-          'dist/css/main.css': 'src/css/main.scss'
+          'dist/css/main.min.css': 'src/css/main.scss'
         }
       }
     },
@@ -77,7 +76,7 @@ module.exports = function(grunt) {
       },
 
       dist: {
-        src: ['dist/css/main.css']
+        src: ['dist/css/main.min.css']
       }
     },
 
@@ -88,13 +87,13 @@ module.exports = function(grunt) {
 
       dist: {
         files: {
-          'dist/css/main.css': 'dist/css/main.css'
+          'dist/css/main.min.css': 'dist/css/main.min.css'
         }
       }
     },
 
     cssbeautifier : {
-      files : ['dist/css/main.css'],
+      files : ['dist/css/main.min.css'],
       options : {
         indent: '  ',
         openbrace: 'end-of-line',
@@ -110,7 +109,7 @@ module.exports = function(grunt) {
 
       target: {
         files: {
-          'dist/css/main.min.css': ['dist/css/main.css'],
+          'dist/css/main.min.css': ['dist/css/main.min.css'],
         }
       }
     },
@@ -156,7 +155,7 @@ module.exports = function(grunt) {
         tasks: ['uglify']
       },
       jade: {
-        files: ['src/**/*.jade'],
+        files: ['src/*.jade'],
         tasks: ['jade']
       }
     },
@@ -172,6 +171,55 @@ module.exports = function(grunt) {
         dest: '/public_html/test',
         exclusions: ['**/.DS_Store']
       }
+    },
+
+    imagemin: {
+      png: {
+        options: {
+          optimizationLevel: 7
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'src/img/',
+            src: ['**/*.png'],
+            dest: 'dist/img/',
+            ext: '.png'
+          }
+        ]
+      },
+
+      jpg: {
+        options: {
+          progressive: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'src/img/',
+            src: ['**/*.jpg'],
+            dest: 'dist/img/',
+            ext: '.jpg'
+          }
+        ]
+      }
+    },
+
+    svgmin: {
+      options: {
+        plugins: [
+          { collapseGroups: false },
+          { removeUnknownsAndDefaults: false }
+        ]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'src/img',
+          src: '{,*/}*.svg',
+          dest: 'dist/img'
+        }]
+      }
     }
   });
 
@@ -179,6 +227,8 @@ module.exports = function(grunt) {
     'sass',
     'postcss',
     'cssnext',
+    'imagemin',
+    'svgmin',
     'copy'
   ]);
 
@@ -205,7 +255,6 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', ['clean', 'preview']);
-  grunt.registerTask('compile', ['clean', 'compile-theme']);
-  grunt.registerTask('ship', ['clean', 'compile', 'prettify']);
+  grunt.registerTask('prepare', ['clean', 'compile-theme', 'prettify']);
   grunt.registerTask('deploy', ['ship', 'ftp-deploy'])
 }
