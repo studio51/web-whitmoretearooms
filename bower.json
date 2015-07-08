@@ -1,6 +1,9 @@
 {
-  "name": "whitmoretearooms-co-uk",
-  "version": "0.0.0",
+  "name": "s51-whitmoretearooms-co-uk",
+  "version": "1.0.1",
+  "description": "Website for whitmoretearooms.co.uk , a tea rooms based in Whitmore, Newcastle-under-Lyme",
+  "author": "Vlad Radulescu",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "~3.0.0-rc1",
     "font-awesome": "~3.2.1",

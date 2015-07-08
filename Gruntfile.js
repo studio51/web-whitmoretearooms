@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
       dist: {
         options: {
-          base: 'dist/'
+          base: 'src/'
         }
       }
     },
@@ -36,19 +36,19 @@ module.exports = function(grunt) {
       },
 
       dist: {
-        src: ['dist/']
+        // src: ['dist/']
       }
     },
 
     copy: {
-      dist: {
+      src: {
         files: [{
           expand: true,
           dot: true,
           flatten: true,
           cwd: 'bower_components/fontawesome/font/',
           src: ['*.*'],
-          dest: 'dist/fonts',
+          dest: 'src/fonts',
           filter: 'isFile'
         }]
       }
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 
       dist: {
         files: {
-          'dist/css/theme.css': 'css/theme.scss'
+          'dist/css/main.css': 'src/css/main.scss'
         }
       }
     },
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
       },
 
       dist: {
-        src: ['dist/css/theme.css']
+        src: ['dist/css/main.css']
       }
     },
 
@@ -88,13 +88,13 @@ module.exports = function(grunt) {
 
       dist: {
         files: {
-          'dist/css/theme.css': 'dist/css/theme.css'
+          'dist/css/main.css': 'dist/css/main.css'
         }
       }
     },
 
     cssbeautifier : {
-      files : ['dist/css/theme.css'],
+      files : ['dist/css/main.css'],
       options : {
         indent: '  ',
         openbrace: 'end-of-line',
@@ -110,18 +110,7 @@ module.exports = function(grunt) {
 
       target: {
         files: {
-          'dist/css/theme.min.css': ['dist/css/theme.css'],
-        }
-      }
-    },
-
-    bowerRequirejs: {
-      all: {
-        rjsConfig: 'js/main.js',
-        options: {
-          exclude: [
-            'fontawesome'
-          ]
+          'dist/css/main.min.css': ['dist/css/main.css'],
         }
       }
     },
@@ -159,16 +148,29 @@ module.exports = function(grunt) {
         files: 'Gruntfile.js'
       },
       sass: {
-        files: ['css/**/*.scss'],
+        files: ['src/css/**/*.scss'],
         tasks: ['sass', 'postcss', 'cssnext']
       },
       uglify: {
-        files: ['js/**/*.js'],
+        files: ['src/js/**/*.js'],
         tasks: ['uglify']
       },
       jade: {
-        files: ['**/*.jade'],
+        files: ['src/**/*.jade'],
         tasks: ['jade']
+      }
+    },
+
+    'ftp-deploy': {
+      build: {
+        auth: {
+          host: 'whitmoretearooms.co.uk',
+          port: 21,
+          authKey: '/.ftppass'
+        },
+        src: 'app',
+        dest: '/public_html/test',
+        exclusions: ['**/.DS_Store']
       }
     }
   });
@@ -205,4 +207,5 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['clean', 'preview']);
   grunt.registerTask('compile', ['clean', 'compile-theme']);
   grunt.registerTask('ship', ['clean', 'compile', 'prettify']);
+  grunt.registerTask('deploy', ['ship', 'ftp-deploy'])
 }
