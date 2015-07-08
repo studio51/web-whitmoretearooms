@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
       dist: {
         options: {
-          base: 'src/'
+          base: 'dist/'
         }
       }
     },
@@ -46,9 +46,9 @@ module.exports = function(grunt) {
           expand: true,
           dot: true,
           flatten: true,
-          cwd: 'bower_components/fontawesome/font/',
+          cwd: 'bower_components/font-awesome/font/',
           src: ['*.*'],
-          dest: 'src/fonts',
+          dest: 'dist/fonts',
           filter: 'isFile'
         }]
       }
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
         },
 
         files: {
-          'dist/js/main.min.js': ['js/**/*.js']
+          'dist/js/main.min.js': ['src/js/**/*.js']
         }
       }
     },
@@ -130,7 +130,7 @@ module.exports = function(grunt) {
     jade: {
       html: {
         files: {
-          'dist/': ['index.jade']
+          'dist/': ['src/**/*.jade']
         },
 
         options: {

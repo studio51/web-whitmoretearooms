@@ -1,7 +1,7 @@
 {
   "name": "s51-whitmoretearooms-co-uk",
   "version": "1.0.1",
-  "description": "Website for whitmoretearooms.co.uk , a tea rooms based in Whitmore, Newcastle-under-Lyme",
+  "description": "Website for whitmoretearooms.co.uk , a tea room based in Whitmore, Newcastle-under-Lyme",
   "dependencies": {},
   "author": "Vlad Radulescu",
   "license": "MIT",
@@ -43,6 +43,9 @@
     "CSS",
     "JS",
     "SASS",
-    "Jade"
+    "Jade",
+    "website",
+    "whitmoretearooms",
+    "studio51"
   ]
 }
