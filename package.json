@@ -1,14 +1,15 @@
 {
   "name": "s51-whitmoretearooms-co-uk",
+  "homepage": "https://github.com/studio51/web-whitmoretearooms",
   "version": "1.0.1",
   "description": "Website for whitmoretearooms.co.uk , a tea room based in Whitmore, Newcastle-under-Lyme",
-  "dependencies": {},
   "author": "Vlad Radulescu",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:studio51/web-whitmoretearooms.git"
   },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer-core": "^5.1.11",
     "bower": "^1.4.1",
@@ -34,7 +35,6 @@
   "bugs": {
     "url": "https://github.com/studio51/web-whitmoretearooms/issues"
   },
-  "homepage": "https://github.com/studio51/web-whitmoretearooms",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
