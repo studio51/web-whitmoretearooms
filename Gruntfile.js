@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       },
 
       dist: {
-        // src: ['dist/']
+        src: ['dist/']
       }
     },
 
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
     jade: {
       html: {
         files: {
-          'dist/': ['src/**/*.jade']
+          'dist/': ['src/*.jade']
         },
 
         options: {
@@ -155,7 +155,7 @@ module.exports = function(grunt) {
         tasks: ['uglify']
       },
       jade: {
-        files: ['src/*.jade'],
+        files: ['src/**/*.jade'],
         tasks: ['jade']
       }
     },
