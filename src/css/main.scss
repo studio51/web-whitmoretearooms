@@ -345,7 +345,7 @@ body {
 
     .section-title,
     .menu-category-title {
-      font-size: 2em;
+      font-size: 1.6em;
       font-weight: 700;
       margin-bottom: $theme-padding;
 
@@ -365,38 +365,25 @@ body {
   .about {
     margin-top: -( $theme-padding );
 
+    @media screen and (min-width: $screen-sm-min) { text-align: left; }
+
     p:not(:last-child) { margin-bottom: $theme-padding / 3; }
   }
 
-//   @media(min-width: $screen-sm-min) {
-//     .about .section-title,
-//     .about p {
-//       text-align: left;
-//     }
-//   }
-
   /* 4.3 Whitmore Tea Rooms Menus */
 
-    /* Menu Page */
-
-      // .menu-page {
-      //   .menu {
-      //     margin-top: $theme-padding;
-      //   }
-
-      //   p.bookings-text {
-      //     text-align: left;
-
-      //     @media(max-width: $screen-sm-min) {
-      //       text-align: center;
-      //     }
-      //   }
-      // }
-
   .menu {
-    @media(max-width: $screen-md-min) { .first-page { margin-bottom: $theme-padding; }}
-
     img { margin: 0 auto; }
+
+    &-tabs {
+      @extend .col-md-4;
+
+      @media screen and (max-width: $screen-md-min) {
+        margin-bottom: $theme-padding;
+      }
+    }
+
+    &-items { @extend .col-md-8; }
 
     .bookings-information { margin: ( $theme-padding / 2 ) 0; }
 
@@ -458,6 +445,71 @@ body {
     }
   }
 
+/* Contact * Social media */
+
+.contact {
+  background-color: #fff;
+  padding: $theme-padding 0;
+}
+
+  /* Trip Advisor widget */
+
+  .widSSP {
+    box-shadow: 0 3px 0 1px rgba($border-color, .6);
+    border-radius: $border-radius;
+    padding: $theme-padding / 2 !important;
+    width: 100% !important;
+
+    a {
+      text-shadow: none;
+    }
+
+    &Data {
+      border: none !important;
+      padding: 0 !important;
+    }
+  }
+
+  .widSSPBranding {
+    border: none !important;
+    width: 100%;
+    padding: 0 0 ( $theme-padding / 2 ) !important;
+    margin: 0 !important;
+
+    dl {
+      dt {
+        margin: 0 !important;
+        width: 100% !important;
+      }
+    }
+  }
+
+  /* Reviews */
+
+  .reviews {
+    ul {
+      li {
+        text-align: left;
+
+        .author {
+          display: block;
+          font-size: $font-size-sm;
+        }
+
+        .review { margin: ( $theme-padding / 2 ) 0; }
+
+        .date {
+          color: rgba(#999, 1);
+          display: block;
+          font-size: .9em;
+          font-style: italic;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  /* Social Media links */
 
 /* 5.0 Footer */
 
@@ -467,44 +519,7 @@ footer {
   padding: $theme-padding 0;
 }
 
-//   .footer-clearfix {
-//     margin-top: $theme-padding;
-//   }
 
-//   /* 5.1 Trip Advisor widget */
-
-//   .widSSP {
-    // box-shadow: 0 3px 0 1px fade($border-color, 80%);
-
-//     border-radius: $border-radius;
-//     padding: $theme-padding / 2 !important;
-//     width: 100% !important;
-
-//     a {
-//       text-shadow: none;
-//     }
-
-//     &Data {
-//       border: none !important;
-//       padding: 0 !important;
-//     }
-//   }
-
-//   .widSSPComponent { display: none !important; }
-
-//   .widSSPBranding {
-//     border: none !important;
-//     width: 100%;
-//     padding: 0 0 ( $theme-padding / 2 ) !important;
-//     margin: 0 !important;
-
-//     dl {
-//       dt {
-//         margin: 0 !important;
-//         width: 100% !important;
-//       }
-//     }
-//   }
 
 //   /* 5.2 Whitmore Tea Rooms Reviews */
 
@@ -541,29 +556,6 @@ footer {
 //     }
 //   }
 
-//   .reviews {
-//     ul {
-//       li {
-
-//         .author {
-//           display: block;
-//           font-size: $font-size-md;
-//         }
-
-//         .review {
-//           margin: ( $theme-padding / 2 ) 0;
-//         }
-
-//         .date {
-//           // color: darken($border-color, 20%);
-//           display: block;
-//           font-size: $font-size-sm - 1px;
-//           font-style: italic;
-//           text-align: right;
-//         }
-//       }
-//     }
-//   }
 
 //   /* 5.3 Whitmore Tea Rooms Social Media Links */
 
