@@ -1,0 +1,13 @@
+body {
+  background-color: #efefef;
+  font-family: 'Quicksand', sans-serif;
+  font-size: $font-size-sm;
+}
+
+  .container {
+    padding: 0 $theme-padding;
+
+    @media screen and (min-width: $screen-md-min) {
+      padding: 0 ( $theme-padding * 4 );
+    }
+  }

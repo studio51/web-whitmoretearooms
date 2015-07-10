@@ -1,0 +1,12 @@
+$theme-padding: 16px * 2;
+$navbar-height: $theme-padding * 5;
+
+$background-color: #f5f7fa;
+$box-color: #ffffff;
+
+$border-radius: 5px;
+$border-color: darken($background-color, 5%);
+
+$font-size-sm: 14px;
+$font-size-md: $font-size-sm + 2px;
+$font-size-lg: $font-size-md + 2px;

@@ -1,0 +1,29 @@
+.widSSP {
+  box-shadow: 0 3px 0 1px rgba($border-color, .6);
+  border-radius: $border-radius;
+  padding: $theme-padding / 2 !important;
+  width: 100% !important;
+
+  a {
+    text-shadow: none;
+  }
+
+  &Data {
+    border: none !important;
+    padding: 0 !important;
+  }
+}
+
+.widSSPBranding {
+  border: none !important;
+  width: 100%;
+  padding: 0 0 ( $theme-padding / 2 ) !important;
+  margin: 0 !important;
+
+  dl {
+    dt {
+      margin: 0 !important;
+      width: 100% !important;
+    }
+  }
+}

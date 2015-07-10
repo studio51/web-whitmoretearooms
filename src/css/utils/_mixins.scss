@@ -1,0 +1,50 @@
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+
+/* Variables
+
+ @media min-width
+ @media max-width
+ @media min-width and max-width
+
+ http://blog.grayghostvisuals.com/sass/sass-media-query-mixin/
+
+*/
+
+$viewport-increment: 0.1px;
+
+/* Desktop */
+
+$desktop: $screen-lg-min;
+$pre-desktop: $desktop - $viewport-increment;
+
+/* Tablet */
+
+$tablet: $screen-md-min;
+$pre-tablet: $tablet - $viewport-increment;
+
+/* Palm */
+
+$palm: $screen-sm-min;
+$post-palm: $palm + $viewport-increment;
+
+/* Constraints */
+
+$min: min-width;
+$max: max-width;
+
+@mixin mq($constraint, $viewport1, $viewport2: null) {
+
+  @if $constraint == $min {
+
+    @media screen and ($min: $viewport1) { @content; }
+
+  } @else if $constraint == $max {
+
+    @media screen and ($max: $viewport1) { @content; }
+
+  } @else {
+
+    @media screen and ($min: $viewport1) and ($max: $viewport2) { @content; }
+
+  }
+}

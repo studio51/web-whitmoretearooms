@@ -1,0 +1,16 @@
+.box {
+  background-color: #fff;
+  border-radius: $border-radius;
+  box-shadow: 0 3px 0 1px rgba($border-color, .5);
+  padding: $theme-padding;
+  text-align: center;
+
+  .section-title,
+  .menu-category-title {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: $theme-padding;
+
+    @media(max-width: $screen-sm-min) { font-size: 5.5vw; }
+  }
+}
