@@ -1,6 +1,13 @@
 .board {
   @extend .slideExpandUp;
 
+  color: #fff;
+  font-family: 'crayon';
+  margin: $theme-padding 0 ( $theme-padding * 2 );
+  padding: ( $theme-padding * 2 ) $theme-padding;
+  position: relative;
+  text-align: center;
+
   .flaticon,
   [class*="wta"]:before {
     margin-left: 4px;
@@ -17,20 +24,13 @@
     @extend .col-lg-5;
   }
 
-  color: #fff;
-  font-family: 'crayon';
-  margin: $theme-padding 0 ( $theme-padding * 2 );
-  padding: ( $theme-padding * 2 ) ( $theme-padding / 2 );
-  position: relative;
-  text-align: center;
-
   &-contact-information {
     @extend .visible-xs;
 
     margin-bottom: $theme-padding / 2;
-  }
 
-  /* IE Fix */
+    i { font-size: 4.6vw; } /* fix new row on iPhone4 */
+  }
 
   h1, p, .contact-information {
     position: relative;

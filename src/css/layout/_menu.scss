@@ -1,0 +1,73 @@
+.menu {
+  img { margin: 0 auto; }
+
+  &-tabs {
+    @extend .col-md-4;
+
+    @include mq($max, $tablet) { margin-bottom: $theme-padding; }
+  }
+
+  &-items { @extend .col-md-8; }
+
+  .bookings-information { margin: ( $theme-padding / 2 ) 0; }
+
+  .nav-tabs {
+    li {
+      &:not(:first-child) { margin-top: $theme-padding / 4; }
+
+      a {
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        display: block;
+        font-weight: 700;
+        padding:  $theme-padding / 2;
+
+        @include mq($max, $phone) { font-size: 4vw; }
+        @include mq(null, $tablet, $desktop) { font-size: 1vw; }
+      }
+
+      &.active a { background-color: rgba($border-color, .2); }
+    }
+  }
+
+  .tab-pane {
+    display: none;
+
+    &.active { display: block; }
+  }
+
+  .divider {
+    .item:not(:last-child)::after {
+      content: '~~~';
+      display: block;
+      margin-bottom: $theme-padding / 4;
+      margin-top: $theme-padding / 4;
+    }
+  }
+
+  &-drinks {
+    .item {
+      display: table;
+      width: 100%;
+      margin-bottom: 4px;
+
+      p, span { display: table-cell; }
+    }
+
+    p { text-align: left; }
+
+    span {
+      font-weight: 700;
+      text-align: right;
+    }
+  }
+
+  .item {
+    &-title {
+      font-size: $font-size-md;
+      font-weight: 700;
+      margin-bottom: $theme-padding / 2;
+      text-shadow: 0px 0px 1px rgba(#000, .2);
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .navbar {
-  box-shadow: 0 0 30px 10px rgba(#000, .5);
+  box-shadow: 0 0 20px 5px rgba(#999, .3);
   padding: $theme-padding 0;
   position: relative;
 
@@ -13,8 +13,7 @@
     img {
       width: 100%;
 
-      @media screen and (min-width: $screen-sm-min) {
-        margin: 0 auto;
+      @include mq($min, $phone) {
         max-height: 100px;
         width: auto;
       }
@@ -31,7 +30,6 @@
     align-self: flex-end;
 
     p {
-      margin-top: $theme-padding / 4;
       font-size: 1.2em;
       font-weight: 700;
 

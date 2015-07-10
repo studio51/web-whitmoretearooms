@@ -1,0 +1,92 @@
+//   /* 5.2 Whitmore Tea Rooms Reviews */
+
+//     /* Reviews Page */
+
+//       .reviews-page {
+//         .reviews {
+//           border-radius: none;
+//           box-shadow: none;
+//           margin-top: 0;
+//           padding: 0;
+
+//           ul {
+//             li {
+              // box-shadow: 0 3px 0 1px fade($border-color, 80%);
+
+//               border-radius: $border-radius;
+//               margin-top: $theme-padding;
+//               padding: $theme-padding;
+//             }
+//           }
+//         }
+//       }
+
+//   .reviews {
+    // box-shadow: 0 3px 0 1px fade($border-color, 80%);
+
+//     border-radius: $border-radius;
+//     margin-top: $theme-padding;
+//     padding: $theme-padding;
+
+//     @media(min-width: $screen-sm-min) {
+//       margin-top: 0;
+//     }
+//   }
+
+
+//   /* 5.3 Whitmore Tea Rooms Social Media Links */
+
+//   .social-links {
+//     li {
+
+//       @media(max-width: $screen-md-min) {
+//         display: block;
+//         margin: 0;
+//         width: 100%;
+//       }
+
+//       @media(min-width: $screen-md-min) {
+//         margin-right: $theme-padding / 5;
+//       }
+
+//       @media(max-width: $screen-md-min) {
+
+//         &:not(:first-child) {
+//           margin-top: $theme-padding / 4;
+//         }
+//       }
+
+//       p {
+//         text-align: left;
+//         font-size: $font-size-md;
+
+//         @media(min-width: $screen-md-min) {
+//           font-size: $font-size-sm;
+//         }
+//       }
+
+//       a {
+//         text-shadow: none;
+//         display: block;
+//         font-weight: 700;
+//         padding: ( $theme-padding / 3 ) ( $theme-padding / 2);
+//         border-radius: $border-radius;
+//         color: #fff;
+
+//         @media(min-width: $screen-md-min) {
+//           background-color: transparent !important;
+//           padding: 0;
+
+//           &.facebook  { color: #3b5998; }
+//           &.twitter   { color: #00aced; }
+//           &.gplus     { color: #dd4b39; }
+//           &.pinterest { color: #cb2027; }
+//         }
+
+//         &.facebook  { background-color: saturate(#3b5998, 0%); }
+//         &.twitter   { background-color: saturate(#00aced, 0%); }
+//         &.gplus     { background-color: saturate(#dd4b39, 0%); }
+//         &.pinterest { background-color: saturate(#cb2027, 0%); }
+//       }
+//     }
+//   }

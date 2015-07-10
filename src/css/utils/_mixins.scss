@@ -22,10 +22,10 @@ $pre-desktop: $desktop - $viewport-increment;
 $tablet: $screen-md-min;
 $pre-tablet: $tablet - $viewport-increment;
 
-/* Palm */
+/* Phone */
 
-$palm: $screen-sm-min;
-$post-palm: $palm + $viewport-increment;
+$phone: $screen-sm-min;
+$post-phone: $phone + $viewport-increment;
 
 /* Constraints */
 

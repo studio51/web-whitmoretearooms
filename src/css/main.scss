@@ -11,34 +11,6 @@
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/utilities";
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/responsive-utilities";
 
-  .container {
-    border: 1px solid red;
-  }
-
-  html::before {
-    content: "You're on a Small Device right now";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: $brand-success;
-    padding: 8px;
-
-    @include mq($min, $tablet) {
-      content: "You're on a Tablet right now";
-      background-color: $brand-primary;
-    }
-
-    @include mq(null, $post-palm, $pre-tablet) {
-      content: "Not sure";
-      background-color: $brand-warning;
-    }
-
-    @include mq($min, $desktop) {
-      content: "You're on a Desktop right now";
-      background-color: $brand-danger;
-    }
-  }
-
 /*
 
   Author: Radulescu Vladut
@@ -53,72 +25,23 @@
 */
 
 @import "utils/variables";
+@import "utils/reset";
 
-/* 0.0 Reset */
+@import "base/base";
+@import "base/icons";
 
-  @import "utils/reset";
+@import "layout/header";
 
-/* 1.0 Body */
+@import "components/carousel";
+@import "components/board";
+@import "components/box";
 
-  @import "base/base";
+@import "utils/misc";
 
-  /* 1.1 Misc */
+@import "layout/about";
+@import "layout/menu";
+@import "layout/contact";
+@import "layout/footer";
 
-    @import "base/icons";
-
-/* 2.0 Navigation */
-
-  @import "components/navigation";
-
-/* 3.0 Intro */
-
-  .intro {
-    @extend .slideExpandUp;
-  }
-
-  /* 3.1 Background Carousel */
-
-    @import "components/carousel";
-
-  /* 3.2 Opening Times Board */
-
-    @import "components/board";
-
-/* 4.0 Content */
-
-  section, footer {
-    p, a {
-      text-shadow: 0 0 1px rgba(#000, .3);
-      filter: progid:DXImageTransform.Microsoft.Shadow(color=#000,direction=0,strength=0.4);
-      font-weight: 400;
-    }
-  }
-
-  @import "components/box";
-
-    /* 4.0.1 Quotes */
-
-    .quote {
-      font-style: italic;
-      padding: ( $theme-padding / 2 ) 0;
-    }
-
-  /* 4.2 About Whitmore Tea Rooms */
-
-    @import "pages/about";
-
-  /* 4.3 Whitmore Tea Rooms Menus */
-
-    @import "pages/menu";
-
-/* Contact * Social media */
-
-  @import "pages/contact";
-
-/* 5.0 Footer */
-
-footer {
-  background-color: #fff;
-  border-top: 1px solid $border-color;
-  padding: $theme-padding 0;
-}
+@import "pages/menu";
+@import "pages/reviews";
