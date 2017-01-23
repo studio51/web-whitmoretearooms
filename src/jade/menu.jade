@@ -12,145 +12,357 @@
       #menu-page-right
         div(role='tabpanel')
           ul.nav.nav-tabs(role='tablist')
-            li(role='presentation')
-              a.menu-item(href='#drinks-menu', aria-controls='drinks-menu', role='tab', data-toggle='tab') Soft Drinks
-
+            li.special(role='presentation')
+              a.menu-item(href='#breakfast-menu', aria-controls='breakfast-menu', role='tab', data-toggle='tab') Breakfast &amp; Brunch
+              
             li.active(role='presentation')
-              a.menu-item(href='#tea-menu', aria-controls='tea-menu', role='tab', data-toggle='tab') Lunch &amp; Afternoon Tea
+              a.menu-item(href='#tea-menu', aria-controls='tea-menu', role='tab', data-toggle='tab') Cream Tea &amp; Afternoon Tea
 
             li(role='presentation')
-              a.menu-item(href='#savouries-menu', aria-controls='savouries-menu', role='tab', data-toggle='tab') Savouries &amp; Light BItes
+              a.menu-item(href='#lunch-menu', aria-controls='lunch-menu', role='tab', data-toggle='tab') Lunch &amp; Light Bites
+
+            li(role='presentation')
+              a.menu-item(href='#sandwiches-menu', aria-controls='sandwiches-menu', role='tab', data-toggle='tab') Sandwiches
+              
+            li(role='presentation')
+              a.menu-item(href='#drinks-tea-menu', aria-controls='drinks-tea-menu', role='tab', data-toggle='tab') Tea &amp; Coffee
+              
+            li(role='presentation')
+              a.menu-item(href='#drinks-cold-menu', aria-controls='drinks-cold-menu', role='tab', data-toggle='tab') Cold Drinks
 
   .menu-items
-    .box
-      .tab-content
-        #drinks-menu.tab-pane.fade(role='tabpanel')
-          h1.menu-category-title Soft Drinks Menu
+    .tab-content
+      #breakfast-menu.tab-pane.fade(role='tabpanel')
+        h1.menu-category-title Breakfast &amp; Brunch
+        span served daily from 10am - 2pm
 
-          .menu-drinks
-            .item
-              p Coke Cola / Diet Coke
-              span &pound;2.20
+        .menu-inner
+          
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Breakfast Sandwich &pound;5.95
+              p.menu-item-description
+                | Bacon or Sausage served on White or Granary Farmhouse Bread
+                | ( add a fried egg or melted cheddar cheese <strong>&pound;0.55</strong> )
+                  
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Vegetarian Breakfast Muffin &pound;5.75
+              p.menu-item-description
+                | Scrambled Eggs, Melted Cheddar Cheese &amp; Mushrooms served
+                | on a lightly toasted English Muffin <span>(v)</span>
+                  
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Small English &pound;6.75
+              p.menu-item-description
+                | Two Rashers of Bacon, Fried Egg, Grilled Vine Tomato &amp; 
+                | Mushrooms
+                  
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Full English &pound;7.95
+              p.menu-item-description
+                | Two Rashers of Bacon, Buttercross Farm Sausage &amp; Fried Egg
+                | with Vine Tomato, Mushrooms, Black Pudding, Fried Bread, Hash
+                | Brown &amp; Beans <strong>*</strong>
+                
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Vegetarian Full English &pound;6.75
+              p.menu-item-description
+                | Hash Browns, Two Fried Eggs, Vine Tomato &amp; Mushrooms <span>(v)</span> <strong>*</strong>
+                br
+                | ( add beans <strong>&pound;0.50</strong> / haloumi <strong>&pound;1.25</strong> / wilted spinach <strong>&pound;0.75</strong>)
+                
+          .menu-inner-section
+            .menu-item
+              
+              em
+                | <strong>*</strong> Served with a Rack of White &amp; Granary
+                br
+                | Farmhouse Toast choice of Scrambled or Poached Eggs available
+                | on request
+                br
+                | Glutten free options available
+                
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Eggs Benedict &pound;7.25
+              p.menu-item-description
+                | Lightly toasted English Muffins with Poached Eggs &amp;
+                | Hollandaise Sauce served with a choice of:
+                br
+                em
+                  | Bacon / Pan-fried Ham / Smoked / Smoked Salmon ( Eggs Royale )
+                  | Wilted Spinach ( Eggs Florentine ) <span>(v)</span>
+                  
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Smoked Salmon &pound;6.95
+              p.menu-item-description
+                | Scrambled Eggs &amp; Smoked Salmon served with Watercress &amp;
+                | Lemon
+                
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Children's Breakfast &pound;5.50
+              p.menu-item-description
+                | Choose from Bacon <strong><u>or</u></strong> Sausage, Fried <strong><u>or</u></strong> Scrambled Egg, Hash
+                | Brown or Mushrooms - <em>with Beats &amp; Toast</em>
+                
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Eggs on TOast &pound;5.75
+              p.menu-item-description
+                | Poached or Scrambled Eggs served on White or Granary Toast <span>(v)</span>
+                
+          .menu-inner-section
+            .menu-item
+              p Berries, Honey &amp; Greek Yogurt with Oats <strong>&pound;4.25</strong>
+              p Rack of White &amp; Granary Farmhouse Toast with Raspberry Jam or Marmalade <strong>&pound;2.25</strong>
+              p Warm Croissant with Raspberry Jam &amp; Butter <strong>&pound;2.95</strong>
+                
+          .menu-inner-section
+            .menu-item
+              p Glass of Bucks Fizz <strong>&pound;4.95</strong>
+              
+      #tea-menu.tab-pane.fade.in.active(role='tabpanel')
+        h1.menu-category-title Cream Tea &amp; Afternoon Tea
 
-            .item
-              p Fentiman&apos;s Victorian Lemonade
-              span &pound;2.50
+        .menu-inner
+          
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Cream Tea &pound;5.50
+              p.menu-item-description
+                | Home-Made scones ( sultana, cherry, plain or glutten free )
+                | served with clotted cream, preserve &amp; a pot of tea or
+                | cafetière of coffee
+          
+          .menu-inner-section
+            .menu-item
+              h4.menu-item-title Afternoon Tea &pound;14.50 / person
+              p.menu-item-description
+                | Includes a pot of tea or coffee, warm scone, clotted cream
+                | and preserve, two sandwich fillings per person from the cold
+                | sandwich selection on the main menu and one slice of
+                | home-made cake ( add a glass of Prosecco &pound;4 )
 
-            .item
-              p Fentiman&apos;s Dandelion &amp; Burdoch
-              span &pound;2.50
+          .menu-inner-section
+              .menu-item
+                h4.menu-item-title Royal Tea &pound;21.50 / person
+                p.menu-item-description
+                  | Includes a glass of medium or cream sherry to begin followed
+                  | by a pot of tea or coffee served with a warm scone, clotted
+                  | cream and preserve, two sandwich fillings per person from
+                  | the cold sandwich selection on the main menu, on slice of
+                  | home-made cake and a glass of Champagne
 
-            .item
-              p Fentiman&apos;s Ginger Beer
-              span &pound;2.50
+          .menu-inner-section
+              .menu-item
+                h4.menu-item-title Children&apos;s Tea &pound;6.50 / child
+                p.menu-item-description
+                  | Includes fruit juice, tea or hot chocolate with cream and 
+                  | marshmallows, a sandwich with a choice of Ham, Tuna, Cheese,
+                  | Cream Cheese and Cucumber, Chicken or Beef and home-made
+                  | cake or scone, ready salted Crisps and slices of fresh fruit
+      
+        .quote
+          p &quot;There are a few hours in life more agreeable than the hour dedicated to the ceremony known as afternoon tea.&quot; - <strong>Henry James</strong>
 
-            .item
-              p Bottlegreen Elderflower Presse
-              span &pound;2.20
+      #lunch-menu.tab-pane.fade(role='tabpanel')
+        h1.menu-category-title Lunch &amp; Light Bites
 
-            .item
-              p Brit Vic Cranberry Juice
-              span &pound;1.80
+        .menu-inner
+        
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Toasted Breads
+              
+              p Teacake, English Muffin or Crumpets with butter and preserve <strong>&pound;2.95</strong>
 
-            .item
-              p Brit Vic Orange Juice
-              span &pound;1.80
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Omelettes
+              p.menu-item-description Three egg omelette served with a filling of your choice, salad &amp; a slice of toast
+              
+              p Cheese &amp; Ham <strong>&pound;6.95</strong>
+              p Cheese &amp; Bacon <strong>&pound;6.95</strong>
+              p Cheese <span>(v)</span> <strong>&pound;6.50</strong>
+              p Cheese &amp; Mushroom <span>(v)</span> <strong>&pound;6.75</strong>
+              p Cheese &amp; Tomato <span>(v)</span> <strong>&pound;6.75</strong>
+              p Cheese &amp; Spinach <span>(v)</span> <strong>&pound;6.75</strong>
+              
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Oatcakes
+              p.menu-item-description Two local hand-made oatcakes with a filling of your choice served with salad
+              
+              p Cheese <span>(v)</span> <strong>&pound;5.75</strong>
+              p Egg &amp; Cheese <span>(v)</span> <strong>&pound;5.95</strong>
+              p Cheese &amp; Mushroom <span>(v)</span> <strong>&pound;5.95</strong>
+              p Cheese &amp; Tomato <span>(v)</span> <strong>&pound;5.95</strong>
+              p Cheese &amp; Bacon <strong>&pound;6.75</strong>
+              p Buttercross Fram Sausage &amp; Cheese <strong>&pound;6.75</strong>
+              
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Soup of the Day
+              
+              p Home-Made Soup with warm roll &amp; butter <span>(v)</span> <strong>&pound;6.25</strong>
 
-            .item
-              p Schweeppes Tonic / Slimline Tonic
-              span &pound;1.80
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Salads
+              
+              p Smoked Salmon &amp; Marie Rose Prawn <strong>&pound;7.95</strong>
+              p Hand-Carved Ham <strong>&pound;6.95</strong>
+              p Herb Roast Chicken <strong>&pound;6.95</strong>
+              p Egg Mayonnaise &amp; Cheese <span>(v)</span> <strong>&pound;6.25</strong>
 
-            .item
-              p Fruit Shoots
-              span &pound;1.50
+        .quote
+          p &quot;You can never get a cup of tea large enough or a book long enough to suit me.&quot; - <strong>C. S. Lewis</strong>
 
-            .item
-              p Sparkling / Still Mineral Water
-              span &pound;2.00
+      #sandwiches-menu.tab-pane.fade(role='tabpanel')
+        h1.menu-category-title Sandwiches
 
-            .item
-              p Lipton&apos;s Peach Iced Tea
-              span &pound;2.00
+        .menu-inner
+        
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Cold Sandwiches
+              
+              p Herb Roast Chicken &amp Mayonnaise <strong>&pound;6.75</strong>
+              p Cream Cheese &amp; Cucumber <span>(v)</span> <strong>&pound;5.95</strong>
+              p Roast Beef &amp; Horseradish <strong>&pound;6.95</strong>
+              p Open Prawn in Marie Rose Sauce <strong>&pound;6.95</strong>
+              p Ham &amp; English Mustard <strong>&pound;6.75</strong>
+              p Egg Mayonnaise &amp; Cress <span>(v)</span> <strong>&pound;5.95</strong>
+              p Smoked Salmon, Cream Cheese &amp; Dill <strong>&pound;6.95</strong>
+              p Brie with Apple Chutney <span>(v)</span> <strong>&pound;6.25</strong>
+              p Hummus &amp; Red Pepper <span>(v)</span> <strong>&pound;6.25</strong>
+              p Open Smoked Mackerel &amp; Cucumber <strong>&pound;6.75</strong>
+              
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Paninis
+              
+              p Tomato, Mozzarella &amp; Pesto <span>(v)</span> <strong>&pound;6.25</strong>
+              p Ham, Tomato, Mozzarella &amp; Basil <strong>&pound;6.75</strong>
+              p Roast Beef with Red Peppers, Onions, Mustard &amp; Horseradish <strong>&pound;6.95</strong>
+          
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Toasted Sandwiches
+              
+              p Ham &amp; Cheese <strong>&pound;6.25</strong>
+              p Cheese &amp; Tomato <span>(v)</span> <strong>&pound;5.75</strong>
+              p Cheese &amp; Onion <span>(v)</span> <strong>&pound;5.75</strong>
+              p Cheese <span>(v)</span> <strong>&pound;5.25</strong>
+              p Brie &amp; Tomato <span>(v)</span> <strong>&pound;5.95</strong>
+          
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title BLT / Club Sandwich
+              
+              p Crispy Bacon, Sliced Vine Tomato, Baby Leaf Salad &amp; Mayonnaise served on lightly toasted Farmhouse Bread <strong>&pound;6.50</strong> ( add warm Chicken Breast <strong>&pound;7.25</strong> )
+          
+        .quote
+          p &quot;Though we eat a ltitle flesh and drink no wine, yet let's be merry, we'll have tea and toast.&quot; - <strong>Percy Bysshe Shelley</strong>
 
-        #tea-menu.tab-pane.fade.in.active(role='tabpanel')
-          h1.menu-category-title Lunch &amp; Afternoon Tea
+      #drinks-tea-menu.tab-pane.fade(role='tabpanel')
+        h1.menu-category-title Tea &amp; Coffee
 
-          .menu-tea.divider
-            .item
-              h3.item-title Pot of Tea for one &pound;2.95 / for two &pound;3.95
-              p
-                | English Breakfast, Earl Gray, Darjeeling, Assam &amp; Lapsang Souchong /
-                | Strawberry Rooibos, Camomile, Lemon &amp; Ginger, Peppermint / Green Teas Jasmine,
-                | White &amp; Sencha
+        .menu-inner
+          .menu-inner-section
+            .menu-item
+              p <strong>English Breakfast:</strong> <em>Traditional Yorkshire tea</em>
+              p <strong>Earl Grey:</strong> <em>A fine black tea scented with Bergamont</em>
+              p <strong>Darjeeling:</strong> <em>A delicate black tea from the foothills of the Himalayas</em>
+              p <strong>Assam:</strong> <em>A strong malty flavoured Indian tea</em>
+              p <strong>Ceylon:</strong> <em>Fine quality black tea from Sri Lanka, rich and golden</em>
+              p <strong>Lapsang Souchong:</strong> <em>A smokey flavoured Chinese tea</em>
+              p <strong>Green Tea:</strong> <em>Light and rich in antioxidants</em>
+              p <strong>Jasmine Green Tea:</strong> <em>An elegant tea perfumed with Jasmine flowers</em>
+              p <strong>White Tea:</strong> <em>Gently fragrant and sweet</em>
+              p <strong>Rooibos or 'Red Bush':</strong> <em>a South African caffeine free herbal infusion</em>
+              p <strong>Twinning's Camomile, Lemon &amp; Ginger, Peppermint or Cranberry &amp; Raspberry</strong>
+              br
+              span pot for one <strong>&pound;2.95</strong> / pot for two <strong>&pound;3.95</strong> / extra-large pot <strong>&pound;4.95</strong>
+          
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Cafetière of Coffee
+              
+              p Breakfast Blend, Columbian, French Roast, Guatemalan, Monsoon, Malabar, Java, Ethiopian, Decaffeinated
+              br
+              span small <strong>&pound;2.95</strong> / medium <strong>&pound;4.95</strong> / large <strong>&pound;6.95</strong>
+          
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Hot Chocolate
+              
+              p Mug of Cadbury's hot chocolate with whipped cream &amp; Marshmallows <strong>&pound;2.50</strong>
 
-            .item
-              h3.item-title Cafetiere of Coffee small &pound;2.95 / medium &pound;4.95 / large &pound;6.95
-              p
-                | Choose from our selection of fresh ground Arabica coffee; Breakfast Blend,
-                | French Roast, Colombian, Guatemalan Antigua &amp; Organic Peruvian
+        .quote
+          p &quot;We had a kettle, we let it leak, our not repairing made it worse, we haven't had any tea for a week; the bottom is out of the universe.&quot; - <strong>Rudyard Kipling</strong>
 
-            .item
-              h3.item-title Cream Tea &pound;5.50
-              p Home-Made fruit Scones with Clotted Cream &amp; Preserve served with a Pot of Tea
+      #drinks-cold-menu.tab-pane.fade(role='tabpanel')
+        h1.menu-category-title Cold Drinks
 
-            .item
-              h3.item-title Afternoon Tea &pound;12.50 / person
-              p
-                | Includes a pot of tea or cafetiere of fresh coffee with a warm of
-                | fruit scone, clotted cream and preserve, a selection of dainty finger
-                | sandwiches( two sandwich fillings per person ), and a choice of one
-                | slice of home-made cake per person.
-
-            .item
-              h3.item-title Royal Tea &pound;18.50 / person
-              p
-                | Includes a glass of medium or dry sherry to begin followed by a pot
-                | of tea or cafetiere of fresh coffee served with a selection of finger sandwiches,
-                | scones, clotted cream, preserve &amp; home-made cakes plus champagne.
-
-            .item
-              h3.item-title Children&apos;s Tea &pound;6.50 / child
-              p Fruit juice or hot chocolate with a selection of finger sandwiches, cake, crisps and fruit.
-
-        #savouries-menu.tab-pane.fade(role='tabpanel')
-          h1.menu-category-title Savouries &amp; Light Bites
-
-          .menu-savouries.divider
-            .item
-              h3.item-title Omelettes
-              p Cheese Omelette with Toast &amp; Salad Garnish (v) &pound;6.50
-              p Cheese &amp; Ham &pound;6.95
-              p Cheese &amp; Mushroom (v) &pound;6.75
-
-            .item
-              h3.item-title Traditional Toasted Breads
-              p Toasted Teacake, English Muffin or Crumpet with butter and preserve &pound;2.25
-
-            .item
-              h3.item-title Bacon &amp; Egg Sandwich
-              p hree Rashers of Bacon &amp; Eggs on soft or lightly toasted White or Granary farmhouse Bread &pound;4.95
-
-            .item
-              h3.item-title Oatcakes
-              p Two Local Oatcakes filled with Cheese &pound;5.75
-              p Cheese &amp; Bacon &pound;6.50
-              p Egg &amp; Cheese (v) &pound;5.95
-              p Sausage &amp; Cheese &pound;6.50
-              p Cheese &amp; Mushroom (v) &pound;5.95
-
-            .item
-              h3.item-title Soup of the Day
-              p Home-Made Bowl of Soup served with warm bread roll &amp; butter (v) &pound;5.95
-
-            .item
-              h3.item-title Sandwiches
-              p Open Crayfish in Cocktail Sauce &pound;6.95
-              p Free-Range egg &amp; cress (v) &pound;4.95
-              p Honey Roast Ham &amp; English Mustard &pound;5.95
-              p Herb Roast Chicken Breast &pound;5.95
-              p Cream Cheese &amp; Cucumber (v) &pound;4.95
-              p Smoked Salmon &amp; Dill &pound;6.95
-              p Roast Beef &amp; Horseradish Cream &pound;6.95
-
-.quote
-  p &quot;You can never get a cup of tea large enough or a book long enough to suit me&quot; -C. S. Lewis
+        .menu-inner
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Soft Drinks
+              
+              //- .menu-item-row
+              //-   p.menu-item-cell Coke / Diet Coke
+              //-   span.menu-item-cell.menu-item-cell-auto <strong>&pound;2.50</strong>
+              //-   
+              //- .menu-item-row
+              //-   p.menu-item-cell Glass of Cold Milk
+              //-   span.menu-item-cell.menu-item-cell-auto <strong>&pound;2.50</strong>
+              //-   
+              //- .menu-item-row
+              //-   p.menu-item-cell Lipton&apos;s Peach Iced Tea
+              //-   span.menu-item-cell.menu-item-cell-auto <strong>&pound;2.50</strong>
+              //-   
+              //- .menu-item-row
+              //-   p.menu-item-cell Coke / Diet Coke
+              //-   span.menu-item-cell.menu-item-cell-auto <strong>&pound;2.50</strong>
+              //-   
+                
+              p Coke / Diet Coke <strong>&pound;2.50</strong>
+              p Britvic Lemonade / Soda Water <strong>&pound;1.80</strong>
+              p Britvic Orange Juice / Cranberry Juice <strong>&pound;1.80</strong>
+              p Indian Tonic Water / Slimline Tonic Water <strong>&pound;1.80</strong>
+              p Fentiman&apos;s: Victorian Lemonade / Ginger Beer / Rose Lemonade / Sparkling Elderflower / Dandelion &amp; Burdock <strong>&pound;2.50</strong>
+              p Lipton&apos;s Peach Iced Tea <strong>&pound;2.50</strong>
+              p Strathmore Still / Sparkling Water <strong>&pound;2.00</strong>
+              p Fruit Shoot / Children's Apple Juice <strong>&pound;1.50</strong>
+              p Glass of Cold Milk <strong>&pound;1.25</strong>
+              
+          
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Wine &amp; Prosecco
+          
+              p Bottle of Prosecco <strong>&pound;21.95</strong>
+              p Glass of Prosecco <strong>&pound;4.95</strong>
+              p Glass of White, Rose or Red Wine <strong>125ml &pound;3.25 / 175ml &pound;4.25 / 250ml &pound;5.50</strong>
+              
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Champagne
+            
+              p Bottle of Champagne <strong>&pound;34.95</strong>
+              p Glass of Champagne <strong>&pound;7.95</strong>
+              
+          .menu-inner-section
+            .menu-item
+              h3.menu-item-title Beers &amp; Spirits
+              
+              p Peroni 330ml <strong>&pound;3.00</strong>
+              p Gordon's Gin 25ml <strong>&pound;3.00</strong>
+              p Whiskey 25ml <strong>&pound;3.40</strong>

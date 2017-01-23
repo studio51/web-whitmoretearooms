@@ -1,6 +1,8 @@
 .menu {
   img { margin: 0 auto; }
 
+  margin-bottom: $theme-padding;
+
   &-tabs {
     @extend .col-md-4;
 
@@ -14,6 +16,14 @@
   .nav-tabs {
     li {
       &:not(:first-child) { margin-top: $theme-padding / 4; }
+
+      &.special {
+
+        a {
+          color: #fff;
+          background-color: rgba(#10689A, .5);
+        }
+      }
 
       a {
         border: 1px solid $border-color;
@@ -38,36 +48,103 @@
 
   .divider {
     .item:not(:last-child)::after {
-      content: '~~~';
-      display: block;
-      margin-bottom: $theme-padding / 4;
-      margin-top: $theme-padding / 4;
+      // content: '~~~';
+      // display: block;
+      // margin-bottom: $theme-padding / 4;
+      // margin-top: $theme-padding / 4;
     }
   }
 
   &-drinks {
     .item {
-      display: table;
-      width: 100%;
-      margin-bottom: 4px;
+      // display: table;
+      // width: 100%;
+      // margin-bottom: 4px;
 
-      p, span { display: table-cell; }
+      // p, span { display: table-cell; }
     }
 
-    p { text-align: left; }
+    // p { text-align: left; }
 
     span {
-      font-weight: 700;
-      text-align: right;
+      // font-weight: 700;
+      // text-align: right;
     }
   }
 
   .item {
     &-title {
-      font-size: $font-size-md;
-      font-weight: 700;
+      // font-size: $font-size-md;
+      // font-weight: 700;
+      // margin-bottom: $theme-padding / 2;
+      // text-shadow: 0px 0px 1px rgba(#000, .2);
+    }
+  }
+}
+
+.menu {
+  // p {
+  //   border-right: .5px solid rgba(#efefef, .5);
+  // }
+  //
+  // &-a {
+  //   &-row {
+  //     display: flex;
+  //     border-bottom: .5px solid rgba(#efefef, .5);
+  //   }
+  //
+  //
+  //   &-cell {
+  //     padding: $theme-padding / 4;
+  //     flex: 1;
+  //     display: flex;
+  //     justify-content: flex-end;
+  //
+  //     &-auto {
+  //       flex: 0 1 100px;
+  //       justify-content: flex-start;
+  //     }
+  //   }
+  // }
+
+  &-inner {
+    @extend .box;
+
+    margin-top: $theme-padding / 2;
+
+    &-section {
+      &:not(:last-child)::after {
+        content: '~~~';
+        display: block;
+        margin-bottom: $theme-padding / 4;
+        margin-top: $theme-padding / 4;
+      }
+    }
+  }
+
+  &-item {
+    &-title {
       margin-bottom: $theme-padding / 2;
-      text-shadow: 0px 0px 1px rgba(#000, .2);
+      font-weight: 700;
+    }
+
+    &-description {
+      margin-top: -($theme-padding / 2.5);
+      margin-bottom: $theme-padding / 2;
+      font-style: italic;
+    }
+
+    p ~ p { margin-bottom: 2px; }
+
+    p:not(.menu-item-description) {
+      span {
+        color: green;
+        font-weight: 600;
+      }
+
+      strong {
+        margin-left: 6px;
+      }
     }
   }
 }
