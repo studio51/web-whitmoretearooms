@@ -191,8 +191,8 @@ module.exports = function(grunt) {
           port: 21,
           authKey: '/.ftppass'
         },
-        src: 'app',
-        dest: '/public_html/test',
+        src: 'dist',
+        dest: '/public_html',
         exclusions: ['**/.DS_Store']
       }
     },
@@ -236,7 +236,7 @@ module.exports = function(grunt) {
     'postcss',
     'cssnext',
     'imagemin',
-    // 'svgmin',
+    'svgmin',
     // 'copy'
   ]);
 
@@ -263,6 +263,7 @@ module.exports = function(grunt) {
 
   // grunt.registerTask('default', ['clean', 'preview']);
   grunt.registerTask('default', ['preview']);
-  grunt.registerTask('prepare', ['clean', 'compile-theme', 'prettify']);
-  grunt.registerTask('deploy', ['ship', 'ftp-deploy'])
+  // grunt.registerTask('prepare', ['clean', 'compile-theme', 'prettify']);
+  grunt.registerTask('prepare', ['compile-theme', 'prettify']);
+  grunt.registerTask('deploy', ['prepare', 'ftp-deploy'])
 }
