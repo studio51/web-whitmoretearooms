@@ -1,0 +1,18 @@
+body {
+  background-color: #F4F7F9;
+  font-family: 'Quicksand', sans-serif;
+}
+
+  .container {
+    padding: 0 $theme-padding;
+
+    @include mq($min, $tablet) { padding: 0 ( $theme-padding * 4 ); }
+  }
+
+  section, footer {
+    p, a {
+      text-shadow: 0 0 1px rgba(#000, .3);
+      filter: progid:DXImageTransform.Microsoft.Shadow(color=#000,direction=0,strength=0.4);
+      font-weight: 400;
+    }
+  }

@@ -1,0 +1,28 @@
+.menu-page {
+//     padding: 0 $theme-padding / 2;
+
+  .menu {
+    margin-top: $theme-padding;
+
+//       &-tabs { margin-bottom: $theme-padding; }
+
+//       &-tabs,
+//       &-items { @extend .col-xs-12; }
+  }
+
+//     &-left { padding-left: 0; }
+//     &-right { padding-right: 0; }
+
+//     @include mq($min, $tablet) {
+//       .box { @extend .row; }
+
+//       &-left { @extend .col-sm-7; }
+//       &-right { @extend .col-sm-5; }
+
+//       .bookings-information { margin-bottom: 0; }
+//     }
+
+//     .nav-tabs li a {
+//       @include mq($max, $phone) { font-size: 1em; }
+//     }
+}

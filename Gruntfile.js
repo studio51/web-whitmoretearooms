@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 
+  var mozjpeg = require('imagemin-mozjpeg');
   var appConfig = {
     host: 'localhost',
     port: 1338,
@@ -39,6 +40,7 @@ module.exports = function(grunt) {
             '<%= appConfig.dist_dir %>*.html',
             '<%= appConfig.dist_dir %>img/*.jpg',
             '<%= appConfig.dist_dir %>img/*.png',
+            '<%= appConfig.dist_dir %>img/*.PNG',
           ],
         },
 
@@ -108,7 +110,7 @@ module.exports = function(grunt) {
       }
     },
 
-   postcss: {
+    postcss: {
       options: {
         map: false,
         processors: [
@@ -196,34 +198,18 @@ module.exports = function(grunt) {
     },
 
     imagemin: {
-      png: {
+      dynamic: {
         options: {
-          optimizationLevel: 7
+          optimizationLevel: 7,
+          use: [mozjpeg()]
         },
-        files: [
-          {
-            expand: true,
-            cwd: '<%= appConfig.src_dir %>img/',
-            src: ['**/*.png'],
-            dest: '<%= appConfig.dist_dir %>img/',
-            ext: '.png'
-          }
-        ]
-      },
 
-      jpg: {
-        options: {
-          progressive: true
-        },
-        files: [
-          {
-            expand: true,
-            cwd: '<%= appConfig.src_dir %>img/',
-            src: ['**/*.jpg'],
-            dest: '<%= appConfig.dist_dir %>img/',
-            ext: '.jpg'
-          }
-        ]
+        files: [{
+          expand: true,
+          cwd: '<%= appConfig.src_dir %>img',
+          src: ['**/*.{png,jpg,gif,jpeg}'],
+          dest: '<%= appConfig.dist_dir %>img/'
+        }]
       }
     },
 
@@ -249,7 +235,7 @@ module.exports = function(grunt) {
     'sass',
     'postcss',
     'cssnext',
-    // 'imagemin',
+    'imagemin',
     // 'svgmin',
     // 'copy'
   ]);

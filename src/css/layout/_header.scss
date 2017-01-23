@@ -1,0 +1,51 @@
+.navbar {
+  box-shadow: 0 0 20px 5px rgba(#999, .3);
+  padding: $theme-padding 0;
+  position: relative;
+
+  .container > .row { display: flex; }
+
+  &-header {
+    @extend .col-sm-5;
+    @extend .col-md-6;
+    @extend .col-lg-7;
+
+    img {
+      width: 100%;
+
+      @include mq($min, $phone) {
+        max-height: 100px;
+        width: auto;
+      }
+    }
+  }
+
+  &-contact-information {
+    @extend .col-sm-7;
+    @extend .col-md-6;
+    @extend .col-lg-5;
+
+    @extend .hidden-xs;
+
+    align-self: flex-end;
+
+    p {
+      font-size: 1.2em;
+      font-weight: 700;
+
+      i::before { margin-right: $theme-padding / 4; }
+    }
+  }
+
+  &:after {
+    background-image: url('../img/bg-floral.jpg');
+    background-position: 20% 20%;
+    content: '';
+    height: 100%;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+  }
+}

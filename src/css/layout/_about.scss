@@ -1,0 +1,7 @@
+.about {
+  margin-top: -( $theme-padding );
+
+  @media screen and (min-width: $screen-sm-min) { text-align: left; }
+
+  p:not(:last-child) { margin-bottom: $theme-padding / 3; }
+}

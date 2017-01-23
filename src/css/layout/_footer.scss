@@ -1,0 +1,95 @@
+footer {
+  background-color: #fff;
+  border-top: 1px solid $border-color;
+  padding: $theme-padding 0;
+}
+
+.footer {
+  @extend .row;
+  @include mq($min, $phone) { text-align: left; }
+
+  font-size: .9em;
+  text-align: center;
+
+  &-meta {
+    @extend .col-sm-7;
+
+    p a {
+      display: block;
+
+      @include mq($min, $phone) {
+        display: inline;
+        margin-left: $theme-padding / 4;
+      }
+    }
+  }
+
+  &-links {
+    @extend .col-sm-5;
+    @include mq($min, $phone) { text-align: right; }
+    @include mq($max, $phone) { margin-top: $theme-padding / 2; }
+  }
+}
+
+.map {
+  background-image: url('../img/whitmore-map.png');
+  background-position: center 25px;
+  height: $theme-padding * 13;
+  margin: $theme-padding 0;
+  position: relative;
+  width: 100%;
+
+  @include mq($min, $phone) {
+    background-position: center center;
+    height: $theme-padding * 10;
+  }
+}
+
+.vcard {
+  @extend .floating;
+
+  background: #fff;
+  border-radius: $border-radius;
+  left: 0;
+  margin-left: $theme-padding;
+  margin-right: $theme-padding;
+  margin-top: $theme-padding;
+  padding: $theme-padding $theme-padding 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+
+  @include mq($min, $phone) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    text-align: left;
+  }
+
+  .logo img {
+    max-height: $theme-padding * 2;
+
+    @include mq($max, $phone) {
+      margin: 0 auto;
+      margin-bottom: $theme-padding / 2;
+    }
+  }
+
+  .address {
+    margin-bottom: $theme-padding / 4;
+
+    span { display: block; }
+  }
+
+  &:after {
+    content: '';
+    position: relative;
+    bottom: -( $theme-padding );
+    margin: 0 auto;
+    border-top: ( $theme-padding / 2 ) solid #fff;
+    border-left: ( $theme-padding / 2 ) solid transparent;
+    border-right: ( $theme-padding / 2 ) solid transparent;
+    border-bottom: ( $theme-padding / 2 ) solid transparent;
+  }
+}

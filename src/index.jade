@@ -6,10 +6,10 @@ main#content
   section.intro
     #carousel.carousel.hidden-xs
 
-      while slides < 5
+      while slides < 7
 
         div.carousel-layer(class="carousel-layer-#{slides}")
-          img.lazyOwl(data-src="img/carousel#{slides++}.jpg", title='Whitmore Tea Rooms', alt='')
+          img.lazyOwl(data-src="img/carousel#{slides++}.PNG", title='Whitmore Tea Rooms', alt='')
 
     .container
       .row
@@ -86,7 +86,8 @@ main#content
       .quote
         p &quot; There are few hours in life more agreeable than the hour dedicated to the ceremony known as afternoon tea &quot; -Henry James
 
-      include jade/menu
+      section#menu.menu.menu-index
+        include jade/menu
 
 include jade/contact
 include jade/footer
