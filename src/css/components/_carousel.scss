@@ -7,7 +7,7 @@
   z-index: -1;
 
   &.mobile {
-    background-image: url('../img/carousel1.jpg');
+    background-image: url('../img/carousel1.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,23 +23,24 @@
   }
 
   &-layer {
-
-    @media(min-width: $screen-sm-min) {
-      &-1 { transform: translateY(-17%); }
-    }
-
-    @media(min-width: $screen-md-min) {
-      &-1 { transform: translateY(-5%); }
-      &-2 { transform: translateY(-12%); }
-      &-3 { transform: translateY(-20%); }
-      &-4 { transform: translateY(-18%); }
-    }
-
-    @media(min-width: $screen-lg-min) {
-
-      &-1 { transform: translateY(-10%); }
-      &-2 { transform: translateY(-15%); }
-      &-4 { transform: translateY(-25%); }
-    }
+    transform: translateY(-20%)
+    
+    // @media(min-width: $screen-sm-min) {
+    //   &-1 { transform: translateY(-17%); }
+    // }
+    //
+    // @media(min-width: $screen-md-min) {
+    //   &-1 { transform: translateY(-5%); }
+    //   &-2 { transform: translateY(-12%); }
+    //   &-3 { transform: translateY(-20%); }
+    //   &-4 { transform: translateY(-18%); }
+    // }
+    //
+    // @media(min-width: $screen-lg-min) {
+    //
+    //   &-1 { transform: translateY(-10%); }
+    //   &-2 { transform: translateY(-15%); }
+    //   &-4 { transform: translateY(-25%); }
+    // }
   }
 }
