@@ -9,7 +9,7 @@ main#content
       while slides < 7
 
         div.carousel-layer(class="carousel-layer-#{slides}")
-          img.lazyOwl(data-src="img/carousel#{slides++}.png", title='Whitmore Tea Rooms', alt='')
+          img.lazyOwl(data-src="img/carousel#{slides++}.JPG", title='Whitmore Tea Rooms', alt='')
 
     .container
       .row
@@ -19,7 +19,12 @@ main#content
               p: i.wta-phone 01782 680433
               p: i.wta-mail info@whitmoretearooms.co.uk
 
+            img.christmas-pattern(src='img/christmas-pattern.svg')
+
             h1.board-title Opening Hours
+
+            a(href='#christmas-opening-times', class='christmas-url', title='Whitmore Tea Rooms Christmas Opening Times')
+              | Please see our Christmas &amp; New year Opening Times
 
             p Monday - closed
             p Tuesday - 10am to 5pm
@@ -85,6 +90,83 @@ main#content
 
       .quote
         p &quot; There are few hours in life more agreeable than the hour dedicated to the ceremony known as afternoon tea &quot; -Henry James
+
+      section#christmas-opening-times.box
+        h1.section-title Christmas Opening Times
+        img.christmas-pattern-left(src='img/christmas-pattern-black.svg')
+        img.christmas-pattern-right(src='img/christmas-pattern-black.svg')
+
+        .row
+          .col-sm-6
+            h2 December
+            
+            p
+              strong Tuesday 19th
+              | - 10am to 5pm
+            p
+              strong Wednesday 20th
+              | - 10am to 5pm
+            p
+              strong Thursday 21st
+              | - 10am to 5pm
+            p
+              strong Friday 22nd
+              | - 10am to 5pm
+            p
+              strong Saturday 23rd
+              | - 10am to 5pm
+            p
+              strong Christmas Eve Sunday 24th
+              | - closed
+            p
+              strong Christmas Day Monday 25th
+              | - closed
+            p
+              strong Boxing Day Tuesday 26th
+              | - closed
+            p
+              strong Wednesday 27th
+              | - 10am to 4pm
+            p
+              strong Thursday 28th
+              | - 10am to 4pm
+            p
+              strong Friday 29th
+              | - 10am to 4pm
+            p
+              strong Saturday 30th
+              | - 10am to 4pm
+            p
+              strong New Year's Even Sunday 31st
+              | - closed
+
+          .col-sm-6
+            h2 January
+
+            p
+              strong New Year's Day Monday 1st
+              | - closed
+            p
+              strong Tuesday 2nd
+              | - closed
+            p
+              strong Wednesday 3rd
+              | - closed
+            p
+              strong Thursday 4th
+              | - closed
+            p
+              strong Friday 5th
+              | - 10am to 5pm
+            p
+              strong Saturday 6th
+              | - 10am to 5pm
+            p
+              strong Sunday 7th
+              | - 10am to 5pm
+
+      .quote
+        p &quot; Thank God for tea! What would the world do without tea! How did it exist? I am glad I was not born before tea. &quot; -Sydney Smith
 
       section#menu.menu.menu-index
         include jade/menu

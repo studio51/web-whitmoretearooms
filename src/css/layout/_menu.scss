@@ -17,6 +17,13 @@
     li {
       &:not(:first-child) { margin-top: $theme-padding / 4; }
 
+      &.christmas {
+        a {
+          color: #fff;
+          background-color: rgba(#e74c3c, .5);
+        }
+      }
+
       &.special {
 
         a {

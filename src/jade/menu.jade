@@ -12,6 +12,9 @@
       #menu-page-right
         div(role='tabpanel')
           ul.nav.nav-tabs(role='tablist')
+            li.christmas(role='presentation')
+              a.menu-item(href='#vouchers', aria-controls='vouchers', role='tab', data-toggle='tab') Gift Vouchers
+
             li.special(role='presentation')
               a.menu-item(href='#breakfast-menu', aria-controls='breakfast-menu', role='tab', data-toggle='tab') Breakfast &amp; Brunch
               
@@ -32,6 +35,22 @@
 
   .menu-items
     .tab-content
+      #vouchers.tab-pane.fade(role='tabpanel')
+        h1.menu-category-title Gift Vouchers
+        span *Vouchers are available to purchase by phone or collection
+
+        .menu-inner
+          .menu-inner-section
+            .menu-item(style="text-align: left;")
+
+              p Cream Tea <strong>&pound;5.50</strong>
+              p Afternoon Tea <strong>&pound;15.00</strong>
+              p Champagne Afternoon Tea <strong>&pound;22.50</strong>
+              p Children's Afternoon Tea <strong>&pound;6.50</strong>
+              p Cheese &amp; Spinach <strong>&pound;6.75</strong>
+              br
+              h4 <strong>&pound;25.00</strong> Voucher
+
       #breakfast-menu.tab-pane.fade(role='tabpanel')
         h1.menu-category-title Breakfast &amp; Brunch
         span served daily from 10am - 1.30pm
