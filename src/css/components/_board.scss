@@ -1,6 +1,8 @@
 .board {
   @extend .slideExpandUp;
 
+  .elevate { z-index: 100; }
+  
   color: #fff;
   font-family: 'crayon';
   margin: $theme-padding 0 ( $theme-padding * 2 );

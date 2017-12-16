@@ -6,10 +6,10 @@ main#content
   section.intro
     #carousel.carousel.hidden-xs
 
-      while slides < 7
+      while slides < 15
 
-        div.carousel-layer(class="carousel-layer-#{slides}")
-          img.lazyOwl(data-src="img/carousel#{slides++}.JPG", title='Whitmore Tea Rooms', alt='')
+        div.carousel-layer(class="carousel-layer-#{ slides }")
+          img.lazyOwl(data-src="img/carousel#{ slides++ }.JPG", title='Whitmore Tea Rooms', alt='')
 
     .container
       .row
@@ -21,32 +21,33 @@ main#content
 
             img.christmas-pattern(src='img/christmas-pattern.svg')
 
-            h1.board-title Opening Hours
+            .bord-text
+              h1.board-title Opening Hours
 
-            a(href='#christmas-opening-times', class='christmas-url', title='Whitmore Tea Rooms Christmas Opening Times')
-              | Please see our Christmas &amp; New year Opening Times
+              a.elevate(href='#christmas-opening-times', class='christmas-url', title='Whitmore Tea Rooms Christmas Opening Times')
+                | Please see our Christmas &amp; New year Opening Times
 
-            p Monday - closed
-            p Tuesday - 10am to 5pm
-            p Wednesday - 10am to 5pm
-            p Thursday - 10am to 5pm
-            p Friday - 10am to 5pm
-            p Saturday - 10am to 5pm
-            p Sunday - 10am to 4pm
+              p Monday - closed
+              p Tuesday - 10am to 5pm
+              p Wednesday - 10am to 5pm
+              p Thursday - 10am to 5pm
+              p Friday - 10am to 5pm
+              p Saturday - 10am to 5pm
+              p Sunday - 10am to 4pm
 
-            .board-social-media
-              p
-                | Find us on
+              .board-social-media
+                p
+                  | Find us on
 
-                a(href='https://www.facebook.com/tearoomswhitmore?ref=whitmoretearooms.co.uk', title='Facebook')
-                  img.flaticon(src='img/facebook.svg', title='Like us on Facebook', alt='f')
-                  | facebook
+                  a.elevate(href='https://www.facebook.com/tearoomswhitmore?ref=whitmoretearooms.co.uk', title='Facebook')
+                    img.flaticon(src='img/facebook.svg', title='Like us on Facebook', alt='f')
+                    | facebook
 
-                |  and
+                  |  and
 
-                a(href='https://plus.google.com/101576584832781482721/about?ref=whitmoretearooms.co.uk', title='Google+')
-                  img.flaticon(src='img/google.svg', title='Add us on Google+', alt='f')
-                  | google+
+                  a.elevate(href='https://plus.google.com/101576584832781482721/about?ref=whitmoretearooms.co.uk', title='Google+')
+                    img.flaticon(src='img/google.svg', title='Add us on Google+', alt='f')
+                    | google+
 
   section.content
     .container
