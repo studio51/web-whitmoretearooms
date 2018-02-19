@@ -45,30 +45,3 @@
 
 @import "pages/menu";
 @import "pages/reviews";
-
-#christmas-opening-times {
-  text-align: left;
-  position: relative;
-
-  h2 { margin-bottom: 8px; }
-
-  .christmas-pattern-left {
-    position: absolute;
-    z-index: 0;
-    width: 50%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: 0.1;
-  }
-
-  .christmas-pattern-right {
-    position: absolute;
-    z-index: 0;
-    width: 50%;
-    height: 100%;
-    left: 50%;
-    top: 0;
-    opacity: 0.1;
-  }
-}
